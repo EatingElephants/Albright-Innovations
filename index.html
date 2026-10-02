@@ -395,6 +395,19 @@ footer .tag {
   letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted);
 }
 footer small { color: var(--muted); font-size: var(--t-small); }
+footer .foot-end { display: flex; align-items: center; gap: 18px; }
+
+/* Facebook links */
+.fb { width: 20px; height: 20px; fill: currentColor; flex: none; }
+.social {
+  display: inline-flex; align-items: center; gap: 10px; justify-self: start;
+  font-size: var(--t-small); font-weight: 600; color: var(--ink); text-decoration: none;
+  transition: color .2s;
+}
+.social .fb { color: var(--accent); }
+.social:hover { color: var(--accent); }
+.fb-link { display: inline-flex; color: var(--muted); transition: color .2s; }
+.fb-link:hover { color: var(--accent); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -411,6 +424,9 @@ footer small { color: var(--muted); font-size: var(--t-small); }
       <polygon class="half" points="20,220 100,20 103,20 103,220"/>
       <polygon class="half" points="137,220 137,20 140,20 220,220"/>
       <rect class="bar" x="109" y="2" width="22" height="218"/>
+    </symbol>
+    <symbol id="fb-glyph" viewBox="0 0 24 24">
+      <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/>
     </symbol>
   </defs>
 </svg>
@@ -701,6 +717,10 @@ footer small { color: var(--muted); font-size: var(--t-small); }
           <span class="toast" id="copy-status" role="status" aria-live="polite"></span>
         </div>
         <p class="aside">Want a website preview or an operations check? Say which in your email, include your website link if you have one, and we'll set it up.</p>
+        <a class="social" href="https://www.facebook.com/profile.php?id=61594813718085" target="_blank" rel="noopener">
+          <svg class="fb" viewBox="0 0 24 24" aria-hidden="true"><use href="#fb-glyph"/></svg>
+          <span>Follow us on Facebook</span>
+        </a>
       </div>
     </div>
   </section>
@@ -713,7 +733,12 @@ footer small { color: var(--muted); font-size: var(--t-small); }
       <span class="wordmark"><b>A</b>lbright <b>I</b>nnovations</span>
     </a>
     <span class="tag">Authentic Influence</span>
-    <small>&copy; 2026 Albright Innovations</small>
+    <div class="foot-end">
+      <a class="fb-link" href="https://www.facebook.com/profile.php?id=61594813718085" target="_blank" rel="noopener" aria-label="Albright Innovations on Facebook">
+        <svg class="fb" viewBox="0 0 24 24" aria-hidden="true"><use href="#fb-glyph"/></svg>
+      </a>
+      <small>&copy; 2026 Albright Innovations</small>
+    </div>
   </div>
 </footer>
 
