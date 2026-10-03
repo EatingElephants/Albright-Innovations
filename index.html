@@ -218,7 +218,7 @@ h3 { font-size: var(--t-h3); font-weight: 600; line-height: 1.25; letter-spacing
 }
 @media (max-width: 860px) { .who .wrap { grid-template-columns: 1fr; } }
 
-/* Pain-point cards and calculator: layout, input and the flip only; faces reuse .out */
+/* Pain-point cards and calculator: layout, input and the pop-out; card faces reuse .out */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
 @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
 .input {
@@ -227,17 +227,33 @@ h3 { font-size: var(--t-h3); font-weight: 600; line-height: 1.25; letter-spacing
   color: var(--ink); background: var(--bg);
   border: 1.5px solid var(--line); border-radius: 2px;
 }
-.card { display: grid; grid-template-rows: 1fr auto; gap: 10px; }
-.flip {
+.card { position: relative; display: grid; }
+.card-btn {
   display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none;
-  font: inherit; color: inherit; text-align: left; cursor: pointer; perspective: 1200px;
+  font: inherit; color: inherit; text-align: left; cursor: pointer;
 }
-.flip-inner { display: grid; height: 100%; transform-style: preserve-3d; transition: transform .6s cubic-bezier(.2,.7,.1,1); }
-.flip-inner > .out { grid-area: 1 / 1; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
-.flip-inner > .back { transform: rotateY(180deg); }
-.card.is-flipped .flip-inner { transform: rotateY(180deg); }
-.card-src { visibility: hidden; }
-.card.is-flipped .card-src { visibility: visible; }
+.card-btn .out { height: 100%; }
+/* Pop-out bubble: reuses the inverted band's tokens */
+.bubble {
+  position: absolute; z-index: 5; top: calc(100% + 12px); left: 0; right: 0;
+  display: grid; gap: 10px; padding: 18px 20px;
+  background: var(--inv-bg); color: var(--inv-ink); border-radius: 2px;
+  box-shadow: 0 14px 32px rgba(21, 23, 28, .22);
+  font-size: var(--t-small); line-height: 1.5;
+  visibility: hidden; opacity: 0; transform: translateY(-4px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+.bubble::before { content: ""; position: absolute; top: -6px; left: 22px; width: 12px; height: 12px; background: inherit; transform: rotate(45deg); }
+.bubble::after { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; } /* keeps hover alive across the gap */
+.bubble strong { color: var(--inv-accent); font-size: var(--t-body); line-height: 1.4; }
+.bubble small { color: var(--inv-muted); }
+.card.is-open .bubble { visibility: visible; opacity: 1; transform: none; }
+/* Two-up grid: the bubble spans both columns, anchored to its card's side */
+@media (min-width: 561px) {
+  .bubble { right: auto; width: calc(200% + 24px); }
+  .card:nth-child(even) .bubble { left: auto; right: 0; }
+  .card:nth-child(even) .bubble::before { left: auto; right: 22px; }
+}
 
 /* Services */
 .services { background: var(--surface); }
@@ -504,78 +520,68 @@ footer .foot-end { display: flex; align-items: center; gap: 18px; }
       </div>
       <div class="head">
         <div class="prose">
-          <p>Owners spend about 36% of their week on admin, roughly 16 hours. Tap any card to see what it costs, and what we do about it.</p>
+          <h3>Owners spend about <span class="hl">36% of their week</span> on admin, roughly 16 hours.</h3>
+          <p>Tap any card to see what it costs, and what we do about it.</p>
           <p><small>Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc survey of 251 U.S. business owners, 2023</a></small></p>
         </div>
         <ul class="cards" aria-label="What it's costing you">
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>Nine missed calls means nine voicemails to listen to, write down, and return.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><strong class="hl">Up to 85% of callers whose calls go unanswered won't call back.</strong><span>We set up your phones so every message is written out for you and the caller gets a text back right away.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
-            <small class="card-src">Source: <a href="https://www.businesswire.com/news/home/20250114793850/en/CallRail-Releases-Report-Benchmarking-Marketing-Efforts-for-Small-Businesses" target="_blank" rel="noopener">CallRail small business report, 2025</a></small>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-1"><span class="out"><span>Nine missed calls means nine voicemails to listen to, write down, and return.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-1">
+              <strong>Up to 85% of callers whose calls go unanswered won't call back.</strong>
+              <span>We set up your phones so every message is written out for you and the caller gets a text back right away.</span>
+              <small>Source: <a href="https://www.businesswire.com/news/home/20250114793850/en/CallRail-Releases-Report-Benchmarking-Marketing-Efforts-for-Small-Businesses" target="_blank" rel="noopener">CallRail small business report, 2025</a></small>
+            </div>
           </li>
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>Quotes wait until you're home at night, and the customer calls someone else.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><strong class="hl">Reaching a new lead within 5 minutes, instead of 30, makes you about 100 times more likely to connect.</strong><span>We set up quoting you can send from the job site, with a follow-up that goes out on its own.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
-            <small class="card-src">Source: <a href="https://25649.fs1.hubspotusercontent-na2.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf" target="_blank" rel="noopener">MIT / InsideSales Lead Response Study, 2007</a></small>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-2"><span class="out"><span>Quotes wait until you're home at night, and the customer calls someone else.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-2">
+              <strong>Reaching a new lead within 5 minutes, instead of 30, makes you about 100 times more likely to connect.</strong>
+              <span>We set up quoting you can send from the job site, with a follow-up that goes out on its own.</span>
+              <small>Source: <a href="https://25649.fs1.hubspotusercontent-na2.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf" target="_blank" rel="noopener">MIT / InsideSales Lead Response Study, 2007</a></small>
+            </div>
           </li>
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>Your customer list is scattered, so past customers never hear from you again.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><span>We put everyone in one place, so it's easy to reach out for repeat work and referrals.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-3"><span class="out"><span>Your customer list is scattered, so past customers never hear from you again.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-3">
+              <span>We put everyone in one place, so it's easy to reach out for repeat work and referrals.</span>
+            </div>
           </li>
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>Invoices go out late, so you're waiting weeks to get paid.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><strong class="hl">59% of small businesses have invoices more than 30 days overdue, with $17.7K owed on average.</strong><span>We set up invoicing that goes out when the job is done, with reminders built in.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
-            <small class="card-src">Source: <a href="https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/" target="_blank" rel="noopener">QuickBooks Small Business Late Payments Report, 2026</a></small>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-4"><span class="out"><span>Invoices go out late, so you're waiting weeks to get paid.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-4">
+              <strong>59% of small businesses have invoices more than 30 days overdue, with $17.7K owed on average.</strong>
+              <span>We set up invoicing that goes out when the job is done, with reminders built in.</span>
+              <small>Source: <a href="https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/" target="_blank" rel="noopener">QuickBooks Small Business Late Payments Report, 2026</a></small>
+            </div>
           </li>
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>Every question comes to you, so nothing moves when you're off the clock.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><strong class="hl">44% of owners haven't taken a week off in the past year without checking in on work.</strong><span>We put simple systems in place so your team can find answers without calling you.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
-            <small class="card-src">Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc survey of 251 U.S. business owners, 2023</a></small>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-5"><span class="out"><span>Every question comes to you, so nothing moves when you're off the clock.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-5">
+              <strong>44% of owners haven't taken a week off in the past year without checking in on work.</strong>
+              <span>We put simple systems in place so your team can find answers without calling you.</span>
+              <small>Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc survey of 251 U.S. business owners, 2023</a></small>
+            </div>
           </li>
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>You're paying for ads without knowing which ones bring in work.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><span>We track where every lead comes from, so you know what's worth the money.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-6"><span class="out"><span>You're paying for ads without knowing which ones bring in work.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-6">
+              <span>We track where every lead comes from, so you know what's worth the money.</span>
+            </div>
           </li>
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>Your website hasn't changed in years, and customers notice.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><strong class="hl">Stanford research found people judge a business's website by its look first, and trust sites that show recent updates.</strong><span>We rebuild it and keep it current, so it works for you instead of against you.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
-            <small class="card-src">Source: <a href="https://credibility.stanford.edu/guidelines" target="_blank" rel="noopener">Stanford Web Credibility Project</a></small>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-7"><span class="out"><span>Your website hasn't changed in years, and customers notice.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-7">
+              <strong>Stanford research found people judge a business's website by its look first, and trust sites that show recent updates.</strong>
+              <span>We rebuild it and keep it current, so it works for you instead of against you.</span>
+              <small>Source: <a href="https://credibility.stanford.edu/guidelines" target="_blank" rel="noopener">Stanford Web Credibility Project</a></small>
+            </div>
           </li>
           <li class="card">
-            <button class="flip" type="button" aria-pressed="false">
-              <span class="flip-inner">
-                <span class="out front"><span>Your social media hasn't been posted to in months.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span>
-                <span class="out back" aria-hidden="true"><span>We post regularly, so customers see a business that's active and busy.</span><span class="hl"><span aria-hidden="true">&larr;</span> Back</span></span>
-              </span>
-            </button>
+            <button class="card-btn" type="button" aria-expanded="false" aria-controls="cost-8"><span class="out"><span>Your social media hasn't been posted to in months.</span><span class="hl">See what it costs <span aria-hidden="true">&rarr;</span></span></span></button>
+            <div class="bubble" id="cost-8">
+              <span>We post regularly, so customers see a business that's active and busy.</span>
+            </div>
           </li>
         </ul>
         <div class="out">
@@ -876,20 +882,31 @@ footer .foot-end { display: flex; align-items: center; gap: 18px; }
 })();
 
 (function () {
-  // Pain-point cards: hover flips for mouse users, click/tap/Enter/Space toggles
-  Array.prototype.forEach.call(document.querySelectorAll('.card'), function (card) {
-    var btn = card.querySelector('.flip');
-    var front = card.querySelector('.front');
-    var back = card.querySelector('.back');
-    function set(on) {
-      card.classList.toggle('is-flipped', on);
-      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
-      if (on) { front.setAttribute('aria-hidden', 'true'); back.removeAttribute('aria-hidden'); }
-      else { back.setAttribute('aria-hidden', 'true'); front.removeAttribute('aria-hidden'); }
-    }
-    btn.addEventListener('click', function () { set(btn.getAttribute('aria-pressed') !== 'true'); });
-    card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') set(true); });
-    card.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') set(false); });
+  // Pain-point cards: hover opens the bubble for mouse users; tap, Enter or Space toggles it
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  function set(card, on) {
+    if (on) cards.forEach(function (c) { if (c !== card) set(c, false); });
+    card.classList.toggle('is-open', on);
+    card.querySelector('.card-btn').setAttribute('aria-expanded', on ? 'true' : 'false');
+  }
+  cards.forEach(function (card) {
+    var btn = card.querySelector('.card-btn');
+    btn.addEventListener('click', function (e) {
+      if (e.pointerType === 'mouse') set(card, true);
+      else set(card, !card.classList.contains('is-open'));
+    });
+    card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') set(card, true); });
+    card.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') set(card, false); });
+    card.addEventListener('focusout', function (e) { if (!card.contains(e.relatedTarget)) set(card, false); });
+  });
+  document.addEventListener('click', function (e) {
+    cards.forEach(function (c) { if (!c.contains(e.target)) set(c, false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    cards.forEach(function (c) {
+      if (c.classList.contains('is-open')) { set(c, false); c.querySelector('.card-btn').focus(); }
+    });
   });
 
   // Time calculator: blank or negative counts as 0
