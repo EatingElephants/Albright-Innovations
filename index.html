@@ -217,6 +217,12 @@ h3 { font-size: var(--t-h3); font-weight: 600; line-height: 1.25; letter-spacing
   content: ""; width: 14px; height: 2px; background: var(--accent); transform: translateY(-0.35em);
 }
 @media (max-width: 860px) { .who .wrap { grid-template-columns: 1fr; } }
+/* Stacked layout: lift the left column's children into the grid so the calculator lands last */
+@media (max-width: 860px) {
+  .who .wrap { row-gap: 24px; }
+  .who .wrap > .head:first-child { display: contents; }
+  .who .wrap > .head:first-child > .out { order: 1; }
+}
 
 /* Pain-point cards and calculator: layout, input and the pop-out; card faces reuse .out */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
