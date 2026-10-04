@@ -2,6 +2,20 @@
 
 The site at https://albright-innovations.com. Everything you'd ever want to change lives in the `src` folder. A small script turns it into the finished pages.
 
+## Where we left off (October 4, 2026)
+
+The redesign is **in progress on the `redesign` branch**. The live site is still the old one, on `main`. Nothing here is public until `redesign` is merged into `main`.
+
+To look at it: double-click **`preview.bat`** in this folder. Your browser opens the new site at http://localhost:8080. Leave the black window open while you look, and close it when you're done.
+
+Still to do before it goes live:
+
+1. **Polish.** Walk through every section on a phone and a computer and note what to change.
+2. **Connect the chat panel to an inbox.** The site is hosted on Cloudflare **Workers** (not Pages), so `functions/api/lead.js` doesn't run there yet. Until it's converted, the panel opens a prefilled email instead, so no message is lost.
+3. **Check the Cloudflare build.** GitHub marks the builds for both `main` and `redesign` as failed, though `main` still publishes. Open the build log in Cloudflare and confirm what that red mark means before merging.
+4. **Content TODOs** (search `src/` for `TODO`): pricing, testimonials and client results, the CallRail stat, and three pain-point stats still to source.
+5. **After it's live:** run Google's Rich Results Test and a Lighthouse check on the real pages.
+
 ## The one rule
 
 **Edit files in `src/`, never the finished pages.** `index.html`, the `answers/`, `about/` and `how-we-work/` folders, `sitemap.xml`, `llms.txt` and `llms-full.txt` are all generated. If you edit them by hand, the next build overwrites your change.
@@ -12,7 +26,7 @@ The site at https://albright-innovations.com. Everything you'd ever want to chan
 2. Rebuild: double-click `build.bat`, or run `py -3 build.py` in a terminal. It takes about a second.
 3. Commit and push. Cloudflare publishes the site within a minute.
 
-To look at the site on your own computer before publishing, open the folder's local preview (in Claude Code it's the `site` entry in `.claude/launch.json`). One quirk: every link on the site is a full `https://albright-innovations.com/...` address on purpose, so clicking a link in a local preview jumps to the live site. Type the local address instead, or use the preview link Cloudflare makes for the branch.
+To look at the site on your own computer before publishing, double-click `preview.bat`. Every link on the site is a full `https://albright-innovations.com/...` address on purpose; during a preview on your computer, a few lines in `js/tools.js` keep those links on the local copy instead.
 
 If you commit from the command line, the rebuild happens by itself (there's a git hook in `.githooks/`). On a new computer, turn that on once with `git config core.hooksPath .githooks`.
 
@@ -55,11 +69,7 @@ Write the rest of the file in plain HTML: `<h2>` headings as questions, `<ul>` a
 
 ## Connecting the chat panel to your inbox
 
-The "Tell us what's going on" panel sends to `/api/lead` (`functions/api/lead.js`). It forwards each message to whatever form service you use, once you give it the address:
-
-1. In the Cloudflare dashboard, open the site under Workers & Pages.
-2. Settings, then Environment variables. Add `LEAD_WEBHOOK` with the address your form service gives you (Formspree, Zapier, Make, Basin, a CRM webhook, anything that takes a JSON POST).
-3. Redeploy once.
+**Not working yet.** The "Tell us what's going on" panel sends to `/api/lead`. The code for that address (`functions/api/lead.js`) was written for Cloudflare Pages, but this site runs on Cloudflare Workers, which doesn't use that folder. It needs converting to a small Worker script before it can forward messages to a form service (Formspree, Zapier, Make, Basin, a CRM webhook, anything that takes a JSON POST) through a `LEAD_WEBHOOK` setting.
 
 Until then, the panel opens a prefilled email instead, so nothing is lost.
 

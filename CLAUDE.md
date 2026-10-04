@@ -1,6 +1,6 @@
 # Working on this site
 
-Static site for albright-innovations.com, deployed by Cloudflare Pages straight from this repo (no build step on their side).
+Static site for albright-innovations.com, deployed by **Cloudflare Workers Builds** (Workers static assets, project `albright-innovations`) straight from this repo, not Cloudflare Pages. `functions/` (Pages Functions) does not run there; the lead endpoint needs converting to a Worker script before it works. See "Where we left off" in `README.md` for current status. The owner is not a coder: explain in plain words, prefer double-click files over commands.
 
 - **Edit `src/`, then run the build.** `index.html`, `answers/**`, `about/`, `how-we-work/`, `sitemap.xml`, `llms.txt` and `llms-full.txt` are generated. Never hand-edit them.
 - Build with the full Python path on this machine: `C:/Users/jsalb/AppData/Local/Programs/Python/Python310/python.exe build.py` (or `py -3 build.py`). Standard library only. A pre-commit hook in `.githooks/` runs it too.

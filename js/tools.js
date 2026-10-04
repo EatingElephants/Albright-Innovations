@@ -1,5 +1,16 @@
 /* Albright Innovations: wires the homepage tools to the math in calc.js.
    Results are kept in window.Albright.results so the chat panel can attach them. */
+/* Previewing on this computer: keep links to albright-innovations.com on the local copy.
+   Does nothing on the real site. */
+(function () {
+  var h = location.hostname;
+  if (h !== 'localhost' && h !== '127.0.0.1') { return; }
+  var live = 'https://albright-innovations.com';
+  Array.prototype.forEach.call(document.querySelectorAll('a[href^="' + live + '"]'), function (a) {
+    a.setAttribute('href', a.getAttribute('href').slice(live.length) || '/');
+  });
+})();
+
 (function () {
   'use strict';
   if (!window.Calc) { return; }
