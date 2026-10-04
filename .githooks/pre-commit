@@ -1,0 +1,12 @@
+#!/bin/sh
+# Rebuilds the site from src/ before every commit, so the published pages never fall behind the source.
+# Set up once per computer with:  git config core.hooksPath .githooks
+cd "$(git rev-parse --show-toplevel)" || exit 1
+
+if command -v py >/dev/null 2>&1; then PY="py -3"
+elif command -v python3 >/dev/null 2>&1; then PY="python3"
+else PY="python"
+fi
+
+$PY build.py || { echo; echo "The site did not build. Fix the message above, then commit again."; exit 1; }
+git add index.html sitemap.xml llms.txt llms-full.txt answers about how-we-work

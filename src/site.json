@@ -1,0 +1,31 @@
+{
+  "name": "Albright Innovations",
+  "tagline": "Authentic Influence",
+  "url": "https://albright-innovations.com",
+  "email": "joshua@albright-innovations.com",
+  "calendly": "https://calendly.com/jsalbrig-studio/30min",
+  "facebook": "https://www.facebook.com/profile.php?id=61594813718085",
+  "founder": "Joshua Albright",
+  "founded": "2025",
+  "summary": "Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads and websites, and we set up the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. We work with businesses in Big Rapids and West Michigan and in Charlotte, Waxhaw and Union County, North Carolina, and with remote clients anywhere in the United States.",
+  "areas": [
+    { "name": "Big Rapids, Michigan", "region": "West Michigan" },
+    { "name": "Charlotte, North Carolina", "region": "Charlotte area" },
+    { "name": "Waxhaw, North Carolina", "region": "Union County" },
+    { "name": "Union County, North Carolina", "region": "Union County" }
+  ],
+  "services": [
+    { "name": "Operations review", "url": "/how-we-work/", "desc": "A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away." },
+    { "name": "Tools set up and connected", "url": "/#services", "desc": "Customer list, scheduling, phones, quoting, invoicing and job tracking, picked to fit how you work and connected so information is entered once." },
+    { "name": "Workflows and follow-up", "url": "/#services", "desc": "Clear steps from first call to close to follow-up, so nothing depends on someone remembering." },
+    { "name": "Lead tracking and dashboards", "url": "/#services", "desc": "Every call, message and form tracked to a source, with the numbers you care about in one place." },
+    { "name": "Social media management", "url": "/#services", "desc": "Posts planned, scheduled and answered, so your page stays active without you living on it." },
+    { "name": "Social ads", "url": "/#services", "desc": "Facebook and Instagram ads aimed at people near you who are ready to buy." },
+    { "name": "Websites", "url": "/#services", "desc": "A clean, current site that tells people who you are, what you do and how to reach you." }
+  ],
+  "tools": [
+    { "name": "Where does your week go?", "url": "/#time", "desc": "Add up the hours you spend on quotes, scheduling, invoicing, retyping and social media, and see what they cost per year." },
+    { "name": "Missed-call calculator", "url": "/#calls", "desc": "Estimate the jobs and revenue at risk from unanswered calls and slow follow-up." },
+    { "name": "2-minute operations checkup", "url": "/#checkup", "desc": "Nine quick questions, a score out of 100, and the three fixes worth doing first." }
+  ]
+}

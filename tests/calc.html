@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Calculator tests</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; margin: 32px; max-width: 760px; }
+  h1 { font-size: 1.3rem; }
+  li { margin: 4px 0; padding-left: 8px; }
+  .pass { color: #2f7a4f; }
+  .fail { color: #b93d12; font-weight: 700; }
+  #summary { font-weight: 700; margin: 12px 0; }
+</style>
+</head>
+<body>
+<h1>Calculator tests (js/calc.js)</h1>
+<p>Open this page in a browser. Every line should be green. This page is not linked from the site and is kept out of the sitemap.</p>
+<p id="summary">Running…</p>
+<ul id="out"></ul>
+<script src="../js/calc.js"></script>
+<script>
+(function () {
+  var out = document.getElementById('out'), pass = 0, fail = 0;
+  function t(name, got, want) {
+    var ok = JSON.stringify(got) === JSON.stringify(want);
+    var li = document.createElement('li');
+    li.className = ok ? 'pass' : 'fail';
+    li.textContent = (ok ? 'PASS ' : 'FAIL ') + name + (ok ? '' : '  got ' + JSON.stringify(got) + ', wanted ' + JSON.stringify(want));
+    out.appendChild(li);
+    ok ? pass++ : fail++;
+  }
+  var C = window.Calc;
+
+  /* Tool A: defaults, zero, max, nonsense */
+  var a = C.timeLeaks({ quotes: 4, sched: 4, invoice: 3, retype: 2, social: 3, rate: 75 });
+  t('time defaults: 16 h/wk', a.week, 16);
+  t('time defaults: 832 h/yr', a.year, 832);
+  t('time defaults: $62,400', a.dollars, 62400);
+  t('time defaults: 20.8 work weeks', Math.round(a.workWeeks * 10) / 10, 20.8);
+  t('time defaults: biggest is quotes (first of a tie)', a.biggest, 'quotes');
+  t('time defaults: shares add to 1', Math.round(Object.keys(a.shares).reduce(function (s, k) { return s + a.shares[k]; }, 0) * 1000) / 1000, 1);
+  t('time equivalent text', C.timeEquivalent(a), 'That’s about <strong>21 full work weeks</strong> a year spent on the office side of the business.');
+  var z = C.timeLeaks({ quotes: 0, sched: 0, invoice: 0, retype: 0, social: 0, rate: 75 });
+  t('time all zero: week 0', z.week, 0);
+  t('time all zero: dollars 0', z.dollars, 0);
+  t('time all zero: no biggest', z.biggest, null);
+  t('time all zero: shares are 0 not NaN', z.shares.quotes, 0);
+  t('time all zero: prompt text', C.timeEquivalent(z), 'Slide a few of these to where you land in a normal week.');
+  var m = C.timeLeaks({ quotes: 40, sched: 40, invoice: 40, retype: 40, social: 40, rate: 300 });
+  t('time max sliders: 200 h/wk', m.week, 200);
+  t('time max sliders: $3,120,000', m.dollars, 3120000);
+  var junk = C.timeLeaks({ quotes: 'abc', sched: -5, invoice: null, retype: undefined, social: Infinity, rate: 'x' });
+  t('time junk input: text, negatives, null, undefined and Infinity all count as 0', [junk.week, junk.dollars], [0, 0]);
+  var small = C.timeLeaks({ quotes: 0.5, sched: 0, invoice: 0, retype: 0, social: 0, rate: 50 });
+  t('time small: 26 h/yr says days', C.timeEquivalent(small), 'That’s about <strong>3.3 working days</strong> a year on the office side of the business.');
+
+  /* Tool B */
+  var b = C.missedCalls({ calls: 30, missed: 40, value: 450, close: 40 });
+  t('calls defaults: 12 missed/wk', b.missedWeek, 12);
+  t('calls defaults: 52 missed/mo', b.missedMonth, 52);
+  t('calls defaults: 20.8 jobs/mo', Math.round(b.jobsMonth * 10) / 10, 20.8);
+  t('calls defaults: $9,360/mo', b.revenueMonth, 9360);
+  t('calls defaults: $112,320/yr', b.revenueYear, 112320);
+  t('calls equivalent text', C.callsEquivalent(b), 'About <strong>$9,360 a month</strong> riding on calls nobody picked up.');
+  var b0 = C.missedCalls({ calls: 0, missed: 40, value: 450, close: 40 });
+  t('calls zero calls: everything 0', [b0.missedYear, b0.jobsYear, b0.revenueYear], [0, 0, 0]);
+  t('calls zero calls: prompt text', C.callsEquivalent(b0), 'Start with how many calls come in during a normal week.');
+  var bNone = C.missedCalls({ calls: 30, missed: 0, value: 450, close: 40 });
+  t('calls none missed: text', C.callsEquivalent(bNone).indexOf('nothing at risk') > -1, true);
+  var bMax = C.missedCalls({ calls: 200, missed: 100, value: 5000, close: 100 });
+  t('calls max: 10,400 missed/yr', bMax.missedYear, 10400);
+  t('calls max: $52,000,000/yr', bMax.revenueYear, 52000000);
+  var bOver = C.missedCalls({ calls: 30, missed: 250, value: 450, close: -10 });
+  t('calls out-of-range shares clamp to 0..100%', [bOver.missedShare, bOver.closeShare], [1, 0]);
+
+  /* Tool C */
+  var Q = [
+    { weight: 14, good: 'yes', fix: 'A', why: '', service: 's' },
+    { weight: 14, good: 'yes', fix: 'B', why: '', service: 's' },
+    { weight: 10, good: 'yes', fix: 'C', why: '', service: 's' },
+    { weight: 12, good: 'yes', fix: 'D', why: '', service: 's' },
+    { weight: 10, good: 'yes', fix: 'E', why: '', service: 's' },
+    { weight: 10, good: 'no', fix: 'F', why: '', service: 's' },
+    { weight: 8, good: 'yes', fix: 'G', why: '', service: 's' },
+    { weight: 12, good: 'no', fix: 'H', why: '', service: 's' },
+    { weight: 10, good: 'yes', fix: 'I', why: '', service: 's' }
+  ];
+  var all = C.checkup(Q, ['yes', 'yes', 'yes', 'yes', 'yes', 'no', 'yes', 'no', 'yes']);
+  t('checkup all good: 100', all.score, 100);
+  t('checkup all good: label', all.label, 'Well run');
+  t('checkup all good: no fixes', all.fixes.length, 0);
+  var none = C.checkup(Q, ['no', 'no', 'no', 'no', 'no', 'yes', 'no', 'yes', 'no']);
+  t('checkup all bad: 0', none.score, 0);
+  t('checkup all bad: label', none.label, 'Running on willpower');
+  t('checkup all bad: top 3 by weight, ties by order', none.fixes.map(function (f) { return f.fix; }), ['A', 'B', 'D']);
+  var partly = C.checkup(Q, ['partly', 'yes', 'partly', 'yes', 'yes', 'no', 'yes', 'no', 'yes']);
+  t('checkup partly: half credit (100 - 7 - 5 = 88)', partly.score, 88);
+  t('checkup partly: label 70-89', partly.label, 'Well run, a few gaps');
+  t('checkup partly: fixes list the two partials', partly.fixes.map(function (f) { return f.fix; }), ['A', 'C']);
+  var mid = C.checkup(Q, ['yes', 'no', 'no', 'yes', 'no', 'yes', 'no', 'yes', 'yes']);
+  t('checkup mid: 14+12+10 = 36', mid.score, 36);
+  t('checkup mid: label 0-39', mid.label, 'Running on willpower');
+  var skipped = C.checkup(Q, [null, 'yes', null, 'yes', 'yes', 'no', 'yes', 'no', 'yes']);
+  t('checkup skipped counts as 0', skipped.score, 76);
+  t('checkup answered count', skipped.answered, 7);
+  var empty = C.checkup([], []);
+  t('checkup no questions: 0 not NaN', empty.score, 0);
+
+  /* formatting */
+  t('money rounds and groups', C.money(62400.4), '$62,400');
+  t('money zero', C.money(0), '$0');
+  t('money negative', C.money(-5), '-$5');
+  t('num one decimal under 100', C.num(20.84), '20.8');
+  t('num whole over 100', C.num(832.4), '832');
+  t('num drops .0', C.num(16.0), '16');
+  t('num groups thousands', C.num(10400), '10,400');
+  t('pct', C.pct(0.4), '40%');
+
+  document.getElementById('summary').textContent = pass + ' passed, ' + fail + ' failed.';
+  document.title = (fail ? 'FAIL ' : 'PASS ') + pass + '/' + (pass + fail);
+  window.__calcTests = { pass: pass, fail: fail };
+})();
+</script>
+</body>
+</html>

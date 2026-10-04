@@ -1,0 +1,28 @@
+<article class="answer">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/#answers">Answers</a> <span aria-hidden="true">/</span> <span aria-current="page">{{crumb}}</span>
+    </nav>
+    <div class="answer-head">
+      <p class="label">Answers</p>
+      <h1>{{title}}</h1>
+      <p class="lead direct">{{short}}</p>
+      <p class="updated">Last updated <time datetime="{{updated_iso}}">{{updated}}</time></p>
+    </div>
+    <div class="answer-body prose">
+{{body}}
+    </div>
+    <aside class="cta-box">
+      <p class="label">Next step</p>
+      <h2>Want a second opinion on your setup?</h2>
+      <p>Tell us what's going on and we'll give you our honest take, no pitch attached.</p>
+      {{cta}}
+    </aside>
+    <nav class="more-answers" aria-label="More answers">
+      <p class="label">More answers</p>
+      <ul>
+{{others}}
+      </ul>
+    </nav>
+  </div>
+</article>
