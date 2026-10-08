@@ -2,7 +2,7 @@
 
 The site at https://albright-innovations.com. Everything you'd ever want to change lives in the `src` folder. A small script turns it into the finished pages.
 
-## Where we left off (October 4, 2026)
+## Where we left off (October 8, 2026)
 
 The redesign is **in progress on the `redesign` branch**. The live site is still the old one, on `main`. Nothing here is public until `redesign` is merged into `main`.
 
@@ -10,7 +10,8 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 
 Still to do before it goes live:
 
-1. **Polish.** Walk through every section on a phone and a computer and note what to change.
+1. **Polish.** Keep reviewing on a phone and a computer. Done on October 8: a phone menu, a much shorter phone homepage, a new Answers page (the homepage shows the 4 marked `home: yes`), a shorter About on the homepage, the portrait and calculator-total fixes, and the checkup always including a marketing fix when there's a marketing gap.
+   - **Copy rule:** stay broad about operations. Describe finding and fixing each business's bottlenecks after talking with the owner, never specific features (phone quoting, automatic texts, online booking, pay links). There are no technology partners yet, and every business needs something different.
 2. **Connect the chat panel to an inbox.** The site is hosted on Cloudflare **Workers** (not Pages), so `functions/api/lead.js` doesn't run there yet. Until it's converted, the panel opens a prefilled email instead, so no message is lost.
 3. **Check the Cloudflare build.** GitHub marks the builds for both `main` and `redesign` as failed, though `main` still publishes. Open the build log in Cloudflare and confirm what that red mark means before merging.
 4. **Content TODOs** (search `src/` for `TODO`): pricing, testimonials and client results, the CallRail stat, and three pain-point stats still to source.
