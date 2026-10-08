@@ -44,6 +44,7 @@ The build also checks the brand rules it can check: no "AI" in visible copy, no 
 | The homepage (hero, tools, services, clients, about teaser, contact) | `src/home.html` |
 | The header, footer or chat panel that appear on every page | `src/layout.html` |
 | One of the Answers pages | `src/answers/` (one file per answer) |
+| Which answers show on the homepage | add `home: yes` to the top of that answer's file (the rest are on the Answers page) |
 | The About page | `src/pages/about.html` |
 | The How we work page | `src/pages/how-we-work.html` |
 | Business facts: email, Calendly link, Facebook, areas served, service list | `src/site.json` |
@@ -67,6 +68,7 @@ updated: 2026-10-04
 crumb: Short name for the breadcrumb
 cta: Button text (optional)
 cta_link: /#time (optional; leave out to open the chat)
+home: yes (optional; shows this answer on the homepage. Keep it to about four.)
 -->
 ```
 

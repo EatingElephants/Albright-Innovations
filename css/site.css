@@ -493,16 +493,16 @@ input[type="range"]:focus-visible::-moz-range-thumb { outline: 2px solid var(--a
 
 /* About */
 .about .wrap { display: grid; gap: clamp(48px, 7vw, 88px); }
-.about .top-row { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.about .top-row, .about-page .top-row { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
 .about-copy { display: grid; gap: 32px; }
-.about .prose .intro-p { color: var(--ink); font-size: var(--t-lead); line-height: 1.5; }
+.about .prose .intro-p, .about-page .prose .intro-p { color: var(--ink); font-size: var(--t-lead); line-height: 1.5; }
 @media (min-width: 861px) { .portrait { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 100px); } }
 .portrait { display: grid; gap: 16px; }
-.portrait img { display: block; width: 100%; max-width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; background: var(--surface); }
+.portrait img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; background: var(--surface); }
 .portrait figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-top: 1px solid var(--line); padding-top: 14px; }
 .portrait .name { font-stretch: var(--wide); font-weight: 600; font-size: 1.15rem; letter-spacing: -0.01em; }
 .portrait .role { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
-@media (max-width: 860px) { .about .top-row { grid-template-columns: 1fr; } .portrait { max-width: 260px; } .portrait .name { white-space: nowrap; } }
+@media (max-width: 860px) { .about .top-row, .about-page .top-row { grid-template-columns: 1fr; } .portrait { max-width: 260px; } .portrait .name { white-space: nowrap; } }
 
 .timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); position: relative; }
 .timeline::before { content: ""; position: absolute; left: 0; right: 0; top: 7px; height: 1px; background: var(--line); }
@@ -641,4 +641,30 @@ footer small a { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* Homepage: link to the full Answers page */
+.see-all { margin-top: 28px; }
+
+/* Phones: short and to the point. The extras stay on larger screens and on their own pages. */
+@media (max-width: 760px) {
+  :root { --section: 52px; }
+  .hero { padding-block: 28px 44px; }
+  .hero-mark,
+  .hero .note,
+  .familiar .src,
+  .tool .bars,
+  .research li:nth-child(n+3),
+  .flow-note,
+  .svc .tags,
+  .outcomes,
+  .clients .lead,
+  .start .closing,
+  .principles { display: none; }
+  .logo-wall li { flex-basis: calc(33.333% - 10px); }
+  .logo-name { display: none; }
+  .tool-head p { display: none; }
+  .about .wrap { gap: 0; }
+  #about .portrait { grid-template-columns: 96px 1fr; align-items: center; max-width: none; }
+  #about .portrait figcaption { border-top: 0; padding-top: 0; flex-direction: column; gap: 4px; }
 }

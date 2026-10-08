@@ -6,7 +6,7 @@ Builds the Albright Innovations website from the files in the src/ folder.
 
 What it does:
   - wraps every page in src/layout.html (the shared header, footer and chat panel)
-  - writes index.html, about/, how-we-work/ and one folder per answer under answers/
+  - writes index.html, about/, how-we-work/, the answers/ list page and one folder per answer under answers/
   - builds the "Answers" section on the homepage from the same answer files
   - writes sitemap.xml, llms.txt and llms-full.txt
   - checks the copy for the brand rules (no "AI", no sentence starting with "And",
@@ -314,12 +314,42 @@ def main():
         )
         extra = [
             ld_faq([(meta["title"], visible_text(meta["short"]), BASE + path)]),
-            ld_breadcrumb([("Home", "/"), ("Answers", "/#answers"), (meta["title"], path)]),
+            ld_breadcrumb([("Home", "/"), ("Answers", "/answers/"), (meta["title"], path)]),
             ld_article(meta, path),
         ]
         write(path.strip("/") + "/index.html", page(path, meta, article, extra, "answer"))
         pages_for_sitemap.append((path, meta["updated"]))
         llms_sections.append((meta["title"], path, meta["short"], body))
+
+    # --- the Answers page: every answer, short version, one list ---
+    def qa_items(items):
+        return "".join(
+            f'<li class="qa"><h3><a href="/answers/{m["slug"]}/">{esc(m["title"])}</a></h3>'
+            f'<p>{m["short"]}</p>'
+            f'<a class="more" href="/answers/{m["slug"]}/">Read the full answer <span class="arrow" aria-hidden="true">&rarr;</span></a></li>'
+            for m, _, _ in items
+        )
+
+    index_meta = {
+        "title": "Answers | Albright Innovations",
+        "description": "Straight answers to the questions small business owners ask about missed calls, follow-up, customer lists, social media, ads, websites and what it costs to work with us.",
+    }
+    index_body = (
+        '<article class="page">\n  <div class="wrap">\n    <div>\n'
+        '      <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Answers</span></nav>\n'
+        '      <div class="head">\n        <p class="label">Answers</p>\n'
+        '        <h1>Questions owners ask us, answered straight.</h1>\n'
+        '        <p class="lead">Short answers here. Each one opens to a full page with the sources.</p>\n'
+        '      </div>\n    </div>\n'
+        f'    <ul class="qa-grid">{qa_items(answers)}</ul>\n'
+        '  </div>\n</article>\n'
+    )
+    index_extra = [
+        ld_faq([(m["title"], visible_text(m["short"]), f'{BASE}/answers/{m["slug"]}/') for m, _, _ in answers]),
+        ld_breadcrumb([("Home", "/"), ("Answers", "/answers/")]),
+    ]
+    write("answers/index.html", page("/answers/", index_meta, index_body, index_extra, "answers"))
+    pages_for_sitemap.append(("/answers/", max(m["updated"] for m, _, _ in answers)))
 
     # --- standalone pages (about, how we work) ---
     for f in sorted((SRC / "pages").glob("*.html")):
@@ -345,14 +375,10 @@ def main():
 
     # --- homepage ---
     meta, body = split_meta(read(SRC / "home.html"), "home.html")
-    answers_html = "".join(
-        f'<li class="qa"><h3><a href="/answers/{m["slug"]}/">{esc(m["title"])}</a></h3>'
-        f'<p>{m["short"]}</p>'
-        f'<a class="more" href="/answers/{m["slug"]}/">Read the full answer <span class="arrow" aria-hidden="true">&rarr;</span></a></li>'
-        for m, _, _ in answers
-    )
-    body = fill(body, answers=answers_html)
-    extra = [ld_faq([(m["title"], visible_text(m["short"]), f'{BASE}/answers/{m["slug"]}/') for m, _, _ in answers])]
+    # The homepage shows only the answers marked "home: yes"; the rest are one tap away on /answers/.
+    featured = [a for a in answers if a[0].get("home") == "yes"] or answers[:4]
+    body = fill(body, answers=qa_items(featured))
+    extra = [ld_faq([(m["title"], visible_text(m["short"]), f'{BASE}/answers/{m["slug"]}/') for m, _, _ in featured])]
     extra += [ld_webapp(t) for t in SITE["tools"]]
     write("index.html", page("/", meta, body, extra, "home"))
     home_updated = max([meta["updated"]] + [u for _, u in pages_for_sitemap])
