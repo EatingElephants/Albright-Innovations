@@ -292,14 +292,16 @@ input[type="range"]:focus-visible::-moz-range-thumb { outline: 2px solid var(--a
 
 .tool-out { display: grid; gap: 16px; border-top: 2px solid var(--ink); padding-top: 18px; }
 .tool-out .title { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
-.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+/* The dollar total gets its own full-width row so a big number never spills out of the box. */
+.stat.big { grid-column: 1 / -1; }
 .stat { display: grid; gap: 4px; align-content: start; }
 .stat .k { font-stretch: var(--narrow); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
 .stat .v {
   font-stretch: var(--wide); font-weight: 600; letter-spacing: -0.02em; line-height: 1.05;
   font-size: clamp(1.5rem, 2.6vw, 2rem); font-variant-numeric: tabular-nums; display: block;
 }
-.stat.big .v { color: var(--accent); font-size: clamp(2rem, 3.8vw, 2.9rem); }
+.stat.big .v { color: var(--accent); font-size: clamp(2rem, 3.8vw, 2.9rem); overflow-wrap: anywhere; }
 .equiv { font-size: var(--t-lead); line-height: 1.4; }
 .bars { display: grid; gap: 8px; }
 .bars li { display: grid; grid-template-columns: minmax(0, 11em) 1fr auto; gap: 10px; align-items: center; font-size: var(--t-small); }
@@ -314,8 +316,6 @@ input[type="range"]:focus-visible::-moz-range-thumb { outline: 2px solid var(--a
 .how summary::marker { color: var(--accent); }
 .how p { margin-top: 8px; max-width: 48em; }
 @media (max-width: 560px) {
-  .stats { grid-template-columns: 1fr 1fr; }
-  .stat.big { grid-column: 1 / -1; }
   .bars li { grid-template-columns: minmax(0, 8em) 1fr auto; }
 }
 
