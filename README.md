@@ -14,7 +14,12 @@ Still to do before it goes live:
 2. **Connect the chat panel to an inbox.** The site is hosted on Cloudflare **Workers** (not Pages), so `functions/api/lead.js` doesn't run there yet. Until it's converted, the panel opens a prefilled email instead, so no message is lost.
 3. **Check the Cloudflare build.** GitHub marks the builds for both `main` and `redesign` as failed, though `main` still publishes. Open the build log in Cloudflare and confirm what that red mark means before merging.
 4. **Content TODOs** (search `src/` for `TODO`): pricing, testimonials and client results, the CallRail stat, and three pain-point stats still to source.
-5. **After it's live:** run Google's Rich Results Test and a Lighthouse check on the real pages.
+5. **Make `www.albright-innovations.com` work.** Right now that address doesn't exist at all. In Cloudflare, add `www` to the site and redirect it to `https://albright-innovations.com`.
+6. **After it's live:**
+   - Confirm https://albright-innovations.com/robots.txt and https://albright-innovations.com/sitemap.xml show the new files, not Cloudflare's stand-in. If Cloudflare's "managed robots.txt" setting is on, it adds its own text to ours; check the result reads sensibly.
+   - Set up Google Search Console for the domain, submit `sitemap.xml`, and use "Request indexing" on the homepage and a few Answers pages. Do the same in Bing Webmaster Tools.
+   - Run Google's Rich Results Test and a Lighthouse check on the real pages.
+   - Earn links from other sites (Google Business Profile, Facebook page, chamber of commerce, local directories, client sites). The domain has none yet, which is why its "Domain Rating" is 0.
 
 ## The one rule
 
