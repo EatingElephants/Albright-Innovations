@@ -105,6 +105,15 @@
   var skipped = C.checkup(Q, [null, 'yes', null, 'yes', 'yes', 'no', 'yes', 'no', 'yes']);
   t('checkup skipped counts as 0', skipped.score, 76);
   t('checkup answered count', skipped.answered, 7);
+  var QS = Q.map(function (q, n) { var c = {}; for (var k in q) { c[k] = q[k]; } c.side = (n === 5 || n === 6) ? 'marketing' : 'operations'; return c; });
+  var noFb = C.checkup(QS, ['no', 'no', 'no', 'no', 'no', 'no', 'no', 'yes', 'no']);
+  t('checkup sides: no weekly Facebook gets a spot over a bigger ops gap', noFb.fixes.map(function (f) { return f.fix; }), ['A', 'B', 'G']);
+  var bothMk = C.checkup(QS, ['no', 'no', 'no', 'no', 'no', 'yes', 'no', 'yes', 'no']);
+  t('checkup sides: the biggest marketing gap is the one shown', bothMk.fixes.map(function (f) { return f.fix; }), ['A', 'B', 'F']);
+  var noMk = C.checkup(QS, ['no', 'no', 'no', 'no', 'no', 'no', 'yes', 'yes', 'no']);
+  t('checkup sides: no marketing gap leaves the top 3 alone', noMk.fixes.map(function (f) { return f.fix; }), ['A', 'B', 'D']);
+  var mkOnly = C.checkup(QS, ['yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'no', 'no', 'yes']);
+  t('checkup sides: marketing-only gaps still listed', mkOnly.fixes.map(function (f) { return f.fix; }), ['F', 'G']);
   var empty = C.checkup([], []);
   t('checkup no questions: 0 not NaN', empty.score, 0);
 

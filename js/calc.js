@@ -115,13 +115,28 @@
       else if (a === 'partly') { credit = q.weight / 2; }
       else { credit = 0; }
       score += credit;
-      if (credit < q.weight) { gaps.push({ index: i, lost: q.weight - credit, fix: q.fix, why: q.why, service: q.service }); }
+      if (credit < q.weight) { gaps.push({ index: i, lost: q.weight - credit, fix: q.fix, why: q.why, service: q.service, side: q.side || '' }); }
     }
     var pct = total > 0 ? Math.round(score / total * 100) : 0;
     gaps.sort(function (x, y) { return y.lost - x.lost || x.index - y.index; });
     var band = LABELS[LABELS.length - 1];
     for (i = 0; i < LABELS.length; i++) { if (pct >= LABELS[i].min) { band = LABELS[i]; break; } }
-    return { score: pct, label: band.label, blurb: band.blurb, fixes: gaps.slice(0, 3), answered: answers.filter(function (x) { return !!x; }).length, total: questions.length };
+    return { score: pct, label: band.label, blurb: band.blurb, fixes: pickFixes(gaps, 3), answered: answers.filter(function (x) { return !!x; }).length, total: questions.length };
+  }
+
+  /* The biggest gaps first, but every side of the business with a gap (operations, marketing)
+     gets at least one spot, so a low-weight marketing gap isn't always crowded out. */
+  function pickFixes(gaps, n) {
+    var picked = gaps.slice(0, n), j, k, side, count;
+    for (j = 0; j < gaps.length; j++) {
+      side = gaps[j].side;
+      if (!side || picked.some(function (f) { return f.side === side; })) { continue; }
+      for (k = picked.length - 1; k >= 0; k--) {
+        count = picked.filter(function (f) { return f.side === picked[k].side; }).length;
+        if (count > 1) { picked[k] = gaps[j]; break; }
+      }
+    }
+    return picked;
   }
 
   /* ---------- formatting ---------- */

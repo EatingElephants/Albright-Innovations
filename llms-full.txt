@@ -7,7 +7,7 @@ Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-i
 ## Services
 
 - [Operations review](https://albright-innovations.com/how-we-work/): A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away.
-- [Tools set up and connected](https://albright-innovations.com/#services): Customer list, scheduling, phones, quoting, invoicing and job tracking, picked to fit how you work and connected so information is entered once.
+- [Tools set up and connected](https://albright-innovations.com/#services): Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have.
 - [Workflows and follow-up](https://albright-innovations.com/#services): Clear steps from first call to close to follow-up, so nothing depends on someone remembering.
 - [Lead tracking and dashboards](https://albright-innovations.com/#services): Every call, message and form tracked to a source, with the numbers you care about in one place.
 - [Social media management](https://albright-innovations.com/#services): Posts planned, scheduled and answered, so your page stays active without you living on it.
@@ -139,9 +139,9 @@ That figure is a ceiling, not a forecast. Some missed callers do try again. The 
 
 ## What to do about it
 
-- Text back every missed call automatically. A message within a minute ("Sorry we missed you, what can we help with?") keeps the caller from moving on while you finish what you're doing.
+- Make sure every caller hears back fast. A quick text, a call back, or someone else picking up. What matters is that they hear from you before they call someone else.
 
-- Put every call in one place. Voicemails transcribed, names and numbers saved to your customer list, so nothing depends on a sticky note.
+- Keep every call in one place. Names, numbers and messages saved where you'll see them, so nothing depends on a sticky note.
 
 - Decide who answers when you can't. A simple rule for who picks up during jobs, after hours and on weekends.
 
@@ -171,13 +171,13 @@ A person who just filled out a form or left a message is sitting with the proble
 
 ## How to hit it without living on your phone
 
-- Automatic text-back on missed calls. The caller hears from you in under a minute even when you're on a ladder. That buys you the time to call back properly.
+- A quick reply to missed calls. Even a short message tells the caller you'll be in touch, and buys you the time to call back properly.
 
 - An instant reply to web forms. "Got your message, we'll call you before 5 today." Then make sure someone does.
 
 - Fewer steps between the visit and the quote. When your pricing and wording are already set up, a quote doesn't have to wait for a free evening.
 
-- One inbox for calls, texts and forms. If leads land in five places, some of them wait. If they land in one, the oldest one is always at the top.
+- One place to check for calls, texts and forms. If leads land in five places, some of them wait. If they land in one, the oldest one is always at the top.
 
 - A rule for who answers. During jobs, after hours, on weekends. Written down, so it isn't a daily decision.
 
@@ -371,7 +371,7 @@ Four lines. If a report has forty, nobody reads it.
 
 - Judging an ad after a week. Most need a month to show a pattern.
 
-Setting this up is the lead tracking and dashboards piece of what we do. We connect the phone, the forms and the invoicing so the source follows the customer, and we build the four-line report.
+Setting this up is the lead tracking and dashboards piece of what we do. We work out with you how the source can follow each customer from the first call to the invoice, using the tools you already have where we can, and we keep the report to four lines.
 
 ## When is it time to redo my business website?
 
@@ -559,7 +559,7 @@ It depends on the scope, and we figure it out together before you commit to anyt
 
 - How many people need training. A two-person shop and a twelve-person crew are different afternoons.
 
-- What you already have. If the tools you pay for now can do the job, we connect them instead of replacing them.
+- What you already have. If the tools you pay for now can do the job, we work with them instead of replacing them.
 
 ## What you'll always know up front
 
@@ -600,7 +600,7 @@ The part I'm proudest of is the part I'm doing again now: sitting down with the 
 
 ## Why I started this
 
-Because the thing I enjoy most is the relief. A business owner who has been carrying too much, and a few weeks later isn't. The calls get answered, the quotes go out the same day, the invoices send themselves, and the Facebook page looks like the busy business it is. That's why I do this.
+Because the thing I enjoy most is the relief. A business owner who has been carrying too much, and a few weeks later isn't. The calls get answered, the quotes and invoices go out on time, and the Facebook page looks like the busy business it is. That's why I do this.
 
 ## How I work
 
@@ -659,7 +659,7 @@ We pick a starting point together, usually the top one or two items on the list,
 
 -
 The build
-Tools picked to fit how you already work and connected so information goes in once. Workflows written down. Follow-up that runs on its own. Your team shown how to use it, usually in an afternoon.
+The fixes we agreed on, built around how you already work, using the tools you already have where they fit. Workflows written down. Follow-up that doesn't depend on memory. Your team shown how to use it.
 
 -
 Being seen

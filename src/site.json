@@ -16,7 +16,7 @@
   ],
   "services": [
     { "name": "Operations review", "url": "/how-we-work/", "desc": "A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away." },
-    { "name": "Tools set up and connected", "url": "/#services", "desc": "Customer list, scheduling, phones, quoting, invoicing and job tracking, picked to fit how you work and connected so information is entered once." },
+    { "name": "Tools set up and connected", "url": "/#services", "desc": "Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have." },
     { "name": "Workflows and follow-up", "url": "/#services", "desc": "Clear steps from first call to close to follow-up, so nothing depends on someone remembering." },
     { "name": "Lead tracking and dashboards", "url": "/#services", "desc": "Every call, message and form tracked to a source, with the numbers you care about in one place." },
     { "name": "Social media management", "url": "/#services", "desc": "Posts planned, scheduled and answered, so your page stays active without you living on it." },

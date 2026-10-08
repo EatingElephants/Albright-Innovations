@@ -164,6 +164,7 @@
         fix: q.getAttribute('data-fix') || '',
         why: q.getAttribute('data-fix-why') || '',
         service: q.getAttribute('data-service') || '',
+        side: q.getAttribute('data-side') || '',
         text: $('legend', q).textContent.trim()
       };
     });
