@@ -6,13 +6,13 @@ Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-i
 
 ## Services
 
-- [Operations review](https://albright-innovations.com/how-we-work/): A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away.
-- [Tools set up and connected](https://albright-innovations.com/#services): Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have.
-- [Workflows and follow-up](https://albright-innovations.com/#services): Clear steps from first call to close to follow-up, so nothing depends on someone remembering.
-- [Lead tracking and dashboards](https://albright-innovations.com/#services): Every call, message and form tracked to a source, with the numbers you care about in one place.
-- [Social media management](https://albright-innovations.com/#services): Posts planned, scheduled and answered, so your page stays active without you living on it.
-- [Social ads](https://albright-innovations.com/#services): Facebook and Instagram ads aimed at people near you who are ready to buy.
-- [Websites](https://albright-innovations.com/#services): A clean, current site that tells people who you are, what you do and how to reach you.
+- [Operations review](https://albright-innovations.com/what-we-do/#operations-review): A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away.
+- [The right tools for how you work](https://albright-innovations.com/what-we-do/#tools): Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have.
+- [Workflows and follow-up](https://albright-innovations.com/what-we-do/#workflows): Clear steps from first call to close to follow-up, so nothing depends on someone remembering.
+- [Lead tracking and reporting](https://albright-innovations.com/what-we-do/#lead-tracking): Working out where your customers come from, so you know which ads, posts and referrals bring in paying work.
+- [Social media management](https://albright-innovations.com/what-we-do/#social-media): Posts planned, scheduled and answered, so your page stays active without you living on it.
+- [Social ads](https://albright-innovations.com/what-we-do/#social-ads): Facebook and Instagram ads aimed at people near you who are ready to buy.
+- [Websites](https://albright-innovations.com/what-we-do/#websites): A clean, current site that tells people who you are, what you do and how to reach you.
 
 ## Free tools
 
@@ -38,6 +38,7 @@ Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-i
 ## About
 
 - [About Joshua Albright](https://albright-innovations.com/about/): Who runs Albright Innovations and the experience behind it.
+- [What we do](https://albright-innovations.com/what-we-do/): Each service, what you get, and who it fits.
 - [How we work](https://albright-innovations.com/how-we-work/): What an operations review involves and how a project runs.
 
 
@@ -694,3 +695,99 @@ We check in on a schedule, fix what drifts, and show you the numbers as they com
 The operations check if the office side is what's wearing you down. A website preview if being found is the problem: we mock up a new homepage for your business so you can see what it could look like, free and with no obligation. Either way, you see our thinking first.
 
 Tell us what's going on →
+
+## What we do | Albright Innovations
+
+Source: https://albright-innovations.com/what-we-do/
+
+Home (/) / What we do
+
+What we do
+Two sides of your business. We help with both.
+
+Getting found, and running smoothly once people find you. Here's what each service is, what you get, and who it fits. Every business is different, so the details always come from a conversation with you first.
+
+Always Improving The office side (#always-improving)
+Authentic Influence Being found (#authentic-influence)
+
+## Always Improving
+
+The office side of the business. If the work gets done but too much of it depends on you remembering, start here.
+
+-
+
+### Operations review
+
+What it isWe follow one job through your business, from the first call to the final invoice, and look for where it slows down or depends on someone's memory.
+What you getA one-page list of what we'd fix first and why, in plain words, ordered by what's costing you the most. It's yours to keep whether or not we work together. What we look at. (/answers/what-does-an-operations-review-involve/)
+A good fit ifYou're busy, the work is good, and the office side feels held together with sticky notes.
+
+-
+
+### The right tools for how you work
+
+What it isHelp choosing, setting up and cleaning up the tools behind the business: your customer list, scheduling, phones, quoting, invoicing and job tracking.
+What you getTools that fit how you already work. The ones you have stay wherever they do the job, and your team is shown how to use what's there.
+A good fit ifYou're paying for software nobody uses, or the business runs on a spreadsheet and your text messages.
+
+-
+
+### Workflows and follow-up
+
+What it isWriting down how work moves through your business, from the first call to the close to the follow-up, so it doesn't live only in your head.
+What you getClear steps your team can follow, a plan for following up after quotes and jobs, and fewer questions that only you can answer.
+A good fit ifNothing moves when you're off the clock, or follow-up happens only when someone remembers.
+
+-
+
+### Lead tracking and reporting
+
+What it isWorking out where your customers come from, so you know which ads, posts and referrals bring in paying work.
+What you getA short, regular report with the few numbers you care about, built from the tools you already use wherever we can. How it works. (/answers/how-do-i-know-which-ads-or-posts-bring-in-customers/)
+A good fit ifYou're spending money on ads and can't say which ones pay for themselves.
+
+## Authentic Influence
+
+Being found by the people around you. If customers don't see you online, or what they see looks out of date, start here.
+
+-
+
+### Social media management
+
+What it isWe plan your posts, write them in your voice, schedule them and answer comments.
+What you getA page that stays active and looks like the busy business you are, built from your real work and your real people, without you living on it.
+A good fit ifYour page hasn't been posted to in months, or posting is the job that always slides. Is it worth paying someone? (/answers/is-it-worth-paying-someone-to-manage-our-social-media/)
+
+-
+
+### Social ads
+
+What it isFacebook and Instagram ads aimed at people near you who are likely to need what you offer.
+What you getAds set up and watched for you, with plain reporting on what they bring in. We don't guarantee numbers; we show you the results as they come in.
+A good fit ifYou've tried boosting posts and couldn't tell whether it worked.
+
+-
+
+### Websites
+
+What it isA new site, or a refresh of the one you have, that says who you are, what you do and how to reach you.
+What you getA clean, current site that works on a phone, kept up to date after it launches. Before you decide anything, we can mock up a new homepage so you can see it first.
+A good fit ifYour site hasn't changed in years, or you don't have one yet. What a small business site needs. (/answers/what-should-a-small-business-website-have-on-it/)
+
+## Both sides, together
+
+You can start with one side and add the other later. When we look after both, one team sees the whole business, from the first post a customer sees to the final invoice, so the marketing brings in work the office is ready to handle.
+
+## What we don't do
+
+- We don't promise numbers. We show you the results as they come in.
+
+- We don't make you switch tools that already work for you.
+
+- We don't take on more clients than we can look after well.
+
+## Not sure where to start?
+
+Take the 2-minute operations checkup (/#checkup), or tell us what's eating up your week and we'll tell you which side we'd start with. Here's how a project runs. (/how-we-work/)
+
+Send us a message →

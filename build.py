@@ -404,6 +404,7 @@ def main():
     lines += ["## Free tools", ""] + [f"- [{t['name']}]({BASE}{t['url']}): {t['desc']}" for t in SITE["tools"]] + [""]
     lines += ["## Answers to common questions", ""] + [f"- [{t}]({BASE}{p}): {visible_text(s)}" for t, p, s, _ in llms_sections] + [""]
     lines += ["## About", "", f"- [About {SITE['founder']}]({BASE}/about/): Who runs Albright Innovations and the experience behind it.",
+              f"- [What we do]({BASE}/what-we-do/): Each service, what you get, and who it fits.",
               f"- [How we work]({BASE}/how-we-work/): What an operations review involves and how a project runs.", ""]
     write("llms.txt", "\n".join(lines))
 

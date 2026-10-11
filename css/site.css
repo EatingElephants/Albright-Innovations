@@ -395,6 +395,8 @@ input[type="range"]:focus-visible::-moz-range-thumb { outline: 2px solid var(--a
 .svc { display: grid; gap: 0; }
 .svc li { padding-block: 22px; border-top: 1px solid var(--line); display: grid; gap: 6px; }
 .svc li p { color: var(--muted); max-width: 32em; }
+.svc h3 a { text-decoration: none; }
+.svc h3 a:hover { color: var(--accent); }
 .svc .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .svc .tags span {
   font-stretch: var(--narrow); font-weight: 600; font-size: 0.72rem;
@@ -668,3 +670,21 @@ footer small a { color: var(--muted); }
   #about .portrait { grid-template-columns: 96px 1fr; align-items: center; max-width: none; }
   #about .portrait figcaption { border-top: 0; padding-top: 0; flex-direction: column; gap: 4px; }
 }
+
+/* What we do page */
+.wwd-jump { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 32px; max-width: 42em; }
+.wwd-jump a { display: grid; gap: 4px; padding: 16px 18px; border: 1.5px solid var(--line); border-radius: 2px; text-decoration: none; font-stretch: var(--wide); font-weight: 700; font-size: 1.1rem; color: var(--ink); transition: border-color .2s; }
+.wwd-jump a:hover { border-color: var(--accent); }
+.wwd-jump b, .wwd-side-head h2 b { font-weight: inherit; color: var(--accent); }
+.wwd-jump .wwd-jump-sub { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.wwd-side { display: grid; gap: 24px; padding: 0; scroll-margin-top: 90px; }
+.wwd-side-head { display: grid; gap: 8px; max-width: 42em; }
+.wwd-side-head h2 { font-stretch: var(--wide); font-weight: 700; letter-spacing: -0.02em; }
+.wwd-side-head p { color: var(--muted); font-size: var(--t-lead); line-height: 1.5; }
+.wwd-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(24px, 4vw, 56px); border-top: 2px solid var(--ink); }
+.wwd { display: grid; gap: 14px; align-content: start; padding-block: 24px; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
+.wwd dl { display: grid; gap: 10px; }
+.wwd dt { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+.wwd dd { color: var(--muted); margin: -6px 0 4px; }
+.wwd dd a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+@media (max-width: 760px) { .wwd-list { grid-template-columns: 1fr; } .wwd-jump { grid-template-columns: 1fr; } }

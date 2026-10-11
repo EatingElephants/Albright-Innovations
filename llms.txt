@@ -6,13 +6,13 @@ Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-i
 
 ## Services
 
-- [Operations review](https://albright-innovations.com/how-we-work/): A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away.
-- [Tools set up and connected](https://albright-innovations.com/#services): Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have.
-- [Workflows and follow-up](https://albright-innovations.com/#services): Clear steps from first call to close to follow-up, so nothing depends on someone remembering.
-- [Lead tracking and dashboards](https://albright-innovations.com/#services): Every call, message and form tracked to a source, with the numbers you care about in one place.
-- [Social media management](https://albright-innovations.com/#services): Posts planned, scheduled and answered, so your page stays active without you living on it.
-- [Social ads](https://albright-innovations.com/#services): Facebook and Instagram ads aimed at people near you who are ready to buy.
-- [Websites](https://albright-innovations.com/#services): A clean, current site that tells people who you are, what you do and how to reach you.
+- [Operations review](https://albright-innovations.com/what-we-do/#operations-review): A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away.
+- [The right tools for how you work](https://albright-innovations.com/what-we-do/#tools): Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have.
+- [Workflows and follow-up](https://albright-innovations.com/what-we-do/#workflows): Clear steps from first call to close to follow-up, so nothing depends on someone remembering.
+- [Lead tracking and reporting](https://albright-innovations.com/what-we-do/#lead-tracking): Working out where your customers come from, so you know which ads, posts and referrals bring in paying work.
+- [Social media management](https://albright-innovations.com/what-we-do/#social-media): Posts planned, scheduled and answered, so your page stays active without you living on it.
+- [Social ads](https://albright-innovations.com/what-we-do/#social-ads): Facebook and Instagram ads aimed at people near you who are ready to buy.
+- [Websites](https://albright-innovations.com/what-we-do/#websites): A clean, current site that tells people who you are, what you do and how to reach you.
 
 ## Free tools
 
@@ -38,4 +38,5 @@ Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-i
 ## About
 
 - [About Joshua Albright](https://albright-innovations.com/about/): Who runs Albright Innovations and the experience behind it.
+- [What we do](https://albright-innovations.com/what-we-do/): Each service, what you get, and who it fits.
 - [How we work](https://albright-innovations.com/how-we-work/): What an operations review involves and how a project runs.
