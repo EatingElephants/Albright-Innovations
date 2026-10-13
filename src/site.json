@@ -7,6 +7,13 @@
   "facebook": "https://www.facebook.com/profile.php?id=61594813718085",
   "founder": "Joshua Albright",
   "founded": "2025",
+  "landing": {
+    "lead_endpoint": "",
+    "lead_access_key": "",
+    "meta_pixel_id": "",
+    "booking_url": "",
+    "free_website_video": ""
+  },
   "summary": "Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads and websites, and we set up the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. We work with businesses in Big Rapids and West Michigan and in Charlotte, Waxhaw and Union County, North Carolina, and with remote clients anywhere in the United States.",
   "areas": [
     {

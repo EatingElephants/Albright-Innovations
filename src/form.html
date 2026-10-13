@@ -1,0 +1,54 @@
+<!-- The lead form, shared by every landing page. build.py fills the {{...}} slots from each
+     page's meta block: offer name, heading, button text, the line under the button, where the
+     optional notes field sits, and any extra fields the page asks for. The hidden tracking fields
+     are filled by js/lead.js from the page address (utm_source and friends), so each lead says
+     which ad it came from. -->
+<section class="lp-sec lp-form" id="form">
+  <div class="wrap">
+    <div class="head">
+      <p class="label">{{offer}}</p>
+      <h2>{{heading}}</h2>
+    </div>
+    <form class="lead-form" method="post" action="{{action}}"{{enctype}} data-endpoint="{{endpoint}}" data-key="{{key}}" data-thanks="{{thanks}}" data-email="{{email}}" data-offer="{{offer}}">
+      <!-- Spam trap: people never see this field. If it has a value, the lead is not real. -->
+      <div class="hp" aria-hidden="true"><label for="f-fax">Fax</label><input id="f-fax" name="company_fax" type="text" tabindex="-1" autocomplete="off"></div>
+      <input type="hidden" name="offer" value="{{offer}}">
+      <input type="hidden" name="utm_source" value="">
+      <input type="hidden" name="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" value="">
+      <input type="hidden" name="utm_content" value="">
+      <input type="hidden" name="page_url" value="{{page_url}}">
+{{before}}
+      <div class="two">
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="f-business">Business name</label><input id="f-business" name="business" type="text" autocomplete="organization" required></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+      </div>
+      <div class="field">
+        <label for="f-website">Your website, or your Google or Facebook page</label>
+        <input id="f-website" name="website" type="text" inputmode="url" autocomplete="url" required aria-describedby="f-website-help">
+        <p class="help" id="f-website-help">No website? Your Google or Facebook page works too.</p>
+      </div>
+      <div class="field"><label for="f-type">Type of business</label><input id="f-type" name="business_type" type="text" required placeholder="Plumber, salon, landscaper, restaurant..."></div>
+      <fieldset class="field choice">
+        <legend>Where are you?</legend>
+        <div class="choices">
+          <label><input type="radio" name="area" value="Big Rapids area" required>Big Rapids area</label>
+          <label><input type="radio" name="area" value="Waxhaw / South Charlotte">Waxhaw&ndash;South Charlotte</label>
+          <label><input type="radio" name="area" value="Somewhere else">Somewhere else</label>
+        </div>
+      </fieldset>
+{{extra}}
+{{notes}}
+      <div class="form-actions">
+        <button class="btn primary" type="submit">{{button}} <span class="arrow" aria-hidden="true">&rarr;</span></button>
+        <p class="form-after">{{after}}</p>
+      </div>
+      <div class="form-status" role="status" aria-live="polite"></div>
+      <p class="form-foot">Prefer email? <a href="mailto:{{email}}">{{email}}</a> works too.</p>
+    </form>
+  </div>
+</section>

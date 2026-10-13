@@ -9,4 +9,4 @@ else PY="python"
 fi
 
 $PY build.py || { echo; echo "The site did not build. Fix the message above, then commit again."; exit 1; }
-git add index.html sitemap.xml llms.txt llms-full.txt answers about how-we-work
+git add index.html sitemap.xml llms.txt llms-full.txt answers about how-we-work what-we-do free-website operations contractors

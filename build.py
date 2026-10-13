@@ -8,6 +8,8 @@ What it does:
   - wraps every page in src/layout.html (the shared header, footer and chat panel)
   - writes index.html, about/, how-we-work/, the answers/ list page and one folder per answer under answers/
   - builds the "Answers" section on the homepage from the same answer files
+  - builds the landing pages in src/landing/ (free-website, operations, contractors) with the shared
+    layout in src/landing.html and the shared lead form in src/form.html
   - writes sitemap.xml, llms.txt and llms-full.txt
   - checks the copy for the brand rules (no "AI", no sentence starting with "And",
     every link a full https:// address) and stops with a clear message if one breaks
@@ -239,7 +241,7 @@ def asset_version(rel):
     return hashlib.sha1((ROOT / rel).read_bytes()).hexdigest()[:8]
 
 
-ASSETS = {rel: asset_version(rel) for rel in ("css/site.css", "js/calc.js", "js/tools.js", "js/chat.js")}
+ASSETS = {rel: asset_version(rel) for rel in ("css/site.css", "js/calc.js", "js/tools.js", "js/chat.js", "js/lead.js")}
 
 
 def version_assets(h):
@@ -248,11 +250,11 @@ def version_assets(h):
     return h
 
 
-def page(path, meta, body, extra_ld, page_name):
+def page(path, meta, body, extra_ld, page_name, template=None, business=True, **more):
     canonical = BASE + path
-    ldjson = ld(ld_business()) + "\n" + "\n".join(ld(x) for x in extra_ld)
+    ldjson = "\n".join(ld(x) for x in ([ld_business()] if business else []) + extra_ld)
     out = fill(
-        layout,
+        template or layout,
         title=esc(meta["title"]),
         description=esc(meta["description"]),
         canonical=canonical,
@@ -265,10 +267,162 @@ def page(path, meta, body, extra_ld, page_name):
         email=SITE["email"],
         calendly=SITE["calendly"],
         facebook=SITE["facebook"],
+        **more,
     )
     out = absolutize(version_assets(out))
     check_copy(out, path)
     return out
+
+
+# ---------- landing pages (/free-website, /operations, /contractors) ----------
+# One job per page, no menu, a shared lead form. Settings live in src/site.json under "landing".
+
+landing_tpl = read(SRC / "landing.html")
+form_tpl = read(SRC / "form.html")
+LANDING = SITE.get("landing", {})
+
+# Extra form fields a page can ask for with a "form_extra:" line in its meta block.
+FORM_EXTRAS = {
+    "contractors": (
+        '      <fieldset class="field choice">\n'
+        '        <legend>Crew size</legend>\n'
+        '        <div class="choices">\n'
+        '          <label><input type="radio" name="crew" value="Just me" required>Just me</label>\n'
+        '          <label><input type="radio" name="crew" value="2 to 4">2 to 4</label>\n'
+        '          <label><input type="radio" name="crew" value="5 to 10">5 to 10</label>\n'
+        '          <label><input type="radio" name="crew" value="More than 10">More than 10</label>\n'
+        '        </div>\n'
+        '      </fieldset>\n'
+        '      <div class="field"><label for="f-jobs">Where do most of your jobs come from?</label><input id="f-jobs" name="jobs_from" type="text" required placeholder="Referrals, Google, Facebook, truck signs..."></div>\n'
+    ),
+}
+
+
+def lead_form(meta, path):
+    """The shared form, filled for one page."""
+    for key in ("offer", "thanks", "form_heading", "form_button", "form_after", "form_notes_label"):
+        if key not in meta:
+            sys.exit(f"{path}: the meta block needs a '{key}:' line for the form")
+    endpoint = LANDING.get("lead_endpoint", "").strip()
+    first = meta.get("form_notes_first") == "yes"
+    notes = (
+        f'      <div class="field{" big" if first else ""}">\n'
+        f'        <label for="f-notes">{esc(meta["form_notes_label"])}</label>\n'
+        f'        <textarea id="f-notes" name="notes" rows="{6 if first else 4}"></textarea>\n'
+        f'        <p class="help">{"Optional, but it helps. A sentence or two is plenty." if first else "Optional."}</p>\n'
+        f'      </div>\n'
+    )
+    extra = FORM_EXTRAS.get(meta.get("form_extra", ""), "")
+    if meta.get("form_extra") and not extra:
+        sys.exit(f"{path}: unknown form_extra '{meta['form_extra']}' (known: {sorted(FORM_EXTRAS)})")
+    # Without JavaScript the form still goes somewhere: the endpoint if there is one, otherwise the
+    # visitor's email program with the fields typed in.
+    if endpoint:
+        action, enctype = esc(endpoint), ""
+    else:
+        action = f'mailto:{SITE["email"]}?subject={esc(meta["offer"])}%20request'
+        enctype = ' enctype="text/plain"'
+    return fill(
+        form_tpl,
+        offer=esc(meta["offer"]),
+        heading=esc(meta["form_heading"]),
+        button=esc(meta["form_button"]),
+        after=esc(meta["form_after"]),
+        action=action,
+        enctype=enctype,
+        endpoint=esc(endpoint),
+        key=esc(LANDING.get("lead_access_key", "").strip()),
+        thanks=esc(meta["thanks"]),
+        email=SITE["email"],
+        page_url=BASE + path,
+        before=notes if first else "",
+        extra=extra,
+        notes="" if first else notes,
+    )
+
+
+def pixel_html(lead_event):
+    """Meta Pixel base code, only when an ID is set. The thank-you pages also fire "Lead"."""
+    pid = re.sub(r"\D", "", LANDING.get("meta_pixel_id", ""))
+    if not pid:
+        return "<!-- Meta Pixel is off. TODO: paste your Pixel ID into src/site.json (landing > meta_pixel_id) and rebuild. -->"
+    lead = "\nfbq('track', 'Lead');" if lead_event else ""
+    return (
+        "<!-- Meta Pixel -->\n<script>\n"
+        "!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};"
+        "if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;"
+        "s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');\n"
+        f"fbq('init', '{pid}');\nfbq('track', 'PageView');{lead}\n</script>\n"
+        f'<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id={pid}&ev=PageView&noscript=1"></noscript>'
+    )
+
+
+def video_html():
+    """The video slot on /free-website: a poster until a link is set, then YouTube or an MP4."""
+    v = LANDING.get("free_website_video", "").strip()
+    poster = "/img/free-website-poster.png"
+    if not v:
+        return (
+            '        <!-- TODO: video. Put the YouTube link (unlisted is fine) or the path to an MP4 in this repo into\n'
+            '             src/site.json (landing > free_website_video) and rebuild. Until then the poster shows. -->\n'
+            f'        <div class="video-frame"><img src="{poster}" alt="The free website offer, explained in about two minutes" width="1280" height="720"></div>'
+        )
+    yt = re.search(r"(?:youtu\.be/|[?&]v=|/embed/|/shorts/|/live/)([A-Za-z0-9_-]{11})", v)
+    if yt:
+        return (
+            f'        <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/{yt.group(1)}" title="The free website offer, explained in about two minutes" '
+            'loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
+            'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>'
+        )
+    src = v if v.startswith("https://") else "/" + v.lstrip("/")
+    return (
+        f'        <div class="video-frame"><video controls preload="none" playsinline poster="{poster}" width="1280" height="720">'
+        f'<source src="{esc(src)}" type="video/mp4">Your browser can\'t play this video. <a href="{esc(src)}">Download it instead.</a></video></div>'
+    )
+
+
+def booking_html():
+    """The booking slot on /contractors/thanks: a button when a link is set, a plain line until then."""
+    url = LANDING.get("booking_url", "").strip()
+    if url:
+        return (
+            '    <div class="booking">\n'
+            f'      <a class="btn primary" href="{esc(url)}" target="_blank" rel="noopener">Pick a time for the call <span class="arrow" aria-hidden="true">&rarr;</span></a>\n'
+            '      <p class="help">Opens our calendar. Pick any 15-minute slot that suits you.</p>\n'
+            '    </div>'
+        )
+    return (
+        '    <!-- TODO: booking link. Paste your Cal.com (or Calendly) link into src/site.json (landing > booking_url)\n'
+        '         and rebuild. Until then this says we will email a time. -->\n'
+        '    <div class="booking"><p class="lead-card-line"><b>We\'ll email you a couple of times that work</b></p><p class="help">Usually within two business days. Reply with the one you like, or suggest another.</p></div>'
+    )
+
+
+def faq_pairs(body):
+    """Every <dt>question</dt><dd>answer</dd> in the page, so the FAQ schema always matches the HTML."""
+    return [(visible_text(q).strip(), visible_text(a).strip()) for q, a in re.findall(r"<dt>(.*?)</dt>\s*<dd>(.*?)</dd>", body, re.S)]
+
+
+def ld_service(meta, path):
+    s = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": BASE + path + "#service",
+        "name": meta.get("service_name", meta["title"].split("|")[0].strip()),
+        "serviceType": meta["offer"],
+        "description": meta["description"],
+        "url": BASE + path,
+        "image": BASE + meta.get("og", DEFAULT_OG),
+        "provider": {"@id": BASE + "/#organization"},
+        "areaServed": [{"@type": "Place", "name": a["name"]} for a in SITE["areas"]],
+    }
+    if meta["offer"].lower().startswith("free"):
+        s["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": BASE + path}
+    return s
+
+
+def ld_organization():
+    return ld_business()["@graph"][0]
 
 
 def main():
@@ -373,6 +527,42 @@ def main():
         write(path.strip("/") + "/index.html", page(path, meta, body, extra, path.strip("/")))
         pages_for_sitemap.append((path, meta["updated"]))
 
+    # --- landing pages: one folder per page, thank-you pages kept out of the sitemap ---
+    landing_written = []
+    for f in sorted((SRC / "landing").glob("*.html")):
+        meta, body = split_meta(read(f), f.name)
+        for key in ("path", "offer"):
+            if key not in meta:
+                sys.exit(f"{f.name}: the meta block needs a '{key}:' line")
+        path = meta["path"]
+        is_thanks = meta.get("thanks") == "yes"
+        if not is_thanks and "cta" not in meta:
+            sys.exit(f"{f.name}: the meta block needs a 'cta:' line (the sticky phone button text)")
+        body = body.replace("{{form}}", "" if is_thanks else lead_form(meta, path))
+        body = body.replace("{{video}}", video_html()).replace("{{booking}}", booking_html())
+        faq = faq_pairs(body)
+        graph = [ld_organization(), ld_service(meta, path)]
+        if faq:
+            graph.append(ld_faq([(q, a, BASE + path) for q, a in faq]))
+            graph[-1].pop("@context", None)
+        graph[1].pop("@context", None)
+        extra = [{"@context": "https://schema.org", "@graph": graph}]
+        sticky = "" if is_thanks else f'<div class="stickybar landing-sticky" aria-label="Quick action"><a class="btn primary" href="#form">{esc(meta["cta"])}</a></div>'
+        scripts = '<script src="/js/calc.js" defer></script>\n<script src="/js/tools.js" defer></script>' if meta.get("tools") == "yes" else ""
+        out = page(
+            path, meta, body, extra, path.strip("/").replace("/", "-"),
+            template=landing_tpl, business=False,
+            robots=meta.get("robots", "index, follow"),
+            pixel=pixel_html(lead_event=is_thanks),
+            sticky=sticky,
+            scripts=scripts,
+        )
+        rel = path.strip("/") + "/index.html"
+        write(rel, out)
+        landing_written.append(rel)
+        if not is_thanks:
+            pages_for_sitemap.append((path, meta["updated"]))
+
     # --- homepage ---
     meta, body = split_meta(read(SRC / "home.html"), "home.html")
     # The homepage shows only the answers marked "home: yes"; the rest are one tap away on /answers/.
@@ -385,7 +575,7 @@ def main():
     pages_for_sitemap.insert(0, ("/", home_updated))
 
     # --- links to answer pages must point at real answers ---
-    for rel in ["index.html"] + [p.strip("/") + "/index.html" for p, _ in pages_for_sitemap[1:]]:
+    for rel in ["index.html"] + [p.strip("/") + "/index.html" for p, _ in pages_for_sitemap[1:]] + landing_written:
         for m in re.finditer(re.escape(BASE) + r"/answers/([a-z0-9-]+)/", read(ROOT / rel)):
             if m.group(1) not in slugs:
                 problems.append(f"{rel}: links to an answer that does not exist: {m.group(1)}")

@@ -2,29 +2,44 @@
 
 The site at https://albright-innovations.com. Everything you'd ever want to change lives in the `src` folder. A small script turns it into the finished pages.
 
-## Where we left off (October 8, 2026)
+## Where we left off (October 13, 2026)
 
 The redesign is **in progress on the `redesign` branch**. The live site is still the old one, on `main`. Nothing here is public until `redesign` is merged into `main`.
 
 To look at it: double-click **`preview.bat`** in this folder. Your browser opens the new site at http://localhost:8080. Leave the black window open while you look, and close it when you're done.
 
-Still to do before it goes live:
+**What's done so far**
 
-1. **Polish.** Keep reviewing on a phone and a computer. Done on October 8: a phone menu, a much shorter phone homepage, a new Answers page (the homepage shows the 4 marked `home: yes`), a shorter About on the homepage, the portrait and calculator-total fixes, and the checkup always including a marketing fix when there's a marketing gap.
-   - **Copy rule:** stay broad about operations. Describe finding and fixing each business's bottlenecks after talking with the owner, never specific features (phone quoting, automatic texts, online booking, pay links). There are no technology partners yet, and every business needs something different.
-2. **Connect the chat panel to an inbox.** The site is hosted on Cloudflare **Workers** (not Pages), so `functions/api/lead.js` doesn't run there yet. Until it's converted, the panel opens a prefilled email instead, so no message is lost.
-3. **Check the Cloudflare build.** GitHub marks the builds for both `main` and `redesign` as failed, though `main` still publishes. Open the build log in Cloudflare and confirm what that red mark means before merging.
-4. **Content TODOs** (search `src/` for `TODO`): pricing, testimonials and client results, the CallRail stat, and three pain-point stats still to source.
-5. **Make `www.albright-innovations.com` work.** Right now that address doesn't exist at all. In Cloudflare, add `www` to the site and redirect it to `https://albright-innovations.com`.
-6. **After it's live:**
+- October 4: the redesign itself. Homepage with the three tools (time calculator, missed-call calculator, operations checkup), the Answers pages, About, How we work, the chat panel, the share images, and the build script with its brand checks.
+- October 8: a phone menu, a much shorter phone homepage, an Answers page (the homepage shows the four marked `home: yes`), a shorter About on the homepage, the portrait and calculator-total fixes, the checkup always including a marketing fix when there's a marketing gap, and broader operations wording everywhere.
+- October 11: a **What we do** page (`/what-we-do/`) with every service, what you get and who it fits, split into the two sides of the business. It's in the menu and the footer.
+- October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. **Not committed yet** as of this note; commit when you've looked them over.
+
+**Copy rules that came out of the work**
+
+- Stay broad about operations. Describe finding and fixing each business's bottlenecks after talking with the owner, never specific features (phone quoting, automatic texts, online booking, pay links). There are no technology partners yet, and every business needs something different.
+- The landing pages are the one place the 24/7 assistant is described in any detail, because those offers are built around it. Keep the main site broad.
+- No prices anywhere. Pricing isn't set.
+
+**Still to do before it goes live**
+
+1. **Keep polishing.** Review on a phone and a computer, especially the landing pages, which are new.
+2. **Finish the landing pages.** In `src/site.json` under `landing`: connect the form (`lead_endpoint`, see below), paste the Pixel ID, add the video link and the booking link. Confirm the "within two business days" promise on the thank-you pages. Approve the contractor page copy, which is a draft (every section is marked `TODO DRAFT COPY`).
+3. **Connect the chat panel to an inbox.** The site is hosted on Cloudflare **Workers** (not Pages), so `functions/api/lead.js` doesn't run there yet. Until it's converted, the panel opens a prefilled email instead, so no message is lost. Once the landing-page form is connected, the same service can take the chat panel too.
+4. **Check the Cloudflare build.** GitHub marks the builds for both `main` and `redesign` as failed, though `main` still publishes. Open the build log in Cloudflare and confirm what that red mark means before merging.
+5. **Content TODOs** (search `src/` for `TODO`): pricing, testimonials and client results, the CallRail stat, three pain-point stats still to source, and the landing-page items above.
+6. **Make `www.albright-innovations.com` work.** Right now that address doesn't exist at all. In Cloudflare, add `www` to the site and redirect it to `https://albright-innovations.com`.
+7. **Merge `redesign` into `main`** once the above is done. Cloudflare publishes within a minute.
+8. **After it's live:**
    - Confirm https://albright-innovations.com/robots.txt and https://albright-innovations.com/sitemap.xml show the new files, not Cloudflare's stand-in. If Cloudflare's "managed robots.txt" setting is on, it adds its own text to ours; check the result reads sensibly.
-   - Set up Google Search Console for the domain, submit `sitemap.xml`, and use "Request indexing" on the homepage and a few Answers pages. Do the same in Bing Webmaster Tools.
-   - Run Google's Rich Results Test and a Lighthouse check on the real pages.
+   - Set up Google Search Console for the domain, submit `sitemap.xml`, and use "Request indexing" on the homepage, the What we do page and a few Answers pages. Do the same in Bing Webmaster Tools.
+   - Run Google's Rich Results Test and a Lighthouse check on the real pages, including the three landing pages.
    - Earn links from other sites (Google Business Profile, Facebook page, chamber of commerce, local directories, client sites). The domain has none yet, which is why its "Domain Rating" is 0.
+   - Give each Facebook ad its own landing-page link with tracking values (see "Landing pages for ads").
 
 ## The one rule
 
-**Edit files in `src/`, never the finished pages.** `index.html`, the `answers/`, `about/` and `how-we-work/` folders, `sitemap.xml`, `llms.txt` and `llms-full.txt` are all generated. If you edit them by hand, the next build overwrites your change.
+**Edit files in `src/`, never the finished pages.** `index.html`, the `answers/`, `about/`, `how-we-work/`, `what-we-do/`, `free-website/`, `operations/` and `contractors/` folders, `sitemap.xml`, `llms.txt` and `llms-full.txt` are all generated. If you edit them by hand, the next build overwrites your change.
 
 ## How to change something
 
@@ -48,12 +63,17 @@ The build also checks the brand rules it can check: no "AI" in visible copy, no 
 | Which answers show on the homepage | add `home: yes` to the top of that answer's file (the rest are on the Answers page) |
 | The About page | `src/pages/about.html` |
 | The How we work page | `src/pages/how-we-work.html` |
+| The What we do page | `src/pages/what-we-do.html` |
+| A landing page or its thank-you page | `src/landing/` (one file per page) |
+| The lead form on the landing pages | `src/form.html` (fields), the top of each page's file (heading, button, offer name) |
+| The landing-page settings: form endpoint, Pixel ID, video, booking link | `src/site.json`, under `landing` |
 | Business facts: email, Calendly link, Facebook, areas served, service list | `src/site.json` |
 | Colors, fonts, spacing | `css/site.css` |
 | The calculator math | `js/calc.js` (tests in `tests/calc.html`) |
 | How the tools and the chat behave | `js/tools.js`, `js/chat.js` |
+| How the landing-page form behaves | `js/lead.js` |
 | Logos and the portrait | `img/` |
-| The share image people see when a link is pasted | run `py -3 make_og.py` after editing the words in it |
+| The share images people see when a link is pasted | run `py -3 make_og.py` after editing the words in it (one image per page, plus the video poster) |
 
 ## Adding an answer
 
@@ -75,6 +95,24 @@ home: yes (optional; shows this answer on the homepage. Keep it to about four.)
 
 Write the rest of the file in plain HTML: `<h2>` headings as questions, `<ul>` and `<table>` where they help, a source link at the end. Rebuild, and the page, the homepage card, the sitemap and llms.txt all update together.
 
+## Landing pages for ads
+
+Three pages built for Facebook ads, each with one job and no menu: **`/free-website`** (the free website rebuild), **`/operations`** (start a conversation about how the business runs) and **`/contractors`** (the 24/7 assistant, still a draft). Each has a thank-you page at `/.../thanks/`. They're in the sitemap but not in the site menu.
+
+Where the words live: `src/landing/`. Shared pieces: `src/landing.html` (the layout) and `src/form.html` (the form). The settings below are in `src/site.json` under `"landing"`. After changing any of them, run the build.
+
+**Connect the form (`lead_endpoint`).** Until this is set, the form opens the visitor's email program with everything typed in, so nothing is lost. The simplest option is [Web3Forms](https://web3forms.com/): enter your email on their site, they send you an access key, paste the key into `lead_access_key` and set `lead_endpoint` to `https://api.web3forms.com/submit`. Every lead arrives as an email with all the fields, including which ad it came from. Free up to about 250 a month at the time of writing. Formspree works the same way with its form address and no key (free up to about 50 a month). A Google Apps Script that writes to a Sheet also works: set `lead_endpoint` to the script's web-app address and leave the key blank.
+
+**Tell which ad a lead came from.** Give each ad its own link, for example `https://albright-innovations.com/free-website/?utm_source=facebook&utm_medium=paid&utm_campaign=free-website&utm_content=ad-a` (and `ad-b` for the other one). Those values ride along with every lead, together with the page address.
+
+**Meta Pixel (`meta_pixel_id`).** Paste your Pixel ID. The base code goes on every landing page, and the thank-you pages fire a "Lead" event. With the ID blank, nothing is loaded.
+
+**The video (`free_website_video`).** A YouTube link (unlisted is fine) or the path to an MP4 in this folder. Until it's set, the poster image shows.
+
+**The booking link (`booking_url`).** Your Cal.com or Calendly link. It appears as a button on the contractors thank-you page. Until it's set, that page says we'll email a time.
+
+Share images for the three pages come from `py -3 make_og.py free-website.png operations.png contractors.png`. The video poster is `py -3 make_og.py poster`.
+
 ## Connecting the chat panel to your inbox
 
 **Not working yet.** The "Tell us what's going on" panel sends to `/api/lead`. The code for that address (`functions/api/lead.js`) was written for Cloudflare Pages, but this site runs on Cloudflare Workers, which doesn't use that folder. It needs converting to a small Worker script before it can forward messages to a form service (Formspree, Zapier, Make, Basin, a CRM webhook, anything that takes a JSON POST) through a `LEAD_WEBHOOK` setting.
@@ -93,4 +131,4 @@ Until then, the panel opens a prefilled email instead, so nothing is lost.
 
 ## Open TODOs
 
-Search the `src/` folder for `TODO`. As of this writing: pricing (no numbers yet), client testimonials and results, the lead follow-up workflow, and three stats we'd like to add once we find a source we can link to.
+Search the `src/` folder for `TODO`. As of this writing: pricing (no numbers yet), client testimonials and results, the lead follow-up workflow, three stats we'd like to add once we find a source we can link to, the landing-page settings (form endpoint, Pixel ID, video, booking link), the two-business-day promise on the thank-you pages, the landing-page photo of Josh, and the contractor page copy, which is a draft.
