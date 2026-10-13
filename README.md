@@ -13,12 +13,12 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 - October 4: the redesign itself. Homepage with the three tools (time calculator, missed-call calculator, operations checkup), the Answers pages, About, How we work, the chat panel, the share images, and the build script with its brand checks.
 - October 8: a phone menu, a much shorter phone homepage, an Answers page (the homepage shows the four marked `home: yes`), a shorter About on the homepage, the portrait and calculator-total fixes, the checkup always including a marketing fix when there's a marketing gap, and broader operations wording everywhere.
 - October 11: a **What we do** page (`/what-we-do/`) with every service, what you get and who it fits, split into the two sides of the business. It's in the menu and the footer.
-- October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. **Not committed yet** as of this note; commit when you've looked them over.
+- October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. Committed later that day, and the main site was brought into line with them: the free website replaces the old "website preview" everywhere, and the assistant and Google Business Profile are on the What we do page and the homepage services list.
 
 **Copy rules that came out of the work**
 
 - Stay broad about operations. Describe finding and fixing each business's bottlenecks after talking with the owner, never specific features (phone quoting, automatic texts, online booking, pay links). There are no technology partners yet, and every business needs something different.
-- The landing pages are the one place the 24/7 assistant is described in any detail, because those offers are built around it. Keep the main site broad.
+- The 24/7 assistant is a real offer (website chat, and the phone line when a call isn't answered), so it can be described. Every other operations promise stays broad.
 - No prices anywhere. Pricing isn't set.
 
 **Still to do before it goes live**
@@ -36,6 +36,16 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
    - Run Google's Rich Results Test and a Lighthouse check on the real pages, including the three landing pages.
    - Earn links from other sites (Google Business Profile, Facebook page, chamber of commerce, local directories, client sites). The domain has none yet, which is why its "Domain Rating" is 0.
    - Give each Facebook ad its own landing-page link with tracking values (see "Landing pages for ads").
+
+## Approved facts about Josh
+
+Use these and nothing more, and don't name the former employer.
+
+- Grew up in a third-generation Albright family business in Big Rapids, Michigan.
+- Marketing degree, University of North Carolina at Charlotte, 2006.
+- Worked in the restaurant business through the financial crisis.
+- Twelve years at one company, from a startup to over $10 million a year, moving from sales to marketing to contracts to Director of Operations. Built its contracts department from the ground up and ran it; built the full customer workflow from first call to final follow-up; worked alongside accounting.
+- Started Albright Innovations in 2025. Based in Big Rapids, Michigan and Waxhaw, North Carolina. Does the work himself and keeps the client list small.
 
 ## The one rule
 

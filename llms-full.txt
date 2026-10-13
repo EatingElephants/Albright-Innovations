@@ -1,18 +1,20 @@
 # Albright Innovations
 
-> Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads and websites, and we set up the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. We work with businesses in Big Rapids and West Michigan and in Charlotte, Waxhaw and Union County, North Carolina, and with remote clients anywhere in the United States.
+> Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads, Google Business Profiles and websites, and we build a free one-page website for local businesses. We set up a 24/7 assistant that answers website and phone enquiries and sends the lead to the owner, and we improve the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. We work with businesses in Big Rapids and West Michigan and in Charlotte, Waxhaw and Union County, North Carolina, and with remote clients anywhere in the United States.
 
 Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-innovations.com. Website: https://albright-innovations.com/
 
 ## Services
 
 - [Operations review](https://albright-innovations.com/what-we-do/#operations-review): A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away.
+- [A 24/7 assistant for your website and phone](https://albright-innovations.com/what-we-do/#assistant): Answers common questions on your website or phone line, takes the customer's details and sends them to you right away, day or night.
 - [The right tools for how you work](https://albright-innovations.com/what-we-do/#tools): Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have.
 - [Workflows and follow-up](https://albright-innovations.com/what-we-do/#workflows): Clear steps from first call to close to follow-up, so nothing depends on someone remembering.
 - [Lead tracking and reporting](https://albright-innovations.com/what-we-do/#lead-tracking): Working out where your customers come from, so you know which ads, posts and referrals bring in paying work.
 - [Social media management](https://albright-innovations.com/what-we-do/#social-media): Posts planned, scheduled and answered, so your page stays active without you living on it.
+- [Google Business Profile and reviews](https://albright-innovations.com/what-we-do/#google-business): Your Google listing kept current, with posts and a steady way of asking for reviews.
 - [Social ads](https://albright-innovations.com/what-we-do/#social-ads): Facebook and Instagram ads aimed at people near you who are ready to buy.
-- [Websites](https://albright-innovations.com/what-we-do/#websites): A clean, current site that tells people who you are, what you do and how to reach you.
+- [Websites](https://albright-innovations.com/what-we-do/#websites): A clean, current site that tells people who you are, what you do and how to reach you. The one-page version is free for local businesses.
 
 ## Free tools
 
@@ -406,7 +408,7 @@ Sometimes the structure is fine and the content is stale. If the site works on a
 
 - A short conversation about who your customers are and what they need to see to pick up the phone.
 
-- A homepage preview. We mock up your new homepage first, so you see the direction before anything is built.
+- A free one-page site first. For local businesses we build the one-page version at no charge, so you see the direction before anything bigger is built. How that works. (/free-website/)
 
 - The build. Usually a handful of pages: home, services, about, contact, and reviews or gallery. Built to load fast and work on a phone first.
 
@@ -593,7 +595,7 @@ I grew up in a third-generation Albright family business in Big Rapids, Michigan
 
 ## What I did for twelve years
 
-I earned my marketing degree at the University of North Carolina at Charlotte in 2006. A few years later I joined a young, growing company and stayed twelve years, moving from sales to marketing to contracts to Director of Operations.
+I earned my marketing degree at the University of North Carolina at Charlotte in 2006. A few years later I started in sales at a startup and stayed twelve years, moving from sales to marketing to contracts to Director of Operations while the company grew to over $10 million a year.
 
 There wasn't much I didn't touch. I rebuilt the company's marketing. I created its contracts department from the ground up and ran it. As Director of Operations I built the full customer workflow, from the first sales call through the close and every follow-up for the life of the contract, and I worked alongside accounting so the money side and the operations side understood each other.
 
@@ -692,7 +694,7 @@ We check in on a schedule, fix what drifts, and show you the numbers as they com
 
 ## Two ways to start
 
-The operations check if the office side is what's wearing you down. A website preview if being found is the problem: we mock up a new homepage for your business so you can see what it could look like, free and with no obligation. Either way, you see our thinking first.
+The operations check if the office side is what's wearing you down. A free website if being found is the problem: we build you a clean one-page site, free and yours to keep, so you see our work before anything else. How that works. (/free-website/) Either way, you see our thinking first.
 
 Tell us what's going on →
 
@@ -721,6 +723,14 @@ The office side of the business. If the work gets done but too much of it depend
 What it isWe follow one job through your business, from the first call to the final invoice, and look for where it slows down or depends on someone's memory.
 What you getA one-page list of what we'd fix first and why, in plain words, ordered by what's costing you the most. It's yours to keep whether or not we work together. What we look at. (/answers/what-does-an-operations-review-involve/)
 A good fit ifYou're busy, the work is good, and the office side feels held together with sticky notes.
+
+-
+
+### A 24/7 assistant for your website and phone
+
+What it isAn automated assistant on your website that answers common questions, takes the customer's name, number and what they need, and sends it to you right away, day or night. It can also pick up your phone line when a call goes unanswered.
+What you getSet up for your business: your services, your area, how you work. You approve what it says before it goes live, and it tells people it's automated. Leads arrive by email, customers can send photos, and it's month to month.
+A good fit ifCalls and messages come in while you're on a job or after hours, and some of them never get a reply.
 
 -
 
@@ -760,6 +770,14 @@ A good fit ifYour page hasn't been posted to in months, or posting is the job th
 
 -
 
+### Google Business Profile and reviews
+
+What it isYour listing on Google, kept complete and current, with regular posts and a steady way of asking happy customers for reviews.
+What you getShowing up when people nearby search for what you do, and replies to reviews in your voice.
+A good fit ifPeople search for your trade near you and someone else's listing comes up first.
+
+-
+
 ### Social ads
 
 What it isFacebook and Instagram ads aimed at people near you who are likely to need what you offer.
@@ -771,7 +789,7 @@ A good fit ifYou've tried boosting posts and couldn't tell whether it worked.
 ### Websites
 
 What it isA new site, or a refresh of the one you have, that says who you are, what you do and how to reach you.
-What you getA clean, current site that works on a phone, kept up to date after it launches. Before you decide anything, we can mock up a new homepage so you can see it first.
+What you getA clean, current site that works on a phone. For local businesses we build the one-page version at no charge, and it's yours to keep. If you'd like, we also show you a version hosted by us with the assistant built in. About the free website. (/free-website/)
 A good fit ifYour site hasn't changed in years, or you don't have one yet. What a small business site needs. (/answers/what-should-a-small-business-website-have-on-it/)
 
 ## Both sides, together

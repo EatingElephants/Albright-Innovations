@@ -14,7 +14,7 @@
     "booking_url": "",
     "free_website_video": ""
   },
-  "summary": "Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads and websites, and we set up the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. We work with businesses in Big Rapids and West Michigan and in Charlotte, Waxhaw and Union County, North Carolina, and with remote clients anywhere in the United States.",
+  "summary": "Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads, Google Business Profiles and websites, and we build a free one-page website for local businesses. We set up a 24/7 assistant that answers website and phone enquiries and sends the lead to the owner, and we improve the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. We work with businesses in Big Rapids and West Michigan and in Charlotte, Waxhaw and Union County, North Carolina, and with remote clients anywhere in the United States.",
   "areas": [
     {
       "name": "Big Rapids, Michigan",
@@ -40,6 +40,11 @@
       "desc": "A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away."
     },
     {
+      "name": "A 24/7 assistant for your website and phone",
+      "url": "/what-we-do/#assistant",
+      "desc": "Answers common questions on your website or phone line, takes the customer's details and sends them to you right away, day or night."
+    },
+    {
       "name": "The right tools for how you work",
       "url": "/what-we-do/#tools",
       "desc": "Customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have."
@@ -60,6 +65,11 @@
       "desc": "Posts planned, scheduled and answered, so your page stays active without you living on it."
     },
     {
+      "name": "Google Business Profile and reviews",
+      "url": "/what-we-do/#google-business",
+      "desc": "Your Google listing kept current, with posts and a steady way of asking for reviews."
+    },
+    {
       "name": "Social ads",
       "url": "/what-we-do/#social-ads",
       "desc": "Facebook and Instagram ads aimed at people near you who are ready to buy."
@@ -67,7 +77,7 @@
     {
       "name": "Websites",
       "url": "/what-we-do/#websites",
-      "desc": "A clean, current site that tells people who you are, what you do and how to reach you."
+      "desc": "A clean, current site that tells people who you are, what you do and how to reach you. The one-page version is free for local businesses."
     }
   ],
   "tools": [
