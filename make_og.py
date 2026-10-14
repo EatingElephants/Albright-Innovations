@@ -110,7 +110,7 @@ def poster(name, headline_lines, sub):
 
 IMAGES = {
     "share.png": (["You built the business.", "We handle the headaches."],
-                  "Marketing and operations for small businesses. Big Rapids, MI and Waxhaw, NC."),
+                  "Marketing and operations for small businesses."),
     "answers.png": (["Straight answers", "for busy owners."],
                     "Sourced, plain-English answers about the office side of a small business."),
     "free-website.png": (["A free website", "for your business."],

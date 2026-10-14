@@ -1,6 +1,6 @@
 <!--meta
-title: Albright Innovations | Marketing and operations for small businesses in Big Rapids, MI and Waxhaw, NC
-description: See how much time and money the busywork is costing your business, then let us take it off your plate. Social media, ads, websites and the systems behind the scenes. Big Rapids, Michigan and Waxhaw, North Carolina.
+title: Albright Innovations | Marketing and operations for small businesses
+description: See how much time and money the busywork is costing your business, then let us take it off your plate. Social media, ads, websites and the systems behind the scenes.
 updated: 2026-10-04
 -->
   <section class="hero" id="top">
@@ -25,106 +25,85 @@ updated: 2026-10-04
     </div>
   </section>
 
-  <!-- The two calculators, side by side -->
+  <!-- Run your numbers: both calculators in one card -->
   <section class="calcs" id="calcs">
     <div class="wrap">
-      <div class="calc-grid">
-      <!-- Tool A: Where does your week go? -->
-      <div class="tool" id="time" data-tool="time">
+      <div class="tool combo" data-tool="combo">
         <div class="tool-head">
-          <p class="label">Where does your week go?</p>
-          <h2>Add up the hours. See what they cost.</h2>
-          <p>Slide each one to about where you land in a normal week. The numbers update as you go.</p>
+          <p class="label">Run your numbers</p>
+          <h2>What's the busywork costing you?</h2>
         </div>
-        <div class="sliders">
-          <div class="slider">
-            <div class="slider-row"><label for="t-quotes">Quotes and estimates</label><span class="num"><input id="t-quotes-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="4" aria-label="Quotes and estimates, hours a week">h/wk</span></div>
-            <input type="range" id="t-quotes" data-time="quotes" min="0" max="40" step="0.5" value="4" aria-label="Quotes and estimates, hours a week" style="--p:10%">
+        <div class="combo-grid">
+          <div class="combo-col" id="time" data-tool="time">
+            <h3>Your week</h3>
+            <div class="sliders">
+              <div class="slider">
+                <div class="slider-row"><label for="t-quotes">Quotes and estimates</label><span class="num"><input id="t-quotes-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="4" aria-label="Quotes and estimates, hours a week">h/wk</span></div>
+                <input type="range" id="t-quotes" data-time="quotes" min="0" max="40" step="0.5" value="4" aria-label="Quotes and estimates, hours a week" style="--p:10%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="t-sched">Scheduling and calling people back</label><span class="num"><input id="t-sched-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="4" aria-label="Scheduling and calling people back, hours a week">h/wk</span></div>
+                <input type="range" id="t-sched" data-time="sched" min="0" max="40" step="0.5" value="4" aria-label="Scheduling and calling people back, hours a week" style="--p:10%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="t-invoice">Invoicing and chasing payments</label><span class="num"><input id="t-invoice-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="3" aria-label="Invoicing and chasing payments, hours a week">h/wk</span></div>
+                <input type="range" id="t-invoice" data-time="invoice" min="0" max="40" step="0.5" value="3" aria-label="Invoicing and chasing payments, hours a week" style="--p:7.5%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="t-retype">Typing the same info into more than one place</label><span class="num"><input id="t-retype-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="2" aria-label="Typing the same info into more than one place, hours a week">h/wk</span></div>
+                <input type="range" id="t-retype" data-time="retype" min="0" max="40" step="0.5" value="2" aria-label="Typing the same info into more than one place, hours a week" style="--p:5%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="t-social">Social media and website upkeep</label><span class="num"><input id="t-social-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="3" aria-label="Social media and website upkeep, hours a week">h/wk</span></div>
+                <input type="range" id="t-social" data-time="social" min="0" max="40" step="0.5" value="3" aria-label="Social media and website upkeep, hours a week" style="--p:7.5%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="t-rate">What's an hour of your time worth?</label><span class="num money">$<input id="t-rate-n" type="number" inputmode="decimal" min="0" max="500" step="5" value="75" aria-label="What an hour of your time is worth, in dollars">/hr</span></div>
+                <input type="range" id="t-rate" data-time="rate" min="15" max="300" step="5" value="75" aria-label="What an hour of your time is worth, in dollars" style="--p:21.05%">
+              </div>
+            </div>
           </div>
-          <div class="slider">
-            <div class="slider-row"><label for="t-sched">Scheduling and calling people back</label><span class="num"><input id="t-sched-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="4" aria-label="Scheduling and calling people back, hours a week">h/wk</span></div>
-            <input type="range" id="t-sched" data-time="sched" min="0" max="40" step="0.5" value="4" aria-label="Scheduling and calling people back, hours a week" style="--p:10%">
-          </div>
-          <div class="slider">
-            <div class="slider-row"><label for="t-invoice">Invoicing and chasing payments</label><span class="num"><input id="t-invoice-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="3" aria-label="Invoicing and chasing payments, hours a week">h/wk</span></div>
-            <input type="range" id="t-invoice" data-time="invoice" min="0" max="40" step="0.5" value="3" aria-label="Invoicing and chasing payments, hours a week" style="--p:7.5%">
-          </div>
-          <div class="slider">
-            <div class="slider-row"><label for="t-retype">Typing the same info into more than one place</label><span class="num"><input id="t-retype-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="2" aria-label="Typing the same info into more than one place, hours a week">h/wk</span></div>
-            <input type="range" id="t-retype" data-time="retype" min="0" max="40" step="0.5" value="2" aria-label="Typing the same info into more than one place, hours a week" style="--p:5%">
-          </div>
-          <div class="slider">
-            <div class="slider-row"><label for="t-social">Social media and website upkeep</label><span class="num"><input id="t-social-n" type="number" inputmode="decimal" min="0" max="40" step="0.5" value="3" aria-label="Social media and website upkeep, hours a week">h/wk</span></div>
-            <input type="range" id="t-social" data-time="social" min="0" max="40" step="0.5" value="3" aria-label="Social media and website upkeep, hours a week" style="--p:7.5%">
-          </div>
-          <div class="slider">
-            <div class="slider-row"><label for="t-rate">What's an hour of your time worth?</label><span class="num money">$<input id="t-rate-n" type="number" inputmode="decimal" min="0" max="500" step="5" value="75" aria-label="What an hour of your time is worth, in dollars">/hr</span></div>
-            <input type="range" id="t-rate" data-time="rate" min="15" max="300" step="5" value="75" aria-label="What an hour of your time is worth, in dollars" style="--p:21.05%">
+          <div class="combo-col" id="calls" data-tool="calls">
+            <h3>Your phone</h3>
+            <div class="sliders">
+              <div class="slider">
+                <div class="slider-row"><label for="c-calls">Calls you get in a week</label><span class="num"><input id="c-calls-n" type="number" inputmode="numeric" min="0" max="500" step="1" value="30" aria-label="Calls you get in a week">calls</span></div>
+                <input type="range" id="c-calls" data-calls="calls" min="0" max="200" step="1" value="30" aria-label="Calls you get in a week" style="--p:15%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="c-missed">Share you miss</label><span class="num"><input id="c-missed-n" type="number" inputmode="numeric" min="0" max="100" step="1" value="40" aria-label="Share of calls you miss, percent">%</span></div>
+                <input type="range" id="c-missed" data-calls="missed" min="0" max="100" step="1" value="40" aria-label="Share of calls you miss, percent" style="--p:40%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="c-value">Average job value</label><span class="num money">$<input id="c-value-n" type="number" inputmode="decimal" min="0" max="100000" step="10" value="450" aria-label="Average job value in dollars"></span></div>
+                <input type="range" id="c-value" data-calls="value" min="50" max="5000" step="10" value="450" aria-label="Average job value in dollars" style="--p:8.08%">
+              </div>
+              <div class="slider">
+                <div class="slider-row"><label for="c-close">Share of answered calls that become work</label><span class="num"><input id="c-close-n" type="number" inputmode="numeric" min="0" max="100" step="1" value="40" aria-label="Share of answered calls that become work, percent">%</span></div>
+                <input type="range" id="c-close" data-calls="close" min="0" max="100" step="1" value="40" aria-label="Share of answered calls that become work, percent" style="--p:40%">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tool-out" id="time-out" aria-live="polite" aria-atomic="true">
-          <p class="title">Here's what your answers add up to</p>
+        <div class="tool-out combo-out" aria-live="polite" aria-atomic="true">
           <div class="stats">
-            <div class="stat"><span class="k">Hours a week</span><output class="v" id="time-week" for="t-quotes t-sched t-invoice t-retype t-social">16</output></div>
-            <div class="stat"><span class="k">Hours a year</span><output class="v" id="time-year" for="t-quotes t-sched t-invoice t-retype t-social">832</output></div>
-            <div class="stat big"><span class="k">What that costs a year</span><output class="v" id="time-dollars" for="t-quotes t-sched t-invoice t-retype t-social t-rate">$62,400</output></div>
+            <div class="stat"><span class="k">Hours a week on busywork</span><output class="v" id="time-week" for="t-quotes t-sched t-invoice t-retype t-social">16</output></div>
+            <div class="stat big"><span class="k">What that time costs a year</span><output class="v" id="time-dollars" for="t-quotes t-sched t-invoice t-retype t-social t-rate">$62,400</output></div>
           </div>
-          <p class="equiv" id="time-equiv">That's about <strong>21 full work weeks</strong> a year spent on the office side of the business.</p>
-          <ul class="bars" id="time-bars" aria-label="Where the hours go">
-            <li><span>Quotes and estimates</span><span class="track"><span class="fill" data-bar="quotes" style="width:25%"></span></span><span class="n" data-n="quotes">4 h</span></li>
-            <li><span>Scheduling and callbacks</span><span class="track"><span class="fill" data-bar="sched" style="width:25%"></span></span><span class="n" data-n="sched">4 h</span></li>
-            <li><span>Invoicing and payments</span><span class="track"><span class="fill" data-bar="invoice" style="width:18.75%"></span></span><span class="n" data-n="invoice">3 h</span></li>
-            <li><span>Retyping information</span><span class="track"><span class="fill" data-bar="retype" style="width:12.5%"></span></span><span class="n" data-n="retype">2 h</span></li>
-            <li><span>Social and website</span><span class="track"><span class="fill" data-bar="social" style="width:18.75%"></span></span><span class="n" data-n="social">3 h</span></li>
-          </ul>
-          <p class="bench">Owners commonly report 15 to 20 hours a week on admin. One survey of 251 U.S. owners put it at 36% of the week. Sources: <a href="https://www.xero.com/us/guides/time-tax-small-business/" target="_blank" rel="noopener">Xero</a>, <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc, 2023</a>.</p>
-          <button class="btn primary" type="button" data-chat-open data-attach="time">Talk through these numbers with us <span class="arrow" aria-hidden="true">&rarr;</span></button>
-        </div>
-        <details class="how">
-          <summary>How we figured this</summary>
-          <p>We add the five sliders to get your hours a week, multiply by 52 for a year, then multiply by what you said an hour of your time is worth. The work-weeks line divides the yearly hours by 40. Nothing is weighted or inflated. It's your numbers, added up.</p>
-        </details>
-      </div>
-      <div class="tool" id="calls" data-tool="calls">
-        <div class="tool-head">
-          <p class="label">Missed calls and slow follow-up</p>
-          <h2>What's an unanswered phone costing you?</h2>
-          <p>Four questions. Use round numbers; the point is the size of it, not the decimals.</p>
-        </div>
-        <div class="sliders">
-          <div class="slider">
-            <div class="slider-row"><label for="c-calls">Calls you get in a week</label><span class="num"><input id="c-calls-n" type="number" inputmode="numeric" min="0" max="500" step="1" value="30" aria-label="Calls you get in a week">calls</span></div>
-            <input type="range" id="c-calls" data-calls="calls" min="0" max="200" step="1" value="30" aria-label="Calls you get in a week" style="--p:15%">
-          </div>
-          <div class="slider">
-            <div class="slider-row"><label for="c-missed">Share you miss</label><span class="num"><input id="c-missed-n" type="number" inputmode="numeric" min="0" max="100" step="1" value="40" aria-label="Share of calls you miss, percent">%</span></div>
-            <input type="range" id="c-missed" data-calls="missed" min="0" max="100" step="1" value="40" aria-label="Share of calls you miss, percent" style="--p:40%">
-          </div>
-          <div class="slider">
-            <div class="slider-row"><label for="c-value">Average job value</label><span class="num money">$<input id="c-value-n" type="number" inputmode="decimal" min="0" max="100000" step="10" value="450" aria-label="Average job value in dollars"></span></div>
-            <input type="range" id="c-value" data-calls="value" min="50" max="5000" step="10" value="450" aria-label="Average job value in dollars" style="--p:8.08%">
-          </div>
-          <div class="slider">
-            <div class="slider-row"><label for="c-close">Share of answered calls that become work</label><span class="num"><input id="c-close-n" type="number" inputmode="numeric" min="0" max="100" step="1" value="40" aria-label="Share of answered calls that become work, percent">%</span></div>
-            <input type="range" id="c-close" data-calls="close" min="0" max="100" step="1" value="40" aria-label="Share of answered calls that become work, percent" style="--p:40%">
-          </div>
-        </div>
-        <div class="tool-out" id="calls-out" aria-live="polite" aria-atomic="true">
-          <p class="title">At risk, by your numbers</p>
           <div class="stats">
             <div class="stat"><span class="k">Missed calls a month</span><output class="v" id="calls-missed" for="c-calls c-missed">52</output></div>
-            <div class="stat"><span class="k">Jobs at risk a month</span><output class="v" id="calls-jobs" for="c-calls c-missed c-close">21</output></div>
             <div class="stat big"><span class="k">Revenue at risk a year</span><output class="v" id="calls-year" for="c-calls c-missed c-value c-close">$112,320</output></div>
           </div>
-          <p class="equiv" id="calls-equiv">About <strong>$9,360 a month</strong> riding on calls nobody picked up.</p>
-          <p class="bench">Not every missed caller is lost, so treat this as the ceiling.</p>
-          <button class="btn primary" type="button" data-chat-open data-attach="calls">See how we'd catch these <span class="arrow" aria-hidden="true">&rarr;</span></button>
         </div>
-        <details class="how">
-          <summary>How we figured this</summary>
-          <p>Calls a week times the share you miss gives missed calls a week. We multiply by 52 for a year and divide by 12 for a month. Missed calls times the share of answered calls that become work gives jobs at risk, and jobs times your average job value gives the revenue. It assumes a missed caller was as likely to hire you as an answered one, and it doesn't count the ones who try again, so it's a ceiling, not a forecast.</p>
-        </details>
-      </div>
+        <p class="bench">Owners commonly report 15 to 20 hours a week on admin (<a href="https://www.xero.com/us/guides/time-tax-small-business/" target="_blank" rel="noopener">Xero</a>, <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc, 2023</a>). Not every missed caller is lost, so treat the revenue figure as a ceiling.</p>
+        <div class="combo-foot">
+          <button class="btn primary" type="button" data-chat-open data-attach="time">Talk through these numbers with us <span class="arrow" aria-hidden="true">&rarr;</span></button>
+          <details class="how">
+            <summary>How we figured this</summary>
+            <p>Your week: we add the five hour sliders, multiply by 52 for a year, then by what an hour of your time is worth. Nothing is weighted or inflated.</p>
+            <p>Your phone: calls a week times the share you miss, times 52, divided by 12, gives missed calls a month. Missed calls times the share of answered calls that become work, times your average job value, gives the revenue at risk. It assumes a missed caller was as likely to hire you as an answered one and doesn't count the ones who call back, so it's a ceiling, not a forecast.</p>
+          </details>
+        </div>
       </div>
     </div>
   </section>
@@ -166,24 +145,6 @@ updated: 2026-10-04
             <!-- TODO: add a sourced stat on repeat-customer value once we have one we can verify -->
             <p class="do"><b>Here's what we'd do.</b> Find where your customer information lives now and bring it together in a way your team will actually keep up, so reaching past customers is quick.</p>
             <a class="more" href="/answers/do-i-need-a-crm-for-a-small-business/">Do you need a CRM, and where to start <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-invoices">
-          <summary>Invoices go out late, so you're waiting weeks to get paid.</summary>
-          <div class="row-body">
-            <p>Late invoices turn into late payments. The gap between finishing a job and getting paid is where cash flow trouble starts.</p>
-            <p class="stat-line"><strong>59% of small businesses have invoices more than 30 days overdue</strong>, with $17.7K owed on average. <span class="src">Source: <a href="https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/" target="_blank" rel="noopener">QuickBooks Small Business Late Payments Report, 2026</a></span></p>
-            <p class="do"><b>Here's what we'd do.</b> Look at every step between finishing a job and getting paid, and shorten the ones that drag, so you stop being the collections department.</p>
-            <a class="more" href="#time">Add it to your week <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-questions">
-          <summary>Every question comes to you, so nothing moves when you're off the clock.</summary>
-          <div class="row-body">
-            <p>If the business lives in your head, you can't leave it. That's a systems problem, not a people problem.</p>
-            <p class="stat-line"><strong>44% of owners haven't taken a vacation in the past year</strong> where they could switch off from work completely. <span class="src">Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc, 2023</a></span></p>
-            <p class="do"><b>Here's what we'd do.</b> Written steps for the ten things people ask you most, kept where your team can find them without calling you.</p>
-            <a class="more" href="/what-we-do/#workflows">How we help with workflows <span class="arrow" aria-hidden="true">&rarr;</span></a>
           </div>
         </details>
         <details class="row" id="pain-ads">
@@ -243,10 +204,6 @@ updated: 2026-10-04
               <h3><a href="/what-we-do/#tools">The right tools for how you work</a></h3>
               <p>Your customer list, scheduling, phones, quoting, invoicing and job tracking, chosen to fit how you work and the tools you already have, with your team shown how to use them.</p>
               <div class="tags"><span>Customer list</span><span>Scheduling</span><span>Phones</span><span>Quoting</span><span>Invoicing</span><span>Job tracking</span></div>
-            </li>
-            <li>
-              <h3><a href="/what-we-do/#workflows">Workflows and follow-up</a></h3>
-              <p>Clear steps from first call to close to follow-up, so nothing depends on someone remembering.</p>
             </li>
             <li>
               <h3><a href="/what-we-do/#lead-tracking">Lead tracking and reporting</a></h3>
@@ -368,7 +325,6 @@ updated: 2026-10-04
           <svg class="fb" viewBox="0 0 24 24" aria-hidden="true"><use href="#fb-glyph"/></svg>
           <span>Follow us on Facebook</span>
         </a>
-        <p class="aside">Based in Big Rapids, Michigan and Waxhaw, North Carolina. We work with businesses in both areas and with remote clients anywhere.</p>
       </div>
     </div>
   </section>

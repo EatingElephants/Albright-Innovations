@@ -94,10 +94,10 @@
     function render() {
       pending = false;
       var r = Calc.timeLeaks(values());
-      out.week.textContent = Calc.num(r.week);
-      out.year.textContent = Calc.num(r.year);
-      out.dollars.textContent = Calc.money(r.dollars);
-      out.equiv.innerHTML = Calc.timeEquivalent(r);
+      if (out.week) { out.week.textContent = Calc.num(r.week); }
+      if (out.year) { out.year.textContent = Calc.num(r.year); }
+      if (out.dollars) { out.dollars.textContent = Calc.money(r.dollars); }
+      if (out.equiv) { out.equiv.innerHTML = Calc.timeEquivalent(r); }
       Calc.TIME_KEYS.forEach(function (k) {
         var bar = $('[data-bar="' + k + '"]', tool), n = $('[data-n="' + k + '"]', tool);
         if (bar) { bar.style.width = (r.shares[k] * 100).toFixed(1) + '%'; }
@@ -133,10 +133,10 @@
     function render() {
       pending = false;
       var r = Calc.missedCalls({ calls: inputs.calls.get(), missed: inputs.missed.get(), value: inputs.value.get(), close: inputs.close.get() });
-      out.missed.textContent = Calc.num(r.missedMonth);
-      out.jobs.textContent = Calc.num(r.jobsMonth);
-      out.year.textContent = Calc.money(r.revenueYear);
-      out.equiv.innerHTML = Calc.callsEquivalent(r);
+      if (out.missed) { out.missed.textContent = Calc.num(Math.round(r.missedMonth)); }
+      if (out.jobs) { out.jobs.textContent = Calc.num(r.jobsMonth); }
+      if (out.year) { out.year.textContent = Calc.money(r.revenueYear); }
+      if (out.equiv) { out.equiv.innerHTML = Calc.callsEquivalent(r); }
       A.save('calls', {
         label: 'Missed-call calculator',
         summary: Calc.num(r.missedMonth) + ' missed calls a month, about ' + Calc.num(r.jobsMonth) + ' jobs and ' + Calc.money(r.revenueYear) + ' a year at risk',

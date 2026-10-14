@@ -794,5 +794,9 @@ footer small a { color: var(--muted); }
 
 /* Homepage: both calculators in one section */
 .calcs { background: var(--surface); }
-.calc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); align-items: start; }
-@media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; } }
+.combo-grid, .combo-out { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 4vw, 56px); align-items: start; }
+.combo-col { display: grid; gap: 14px; align-content: start; }
+.combo-col h3 { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); }
+.combo-foot { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: 12px 24px; }
+.combo-foot .how { border-top: 0; padding-top: 0; flex: 1 1 18em; max-width: 36em; }
+@media (max-width: 760px) { .combo-grid, .combo-out { grid-template-columns: 1fr; } }
