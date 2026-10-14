@@ -2,7 +2,7 @@
 
 The site at https://albright-innovations.com. Everything you'd ever want to change lives in the `src` folder. A small script turns it into the finished pages.
 
-## Where we left off (October 13, 2026)
+## Where we left off (October 14, 2026)
 
 The redesign is **in progress on the `redesign` branch**. The live site is still the old one, on `main`. Nothing here is public until `redesign` is merged into `main`.
 
@@ -14,6 +14,7 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 - October 8: a phone menu, a much shorter phone homepage, an Answers page (the homepage shows the four marked `home: yes`), a shorter About on the homepage, the portrait and calculator-total fixes, the checkup always including a marketing fix when there's a marketing gap, and broader operations wording everywhere.
 - October 11: a **What we do** page (`/what-we-do/`) with every service, what you get and who it fits, split into the two sides of the business. It's in the menu and the footer.
 - October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. Committed later that day, and the main site was brought into line with them: the assistant and Google Business Profile are on the What we do page and the homepage services list. (October 14: the free-website mentions came back off the main site; see the copy rules.)
+- October 14: the free website came off the main site (ads only) and the landing pages were hidden from search. The homepage was trimmed to opener, one combined calculator card, Sound familiar (six lines), What we do, clients, How we start, About and contact. The opener has an animation of the 24/7 assistant: the customer's phone, then the lead arriving on the owner's phone. Service-area wording came off the main site (we work anywhere), and the bio was corrected: Josh grew up around entrepreneurs, not in Big Rapids.
 
 **Copy rules that came out of the work**
 
