@@ -42,7 +42,7 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 
 Use these and nothing more, and don't name the former employer.
 
-- Grew up in a third-generation Albright family business in Big Rapids, Michigan.
+- Grew up around entrepreneurs. The family's rental business in Big Rapids, Michigan is in its third generation, and his mother ran a business of her own. He moved away from Big Rapids at eight and visited often, so never say he grew up in Big Rapids or in the family business.
 - Marketing degree, University of North Carolina at Charlotte, 2006.
 - Worked in the restaurant business through the financial crisis.
 - Twelve years at one company, from a startup to over $10 million a year, moving from sales to marketing to contracts to Director of Operations. Built its contracts department from the ground up and ran it; built the full customer workflow from first call to final follow-up; worked alongside accounting.
