@@ -20,8 +20,11 @@
   var msgs = Array.prototype.slice.call(screen.querySelectorAll('.demo-msg'));
   var dots = screen.querySelector('.demo-dots'), field = screen.querySelector('.demo-field');
   var send = screen.querySelector('.demo-send'), alert = screen.querySelector('.demo-alert');
+  var label = document.querySelector('[data-demo-label]');
+  var LABELS = { customer: 'The customer\u2019s phone', owner: 'The owner\u2019s phone' };
+  function setLabel(which) { if (label) { label.textContent = LABELS[which]; } }
   var placeholder = field.textContent;
-  function showAll() { msgs.forEach(function (m) { m.classList.add('is-on'); }); alert.classList.add('is-on'); }
+  function showAll() { msgs.forEach(function (m) { m.classList.add('is-on'); }); }
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { showAll(); return; }
 
   var visible = true, run = 0;
@@ -37,7 +40,8 @@
   }
   function reset() {
     msgs.forEach(function (m, i) { m.classList.toggle('is-on', i === 0); });
-    dots.classList.remove('is-on'); alert.classList.remove('is-on'); screen.classList.remove('is-fading');
+    dots.classList.remove('is-on'); alert.classList.remove('is-on'); screen.classList.remove('is-fading', 'is-owner');
+    setLabel('customer');
     field.textContent = placeholder; field.classList.remove('is-typing');
   }
   function type(text, id) {
@@ -71,8 +75,15 @@
         return wait(1300, id).then(function () { dots.classList.remove('is-on'); m.classList.add('is-on'); return wait(1600, id); });
       });
     });
-    chain.then(function () { return wait(600, id); })
-      .then(function () { alert.classList.add('is-on'); return wait(4500, id); })
+    chain.then(function () { return wait(900, id); })
+      .then(function () {
+        /* Switch to the owner's phone: the chat fades out, the lock screen fades in. */
+        if (label) { label.classList.add('is-switching'); }
+        screen.classList.add('is-owner');
+        return wait(350, id);
+      })
+      .then(function () { setLabel('owner'); if (label) { label.classList.remove('is-switching'); } return wait(1100, id); })
+      .then(function () { alert.classList.add('is-on'); return wait(5000, id); })
       .then(function () { screen.classList.add('is-fading'); return wait(450, id); })
       .then(play, function () { /* a newer run took over */ });
   }
