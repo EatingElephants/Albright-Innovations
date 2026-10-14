@@ -13,13 +13,14 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 - October 4: the redesign itself. Homepage with the three tools (time calculator, missed-call calculator, operations checkup), the Answers pages, About, How we work, the chat panel, the share images, and the build script with its brand checks.
 - October 8: a phone menu, a much shorter phone homepage, an Answers page (the homepage shows the four marked `home: yes`), a shorter About on the homepage, the portrait and calculator-total fixes, the checkup always including a marketing fix when there's a marketing gap, and broader operations wording everywhere.
 - October 11: a **What we do** page (`/what-we-do/`) with every service, what you get and who it fits, split into the two sides of the business. It's in the menu and the footer.
-- October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. Committed later that day, and the main site was brought into line with them: the free website replaces the old "website preview" everywhere, and the assistant and Google Business Profile are on the What we do page and the homepage services list.
+- October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. Committed later that day, and the main site was brought into line with them: the assistant and Google Business Profile are on the What we do page and the homepage services list. (October 14: the free-website mentions came back off the main site; see the copy rules.)
 
 **Copy rules that came out of the work**
 
 - Stay broad about operations. Describe finding and fixing each business's bottlenecks after talking with the owner, never specific features (phone quoting, automatic texts, online booking, pay links). There are no technology partners yet, and every business needs something different.
 - The 24/7 assistant is a real offer (website chat, and the phone line when a call isn't answered), so it can be described. Every other operations promise stays broad.
 - No prices anywhere. Pricing isn't set.
+- No giveaways on the main site. The free website is an ad offer and lives only on the landing pages. The main site stays professional: what we do, nothing free.
 
 **Still to do before it goes live**
 
