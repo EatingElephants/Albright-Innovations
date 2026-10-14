@@ -527,7 +527,7 @@ def main():
         write(path.strip("/") + "/index.html", page(path, meta, body, extra, path.strip("/")))
         pages_for_sitemap.append((path, meta["updated"]))
 
-    # --- landing pages: one folder per page, thank-you pages kept out of the sitemap ---
+    # --- landing pages: ad traffic only, so none of them are in the sitemap or open to search engines ---
     landing_written = []
     for f in sorted((SRC / "landing").glob("*.html")):
         meta, body = split_meta(read(f), f.name)
@@ -552,7 +552,7 @@ def main():
         out = page(
             path, meta, body, extra, path.strip("/").replace("/", "-"),
             template=landing_tpl, business=False,
-            robots=meta.get("robots", "index, follow"),
+            robots=meta.get("robots", "noindex, follow"),
             pixel=pixel_html(lead_event=is_thanks),
             sticky=sticky,
             scripts=scripts,
@@ -560,8 +560,6 @@ def main():
         rel = path.strip("/") + "/index.html"
         write(rel, out)
         landing_written.append(rel)
-        if not is_thanks:
-            pages_for_sitemap.append((path, meta["updated"]))
 
     # --- homepage ---
     meta, body = split_meta(read(SRC / "home.html"), "home.html")

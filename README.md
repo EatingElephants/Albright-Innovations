@@ -108,7 +108,7 @@ Write the rest of the file in plain HTML: `<h2>` headings as questions, `<ul>` a
 
 ## Landing pages for ads
 
-Three pages built for Facebook ads, each with one job and no menu: **`/free-website`** (the free website rebuild), **`/operations`** (start a conversation about how the business runs) and **`/contractors`** (the 24/7 assistant, still a draft). Each has a thank-you page at `/.../thanks/`. They're in the sitemap but not in the site menu.
+Three pages built for Facebook ads, each with one job and no menu: **`/free-website`** (the free website rebuild), **`/operations`** (start a conversation about how the business runs) and **`/contractors`** (the 24/7 assistant, still a draft). Each has a thank-you page at `/.../thanks/`. They're for ad traffic only: not in the menu, not in the sitemap, and marked so search engines skip them.
 
 Where the words live: `src/landing/`. Shared pieces: `src/landing.html` (the layout) and `src/form.html` (the form). The settings below are in `src/site.json` under `"landing"`. After changing any of them, run the build.
 
