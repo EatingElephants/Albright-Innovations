@@ -11,6 +11,77 @@
   });
 })();
 
+/* Opener animation: a customer messages a contractor's website at night, the assistant answers,
+   and the lead lands on the owner's phone. Loops while on screen. With reduced motion, or no script,
+   the finished conversation shows instead. */
+(function () {
+  var screen = document.querySelector('[data-demo]');
+  if (!screen) { return; }
+  var msgs = Array.prototype.slice.call(screen.querySelectorAll('.demo-msg'));
+  var dots = screen.querySelector('.demo-dots'), field = screen.querySelector('.demo-field');
+  var send = screen.querySelector('.demo-send'), alert = screen.querySelector('.demo-alert');
+  var placeholder = field.textContent;
+  function showAll() { msgs.forEach(function (m) { m.classList.add('is-on'); }); alert.classList.add('is-on'); }
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { showAll(); return; }
+
+  var visible = true, run = 0;
+  function wait(ms, id) {
+    return new Promise(function (ok, stop) {
+      (function tick(left) {
+        if (id !== run) { stop(); return; }
+        if (!visible || document.hidden) { setTimeout(function () { tick(left); }, 250); return; }
+        if (left <= 0) { ok(); return; }
+        setTimeout(function () { tick(left - 50); }, 50);
+      })(ms);
+    });
+  }
+  function reset() {
+    msgs.forEach(function (m, i) { m.classList.toggle('is-on', i === 0); });
+    dots.classList.remove('is-on'); alert.classList.remove('is-on'); screen.classList.remove('is-fading');
+    field.textContent = placeholder; field.classList.remove('is-typing');
+  }
+  function type(text, id) {
+    field.classList.add('is-typing');
+    var i = 0;
+    return (function next() {
+      if (i > text.length) { return Promise.resolve(); }
+      field.textContent = text.slice(0, i++);
+      return wait(text.charAt(i - 1) === ' ' ? 70 : 45, id).then(next);
+    })();
+  }
+  function play() {
+    var id = ++run;
+    reset();
+    var steps = msgs.slice(1);
+    var chain = wait(1400, id);
+    steps.forEach(function (m) {
+      chain = chain.then(function () {
+        if (m.getAttribute('data-step') === 'type') {
+          return type(m.textContent, id).then(function () { return wait(250, id); }).then(function () {
+            send.classList.add('is-pressed');
+            return wait(150, id);
+          }).then(function () {
+            send.classList.remove('is-pressed');
+            field.textContent = placeholder; field.classList.remove('is-typing');
+            m.classList.add('is-on');
+            return wait(500, id);
+          });
+        }
+        dots.classList.add('is-on');
+        return wait(1300, id).then(function () { dots.classList.remove('is-on'); m.classList.add('is-on'); return wait(1600, id); });
+      });
+    });
+    chain.then(function () { return wait(600, id); })
+      .then(function () { alert.classList.add('is-on'); return wait(4500, id); })
+      .then(function () { screen.classList.add('is-fading'); return wait(450, id); })
+      .then(play, function () { /* a newer run took over */ });
+  }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0.2 }).observe(screen);
+  }
+  play();
+})();
+
 /* Phone menu: close it after a link is tapped, on Escape, or on a tap outside it. */
 (function () {
   var menu = document.querySelector('.menu');
