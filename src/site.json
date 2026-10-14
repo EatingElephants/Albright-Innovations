@@ -90,11 +90,6 @@
       "name": "Missed-call calculator",
       "url": "/#calls",
       "desc": "Estimate the jobs and revenue at risk from unanswered calls and slow follow-up."
-    },
-    {
-      "name": "2-minute operations checkup",
-      "url": "/#checkup",
-      "desc": "Nine quick questions, a score out of 100, and the three fixes worth doing first."
     }
   ]
 }

@@ -227,7 +227,7 @@ small { font-size: var(--t-small); color: var(--muted); }
 
 /* Hero: the statement on the left, the time calculator on the right */
 .hero { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 7vw, 96px); position: relative; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 52rem); }
 .hero-copy { display: grid; gap: 28px; }
 .hero h1 { font-size: clamp(2.3rem, 5.2vw, 4.4rem); }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -791,3 +791,8 @@ footer small a { color: var(--muted); }
   .lp-about .portrait { grid-template-columns: 96px 1fr; align-items: center; max-width: none; }
   .lp-about .portrait figcaption { border-top: 0; padding-top: 0; flex-direction: column; gap: 4px; }
 }
+
+/* Homepage: both calculators in one section */
+.calcs { background: var(--surface); }
+.calc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); align-items: start; }
+@media (max-width: 900px) { .calc-grid { grid-template-columns: 1fr; } }

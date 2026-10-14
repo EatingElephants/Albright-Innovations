@@ -20,7 +20,6 @@ Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-i
 
 - [Where does your week go?](https://albright-innovations.com/#time): Add up the hours you spend on quotes, scheduling, invoicing, retyping and social media, and see what they cost per year.
 - [Missed-call calculator](https://albright-innovations.com/#calls): Estimate the jobs and revenue at risk from unanswered calls and slow follow-up.
-- [2-minute operations checkup](https://albright-innovations.com/#checkup): Nine quick questions, a score out of 100, and the three fixes worth doing first.
 
 ## Answers to common questions
 
@@ -502,7 +501,7 @@ We follow one job through your business and watch where it slows down or depends
 
 ## What you get
 
-A one-page list, in plain words, of what we'd fix first and why, ordered by what's costing you the most time or the most jobs. It's yours whether or not you hire us. Our 2-minute checkup (/#checkup) gives you a first version of that list right now.
+A one-page list, in plain words, of what we'd fix first and why, ordered by what's costing you the most time or the most jobs. It's yours whether or not you hire us. Our time calculator (/#time) shows you where to look first.
 
 ## What happens next, if you want it to
 
@@ -646,7 +645,7 @@ Every project starts the same way: we look at how work moves through your busine
 
 -
 Tell us what's going on
-Through the panel on this site, by email, or on a 30-minute call. A sentence or two about what's eating up your week is plenty to start. If you've used the calculators or the checkup, those numbers come along.
+Through the panel on this site, by email, or on a 30-minute call. A sentence or two about what's eating up your week is plenty to start. If you've used the calculators, those numbers come along.
 
 -
 The operations check
@@ -806,6 +805,6 @@ You can start with one side and add the other later. When we look after both, on
 
 ## Not sure where to start?
 
-Take the 2-minute operations checkup (/#checkup), or tell us what's eating up your week and we'll tell you which side we'd start with. Here's how a project runs. (/how-we-work/)
+Try the time calculator (/#time), or tell us what's eating up your week and we'll tell you which side we'd start with. Here's how a project runs. (/how-we-work/)
 
 Send us a message →

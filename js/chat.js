@@ -138,7 +138,7 @@
     state.attach = [];
     attachments();
     if (opener && opener.getAttribute('data-attach') && !state.attach.length) {
-      msg('note', 'Move a slider or finish the checkup first and the numbers will ride along with your message.');
+      msg('note', 'Move a slider first and the numbers will ride along with your message.');
     }
     ask(0);
     dialog.showModal();

@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&display=swap">
-<link rel="stylesheet" href="/css/site.css?v=4ab3d675">
+<link rel="stylesheet" href="/css/site.css?v=37a72c86">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@graph": [
@@ -182,48 +182,6 @@
 }</script>
 <script type="application/ld+json">{
  "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "What does a missed call cost a small business?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "A missed call costs you the chance of a job: the share of callers who don't try again, times how often a call becomes work, times your average job value. For a business getting 30 calls a week and missing 40% of them, that's roughly 21 jobs a month at risk.",
-    "url": "https://albright-innovations.com/answers/what-does-a-missed-call-cost-a-small-business/"
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How fast should I respond to a new lead?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "Within five minutes if you can, and within the hour at the latest. Businesses that reach a new lead within an hour are nearly seven times more likely to qualify it than those that wait even an hour longer.",
-    "url": "https://albright-innovations.com/answers/how-fast-should-i-respond-to-a-new-lead/"
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Do I need a CRM for a small business, and what's the simplest place to start?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "If you have more than a few dozen customers, yes, but it doesn't need to be fancy. A CRM is a customer list with the history attached, and the simplest place to start is one shared spreadsheet with six columns.",
-    "url": "https://albright-innovations.com/answers/do-i-need-a-crm-for-a-small-business/"
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What does it cost to work with Albright Innovations?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "It depends on the scope, and we figure it out together before you commit to anything. The first conversation and the operations check don't cost anything, and you'll have a price in writing before any work starts.",
-    "url": "https://albright-innovations.com/answers/what-does-it-cost-to-work-with-albright-innovations/"
-   }
-  }
- ]
-}</script>
-<script type="application/ld+json">{
- "@context": "https://schema.org",
  "@type": "WebApplication",
  "name": "Where does your week go?",
  "url": "https://albright-innovations.com/#time",
@@ -247,25 +205,6 @@
  "name": "Missed-call calculator",
  "url": "https://albright-innovations.com/#calls",
  "description": "Estimate the jobs and revenue at risk from unanswered calls and slow follow-up.",
- "applicationCategory": "BusinessApplication",
- "operatingSystem": "Any",
- "browserRequirements": "Requires JavaScript",
- "isAccessibleForFree": true,
- "offers": {
-  "@type": "Offer",
-  "price": "0",
-  "priceCurrency": "USD"
- },
- "provider": {
-  "@id": "https://albright-innovations.com/#organization"
- }
-}</script>
-<script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "WebApplication",
- "name": "2-minute operations checkup",
- "url": "https://albright-innovations.com/#checkup",
- "description": "Nine quick questions, a score out of 100, and the three fixes worth doing first.",
  "applicationCategory": "BusinessApplication",
  "operatingSystem": "Any",
  "browserRequirements": "Requires JavaScript",
@@ -344,7 +283,13 @@
         </div>
         <p class="note">We work with a handful of small and medium businesses at a time.</p>
       </div>
+    </div>
+  </section>
 
+  <!-- The two calculators, side by side -->
+  <section class="calcs" id="calcs">
+    <div class="wrap">
+      <div class="calc-grid">
       <!-- Tool A: Where does your week go? -->
       <div class="tool" id="time" data-tool="time">
         <div class="tool-head">
@@ -401,101 +346,7 @@
           <p>We add the five sliders to get your hours a week, multiply by 52 for a year, then multiply by what you said an hour of your time is worth. The work-weeks line divides the yearly hours by 40. Nothing is weighted or inflated. It's your numbers, added up.</p>
         </details>
       </div>
-    </div>
-  </section>
-
-  <!-- Sound familiar? (Tool D) -->
-  <section class="familiar" id="familiar">
-    <div class="wrap">
-      <div class="head">
-        <p class="label">Sound familiar?</p>
-        <h2>Busy, because you're good at what you do.</h2>
-        <div class="prose">
-          <p>Our clients are already successful. The office side is what gets held together with spreadsheets, sticky notes and memory. Open any of these to see what it tends to cost and what we'd do about it.</p>
-          <p class="src">Owners spend about <strong>36% of their week</strong> on admin, roughly 16 hours. Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc survey of 251 U.S. business owners, 2023</a>.</p>
-        </div>
-      </div>
-      <div class="rows">
-        <details class="row" id="pain-calls">
-          <summary>Nine missed calls means nine voicemails to listen to, write down and return.</summary>
-          <div class="row-body">
-            <p>Most of those callers won't wait around. Many hang up without leaving a message, and plenty call the next business on the list.</p>
-            <p class="stat-line"><strong>62% of calls to small businesses went unanswered</strong> in a 30-day study of 85 businesses across 58 industries. <span class="src">Source: <a href="https://411locals.us/small-business-owners-dont-answer-62-of-phone-calls/" target="_blank" rel="noopener">411 Locals, 2016</a></span></p>
-            <p class="do"><b>Here's what we'd do.</b> Look at how calls get handled when you're on a job, after hours and on weekends, and close the gaps so callers hear back while they're still deciding.</p>
-            <a class="more" href="#calls">Run your missed-call numbers <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-quotes">
-          <summary>Quotes wait until you're home at night, and the customer calls someone else.</summary>
-          <div class="row-body">
-            <p>Speed matters more than polish. The business that answers first usually gets the conversation.</p>
-            <p class="stat-line"><strong>Reaching a new lead within an hour makes you nearly 7 times more likely to qualify it</strong> than waiting even an hour longer. <span class="src">Source: <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a></span></p>
-            <p class="do"><b>Here's what we'd do.</b> Find the steps that slow your quotes down and take them out, with follow-up that doesn't depend on someone remembering. What that looks like depends on how your business works.</p>
-            <a class="more" href="#flow">See a job from first call to final invoice <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-list">
-          <summary>Your customer list is scattered, so past customers never hear from you again.</summary>
-          <div class="row-body">
-            <p>Repeat work and referrals are the cheapest customers you'll ever get, and they only come if you can reach people.</p>
-            <!-- TODO: add a sourced stat on repeat-customer value once we have one we can verify -->
-            <p class="do"><b>Here's what we'd do.</b> Find where your customer information lives now and bring it together in a way your team will actually keep up, so reaching past customers is quick.</p>
-            <a class="more" href="https://albright-innovations.com/answers/do-i-need-a-crm-for-a-small-business/">Do you need a CRM, and where to start <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-invoices">
-          <summary>Invoices go out late, so you're waiting weeks to get paid.</summary>
-          <div class="row-body">
-            <p>Late invoices turn into late payments. The gap between finishing a job and getting paid is where cash flow trouble starts.</p>
-            <p class="stat-line"><strong>59% of small businesses have invoices more than 30 days overdue</strong>, with $17.7K owed on average. <span class="src">Source: <a href="https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/" target="_blank" rel="noopener">QuickBooks Small Business Late Payments Report, 2026</a></span></p>
-            <p class="do"><b>Here's what we'd do.</b> Look at every step between finishing a job and getting paid, and shorten the ones that drag, so you stop being the collections department.</p>
-            <a class="more" href="#time">Add it to your week <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-questions">
-          <summary>Every question comes to you, so nothing moves when you're off the clock.</summary>
-          <div class="row-body">
-            <p>If the business lives in your head, you can't leave it. That's a systems problem, not a people problem.</p>
-            <p class="stat-line"><strong>44% of owners haven't taken a vacation in the past year</strong> where they could switch off from work completely. <span class="src">Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc, 2023</a></span></p>
-            <p class="do"><b>Here's what we'd do.</b> Written steps for the ten things people ask you most, kept where your team can find them without calling you.</p>
-            <a class="more" href="#checkup">Take the 2-minute checkup <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-ads">
-          <summary>You're paying for ads without knowing which ones bring in work.</summary>
-          <div class="row-body">
-            <p>If you can't connect a job to the ad or post that started it, you're guessing with real money.</p>
-            <!-- TODO: add a sourced stat on untracked ad spend once we have one we can verify -->
-            <p class="do"><b>Here's what we'd do.</b> Work out how you can tell where each job came from, so you can see which ads and posts bring in work and stop paying for the ones that don't.</p>
-            <a class="more" href="https://albright-innovations.com/answers/how-do-i-know-which-ads-or-posts-bring-in-customers/">How to tell which ads bring in customers <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-website">
-          <summary>Your website hasn't changed in years, and customers notice.</summary>
-          <div class="row-body">
-            <p>People check your site before they call. A dated site reads as a business that might not be around next year.</p>
-            <p class="stat-line"><strong>People judge a site's credibility largely by how it looks, and trust sites that are kept current</strong>, according to Stanford's web credibility research. <span class="src">Source: <a href="https://credibility.stanford.edu/guidelines" target="_blank" rel="noopener">Stanford Web Credibility Project</a></span></p>
-            <p class="do"><b>Here's what we'd do.</b> A clean rebuild that says who you are, what you do and how to reach you, then regular updates so it keeps working for you.</p>
-            <a class="more" href="https://albright-innovations.com/answers/when-is-it-time-to-redo-my-business-website/">When it's time to redo your website <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-        <details class="row" id="pain-social">
-          <summary>Your social media hasn't been posted to in months.</summary>
-          <div class="row-body">
-            <p>A quiet page tells people the business is quiet. Steady posts keep you in front of the people around you.</p>
-            <!-- TODO: add a sourced stat on posting frequency once we have one we can verify -->
-            <p class="do"><b>Here's what we'd do.</b> A posting plan we run for you, with comments answered, so your page looks like the busy business it is.</p>
-            <a class="more" href="https://albright-innovations.com/answers/how-often-should-a-local-business-post-on-facebook/">How often a local business should post <span class="arrow" aria-hidden="true">&rarr;</span></a>
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tool B: Missed-call calculator -->
-  <section class="calls" id="calls">
-    <div class="wrap">
-      <div class="tool" data-tool="calls">
+      <div class="tool" id="calls" data-tool="calls">
         <div class="tool-head">
           <p class="label">Missed calls and slow follow-up</p>
           <h2>What's an unanswered phone costing you?</h2>
@@ -527,7 +378,7 @@
             <div class="stat big"><span class="k">Revenue at risk a year</span><output class="v" id="calls-year" for="c-calls c-missed c-value c-close">$112,320</output></div>
           </div>
           <p class="equiv" id="calls-equiv">About <strong>$9,360 a month</strong> riding on calls nobody picked up.</p>
-          <p class="bench">Not every missed caller is lost, so treat this as the ceiling. The research shows how many don't come back.</p>
+          <p class="bench">Not every missed caller is lost, so treat this as the ceiling.</p>
           <button class="btn primary" type="button" data-chat-open data-attach="calls">See how we'd catch these <span class="arrow" aria-hidden="true">&rarr;</span></button>
         </div>
         <details class="how">
@@ -535,45 +386,95 @@
           <p>Calls a week times the share you miss gives missed calls a week. We multiply by 52 for a year and divide by 12 for a month. Missed calls times the share of answered calls that become work gives jobs at risk, and jobs times your average job value gives the revenue. It assumes a missed caller was as likely to hire you as an answered one, and it doesn't count the ones who try again, so it's a ceiling, not a forecast.</p>
         </details>
       </div>
-      <div class="research">
-        <div class="head">
-          <p class="label">What the research says</p>
-          <h2>Callers don't wait.</h2>
-        </div>
-        <ul>
-          <li><b>62% of calls to small businesses went unanswered.</b><p>A 30-day study of 85 businesses across 58 industries. <a href="https://411locals.us/small-business-owners-dont-answer-62-of-phone-calls/" target="_blank" rel="noopener">411 Locals, 2016</a></p></li>
-          <li><b>Answering a web lead within an hour makes you nearly 7 times more likely to qualify it.</b><p>Compared with firms that waited even an hour longer, across 2,241 companies. <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a></p></li>
-          <li><b>The odds of reaching a lead drop 100 times between a 5-minute and a 30-minute response.</b><p>The odds of qualifying it drop 21 times. <a href="https://25649.fs1.hubspotusercontent-na2.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf" target="_blank" rel="noopener">InsideSales.com and MIT, Lead Response Management Study, 2007</a></p></li>
-          <li><b>More than half of homeowners expect a reply within the hour, and 28% expect one right away.</b><p>Only about 1 in 5 home service businesses answer that fast. <a href="https://www.getjobber.com/home-service-trends-report/" target="_blank" rel="noopener">Jobber Home Service Trends Report, 2026</a></p></li>
-          <!-- TODO: CallRail's 2025 consumer survey (42% leave a voicemail, 82% call a competitor) is widely quoted, but we could not find a page on callrail.com to link to. Add it here when the primary source is located. -->
-        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Tool E: First call to final invoice -->
-  <section class="flow-sec" id="flow">
+  <!-- Sound familiar? (Tool D) -->
+  <section class="familiar" id="familiar">
     <div class="wrap">
-      <div class="flow-head">
-        <p class="label">First call to final invoice</p>
-        <h2>Where a job stalls, and where it doesn't.</h2>
-        <p class="lead">The same job, twice. Switch between how it usually goes today and how it goes once the pieces are connected.</p>
-        <div class="toggle" role="group" aria-label="Choose a view" id="flow-toggle">
-          <button type="button" data-mode="today" aria-pressed="true">Today</button>
-          <button type="button" data-mode="withus" aria-pressed="false">With us</button>
+      <div class="head">
+        <p class="label">Sound familiar?</p>
+        <h2>Busy, because you're good at what you do.</h2>
+        <div class="prose">
+          <p>Our clients are already successful. The office side is what gets held together with spreadsheets, sticky notes and memory. Open any of these to see what it tends to cost and what we'd do about it.</p>
+          <p class="src">Owners spend about <strong>36% of their week</strong> on admin, roughly 16 hours. Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc survey of 251 U.S. business owners, 2023</a>.</p>
         </div>
       </div>
-      <ol class="flow" id="flow-steps" data-mode="today">
-        <li class="stall" style="--i:0"><span class="dot" aria-hidden="true"></span><span class="step">A call comes in</span><span class="mode">Today</span><p class="today">You're on a ladder. It goes to voicemail, and half of those callers never leave a message.</p><span class="mode">With us</span><p class="withus">Callers hear back while they're still deciding, in a way that fits how your business runs.</p></li>
-        <li style="--i:1"><span class="dot" aria-hidden="true"></span><span class="step">The quote</span><span class="mode">Today</span><p class="today">Typed up at the kitchen table two nights later, after the customer has already called around.</p><span class="mode">With us</span><p class="withus">Goes out while the customer is still deciding, because the steps that held it up are gone.</p></li>
-        <li class="stall" style="--i:2"><span class="dot" aria-hidden="true"></span><span class="step">Follow-up</span><span class="mode">Today</span><p class="today">If you remember. A sticky note on the dash says "call back Tuesday."</p><span class="mode">With us</span><p class="withus">Follow-up has a clear owner and a clear next step, so it doesn't live on a sticky note.</p></li>
-        <li style="--i:3"><span class="dot" aria-hidden="true"></span><span class="step">Scheduling</span><span class="mode">Today</span><p class="today">Three texts and a phone call to land on a day. The crew finds out that morning.</p><span class="mode">With us</span><p class="withus">Landing on a day takes one conversation, and the crew knows the plan ahead of time.</p></li>
-        <li style="--i:4"><span class="dot" aria-hidden="true"></span><span class="step">The job</span><span class="mode">Today</span><p class="today">Done well. That part was never the problem.</p><span class="mode">With us</span><p class="withus">Done well, with the details saved where the next person can find them.</p></li>
-        <li class="stall" style="--i:5"><span class="dot" aria-hidden="true"></span><span class="step">The invoice</span><span class="mode">Today</span><p class="today">Goes out at the end of the month, in a batch, from a spreadsheet. Then the waiting starts.</p><span class="mode">With us</span><p class="withus">Goes out soon after the job is done, so the wait to get paid gets shorter.</p></li>
-        <li class="stall" style="--i:6"><span class="dot" aria-hidden="true"></span><span class="step">The review</span><span class="mode">Today</span><p class="today">You meant to ask. The happy customer forgets by Friday.</p><span class="mode">With us</span><p class="withus">Asking for a review is part of finishing the job, while the work is fresh in their mind.</p></li>
-      </ol>
-      <p class="flow-note">Every business gets to the "with us" side differently. We talk with you first, learn how you work, and fix the steps that cost you the most. We don't promise numbers for your business; we show you where the leaks are and close them.</p>
-      <div class="actions"><button class="btn primary" type="button" data-chat-open data-topic="First call to final invoice">See what we'd fix first <span class="arrow" aria-hidden="true">&rarr;</span></button></div>
+      <div class="rows">
+        <details class="row" id="pain-calls">
+          <summary>Nine missed calls means nine voicemails to listen to, write down and return.</summary>
+          <div class="row-body">
+            <p>Most of those callers won't wait around. Many hang up without leaving a message, and plenty call the next business on the list.</p>
+            <p class="stat-line"><strong>62% of calls to small businesses went unanswered</strong> in a 30-day study of 85 businesses across 58 industries. <span class="src">Source: <a href="https://411locals.us/small-business-owners-dont-answer-62-of-phone-calls/" target="_blank" rel="noopener">411 Locals, 2016</a></span></p>
+            <p class="do"><b>Here's what we'd do.</b> Look at how calls get handled when you're on a job, after hours and on weekends, and close the gaps so callers hear back while they're still deciding.</p>
+            <a class="more" href="#calls">Run your missed-call numbers <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+        <details class="row" id="pain-quotes">
+          <summary>Quotes wait until you're home at night, and the customer calls someone else.</summary>
+          <div class="row-body">
+            <p>Speed matters more than polish. The business that answers first usually gets the conversation.</p>
+            <p class="stat-line"><strong>Reaching a new lead within an hour makes you nearly 7 times more likely to qualify it</strong> than waiting even an hour longer. <span class="src">Source: <a href="https://hbr.org/2011/03/the-short-life-of-online-sales-leads" target="_blank" rel="noopener">Harvard Business Review, 2011</a></span></p>
+            <p class="do"><b>Here's what we'd do.</b> Find the steps that slow your quotes down and take them out, with follow-up that doesn't depend on someone remembering. What that looks like depends on how your business works.</p>
+            <a class="more" href="#time">Add it to your week <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+        <details class="row" id="pain-list">
+          <summary>Your customer list is scattered, so past customers never hear from you again.</summary>
+          <div class="row-body">
+            <p>Repeat work and referrals are the cheapest customers you'll ever get, and they only come if you can reach people.</p>
+            <!-- TODO: add a sourced stat on repeat-customer value once we have one we can verify -->
+            <p class="do"><b>Here's what we'd do.</b> Find where your customer information lives now and bring it together in a way your team will actually keep up, so reaching past customers is quick.</p>
+            <a class="more" href="https://albright-innovations.com/answers/do-i-need-a-crm-for-a-small-business/">Do you need a CRM, and where to start <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+        <details class="row" id="pain-invoices">
+          <summary>Invoices go out late, so you're waiting weeks to get paid.</summary>
+          <div class="row-body">
+            <p>Late invoices turn into late payments. The gap between finishing a job and getting paid is where cash flow trouble starts.</p>
+            <p class="stat-line"><strong>59% of small businesses have invoices more than 30 days overdue</strong>, with $17.7K owed on average. <span class="src">Source: <a href="https://quickbooks.intuit.com/r/small-business-data/small-business-late-payments-report-2026/" target="_blank" rel="noopener">QuickBooks Small Business Late Payments Report, 2026</a></span></p>
+            <p class="do"><b>Here's what we'd do.</b> Look at every step between finishing a job and getting paid, and shorten the ones that drag, so you stop being the collections department.</p>
+            <a class="more" href="#time">Add it to your week <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+        <details class="row" id="pain-questions">
+          <summary>Every question comes to you, so nothing moves when you're off the clock.</summary>
+          <div class="row-body">
+            <p>If the business lives in your head, you can't leave it. That's a systems problem, not a people problem.</p>
+            <p class="stat-line"><strong>44% of owners haven't taken a vacation in the past year</strong> where they could switch off from work completely. <span class="src">Source: <a href="https://www.timeetc.com/resources/how-to-achieve-more/the-big-price-of-small-tasks-how-entrepreneurs-may-be-unwittingly-keeping-their-businesses-small" target="_blank" rel="noopener">Time etc, 2023</a></span></p>
+            <p class="do"><b>Here's what we'd do.</b> Written steps for the ten things people ask you most, kept where your team can find them without calling you.</p>
+            <a class="more" href="https://albright-innovations.com/what-we-do/#workflows">How we help with workflows <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+        <details class="row" id="pain-ads">
+          <summary>You're paying for ads without knowing which ones bring in work.</summary>
+          <div class="row-body">
+            <p>If you can't connect a job to the ad or post that started it, you're guessing with real money.</p>
+            <!-- TODO: add a sourced stat on untracked ad spend once we have one we can verify -->
+            <p class="do"><b>Here's what we'd do.</b> Work out how you can tell where each job came from, so you can see which ads and posts bring in work and stop paying for the ones that don't.</p>
+            <a class="more" href="https://albright-innovations.com/answers/how-do-i-know-which-ads-or-posts-bring-in-customers/">How to tell which ads bring in customers <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+        <details class="row" id="pain-website">
+          <summary>Your website hasn't changed in years, and customers notice.</summary>
+          <div class="row-body">
+            <p>People check your site before they call. A dated site reads as a business that might not be around next year.</p>
+            <p class="stat-line"><strong>People judge a site's credibility largely by how it looks, and trust sites that are kept current</strong>, according to Stanford's web credibility research. <span class="src">Source: <a href="https://credibility.stanford.edu/guidelines" target="_blank" rel="noopener">Stanford Web Credibility Project</a></span></p>
+            <p class="do"><b>Here's what we'd do.</b> A clean rebuild that says who you are, what you do and how to reach you, then regular updates so it keeps working for you.</p>
+            <a class="more" href="https://albright-innovations.com/answers/when-is-it-time-to-redo-my-business-website/">When it's time to redo your website <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+        <details class="row" id="pain-social">
+          <summary>Your social media hasn't been posted to in months.</summary>
+          <div class="row-body">
+            <p>A quiet page tells people the business is quiet. Steady posts keep you in front of the people around you.</p>
+            <!-- TODO: add a sourced stat on posting frequency once we have one we can verify -->
+            <p class="do"><b>Here's what we'd do.</b> A posting plan we run for you, with comments answered, so your page looks like the busy business it is.</p>
+            <a class="more" href="https://albright-innovations.com/answers/how-often-should-a-local-business-post-on-facebook/">How often a local business should post <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </div>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -641,100 +542,6 @@
     </div>
   </section>
 
-  <!-- Tool C: 2-minute operations checkup -->
-  <section class="checkup" id="checkup">
-    <div class="wrap">
-      <div class="head">
-        <p class="label">2-minute operations checkup</p>
-        <h2>How much of your business runs on memory?</h2>
-        <div class="prose">
-          <p>Nine quick questions about how work moves through your business. You get a score out of 100 and the three fixes we'd make first, based on your answers.</p>
-          <p>No email required to see the result. It's your checkup.</p>
-        </div>
-      </div>
-      <form class="quiz" id="quiz" novalidate>
-        <div class="quiz-top">
-          <p class="quiz-count" id="quiz-count">Question 1 of 9</p>
-          <div class="progress" role="progressbar" aria-label="Checkup progress" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0" id="quiz-progress"><span></span></div>
-        </div>
-        <fieldset class="q" data-side="operations" data-weight="14" data-good="yes" data-fix="Put every customer in one list." data-fix-why="When customer details live in one place, repeat work and referrals take a message, not a search." data-service="The right tools for how you work">
-          <legend>Is your customer list in one place?</legend>
-          <div class="choices"><label><input type="radio" name="q1" value="yes">Yes</label><label><input type="radio" name="q1" value="no">No</label><label><input type="radio" name="q1" value="partly">Sort of</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="operations" data-weight="14" data-good="yes" data-fix="Close the gap on missed calls." data-fix-why="Callers who don't hear back move on to the next business. We look at how calls get handled when you're busy and close that gap." data-service="Phones">
-          <legend>When you miss a call, does the caller get a text back automatically?</legend>
-          <div class="choices"><label><input type="radio" name="q2" value="yes">Yes</label><label><input type="radio" name="q2" value="no">No</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="operations" data-weight="10" data-good="yes" data-fix="Track where every job came from." data-fix-why="When you know which ads and posts bring in work, you can stop paying for the ones that don't." data-service="Lead tracking and reporting">
-          <legend>Can you see which ads or posts brought in each job?</legend>
-          <div class="choices"><label><input type="radio" name="q3" value="yes">Yes</label><label><input type="radio" name="q3" value="no">No</label><label><input type="radio" name="q3" value="partly">Some of them</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="operations" data-weight="12" data-good="yes" data-fix="Get quotes out faster." data-fix-why="We find where quotes stall in your business and remove those steps. The first quote in usually gets the conversation." data-service="Quoting">
-          <legend>Are quotes usually sent the same day?</legend>
-          <div class="choices"><label><input type="radio" name="q4" value="yes">Yes</label><label><input type="radio" name="q4" value="no">No</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="operations" data-weight="10" data-good="yes" data-fix="Invoice the day the job is done." data-fix-why="The sooner an invoice goes out, the sooner you get paid. We find what's holding invoices up and shorten that step." data-service="Invoicing">
-          <legend>Do invoices go out the day the job is finished?</legend>
-          <div class="choices"><label><input type="radio" name="q5" value="yes">Yes</label><label><input type="radio" name="q5" value="no">No</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="marketing" data-weight="10" data-good="no" data-fix="Bring the website up to date." data-fix-why="People check your site before they call. A current site with clear services, photos and a way to reach you earns the call." data-service="Websites">
-          <legend>Is your website more than 3 years old?</legend>
-          <div class="choices"><label><input type="radio" name="q6" value="yes">Yes</label><label><input type="radio" name="q6" value="no">No</label><label><input type="radio" name="q6" value="partly">Not sure</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="marketing" data-weight="8" data-good="yes" data-fix="Post on Facebook every week." data-fix-why="A steady page shows an active business. We plan and schedule it so it happens without you." data-service="Social media management">
-          <legend>Do you post on Facebook at least weekly?</legend>
-          <div class="choices"><label><input type="radio" name="q7" value="yes">Yes</label><label><input type="radio" name="q7" value="no">No</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="operations" data-weight="12" data-good="no" data-fix="Enter each piece of information once." data-fix-why="Typing the same details into several places costs time and causes mistakes. We find where it happens and cut it down." data-service="The right tools for how you work">
-          <legend>Is the same information typed into more than one system?</legend>
-          <div class="choices"><label><input type="radio" name="q8" value="yes">Yes</label><label><input type="radio" name="q8" value="no">No</label></div>
-        </fieldset>
-        <fieldset class="q" data-side="operations" data-weight="10" data-good="yes" data-fix="Make follow-up dependable." data-fix-why="Follow-up after a quote and after a job shouldn't depend on someone remembering. We help you build a routine that holds up on busy weeks." data-service="Workflows and follow-up">
-          <legend>Does follow-up after a quote happen without you remembering to do it?</legend>
-          <div class="choices"><label><input type="radio" name="q9" value="yes">Yes</label><label><input type="radio" name="q9" value="no">No</label></div>
-        </fieldset>
-        <div class="quiz-nav">
-          <button class="btn" type="button" id="quiz-back">Back</button>
-          <button class="btn primary" type="button" id="quiz-next">Next</button>
-        </div>
-        <div class="quiz-result" id="quiz-result" hidden aria-live="polite">
-          <div class="score"><span class="n" id="quiz-score">0</span><span class="of">out of 100</span><span class="tag" id="quiz-label"></span></div>
-          <p id="quiz-blurb"></p>
-          <p class="title" style="font-stretch:70%;font-weight:600;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)">What we'd fix first</p>
-          <ol class="fixes" id="quiz-fixes"></ol>
-          <div class="chat-actions">
-            <button class="btn primary" type="button" data-chat-open data-attach="checkup">Send me this checkup and talk it over <span class="arrow" aria-hidden="true">&rarr;</span></button>
-            <button class="btn" type="button" id="quiz-restart">Start over</button>
-          </div>
-        </div>
-        <noscript><p class="src">Answer the questions above, then tell us your answers and we'll score it for you.</p></noscript>
-      </form>
-    </div>
-  </section>
-
-  <section class="outcomes" id="outcomes">
-    <div class="wrap">
-      <div class="intro">
-        <p class="label">What we work toward</p>
-        <h2>More of what matters to you.</h2>
-      </div>
-      <div class="out-grid">
-        <div class="out">
-          <span class="word">Your time back</span>
-          <p>The posting, the ad settings, the website updates and the spreadsheets come off your list. You get back to the work you're good at.</p>
-        </div>
-        <div class="out">
-          <span class="word">Leads that are ready to buy</span>
-          <p>We focus on reaching people who need what you offer, and on showing you which of them became customers.</p>
-        </div>
-        <div class="out">
-          <span class="word">A name your community knows</span>
-          <p>Steady, genuine posts and a website that looks like you keep your business in front of the people around you.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="clients" id="clients">
     <div class="wrap">
       <div class="head">
@@ -787,20 +594,6 @@
     </div>
   </section>
 
-  <section class="answers" id="answers">
-    <div class="wrap">
-      <div class="head">
-        <p class="label">Answers</p>
-        <h2>Questions owners ask us, answered straight.</h2>
-        <p class="lead">Short answers here. Each one opens to a full page with the sources.</p>
-      </div>
-      <ul class="qa-grid">
-<li class="qa"><h3><a href="https://albright-innovations.com/answers/what-does-a-missed-call-cost-a-small-business/">What does a missed call cost a small business?</a></h3><p>A missed call costs you the chance of a job: the share of callers who don't try again, times how often a call becomes work, times your average job value. For a business getting 30 calls a week and missing 40% of them, that's roughly 21 jobs a month at risk.</p><a class="more" href="https://albright-innovations.com/answers/what-does-a-missed-call-cost-a-small-business/">Read the full answer <span class="arrow" aria-hidden="true">&rarr;</span></a></li><li class="qa"><h3><a href="https://albright-innovations.com/answers/how-fast-should-i-respond-to-a-new-lead/">How fast should I respond to a new lead?</a></h3><p>Within five minutes if you can, and within the hour at the latest. Businesses that reach a new lead within an hour are nearly seven times more likely to qualify it than those that wait even an hour longer.</p><a class="more" href="https://albright-innovations.com/answers/how-fast-should-i-respond-to-a-new-lead/">Read the full answer <span class="arrow" aria-hidden="true">&rarr;</span></a></li><li class="qa"><h3><a href="https://albright-innovations.com/answers/do-i-need-a-crm-for-a-small-business/">Do I need a CRM for a small business, and what&#x27;s the simplest place to start?</a></h3><p>If you have more than a few dozen customers, yes, but it doesn't need to be fancy. A CRM is a customer list with the history attached, and the simplest place to start is one shared spreadsheet with six columns.</p><a class="more" href="https://albright-innovations.com/answers/do-i-need-a-crm-for-a-small-business/">Read the full answer <span class="arrow" aria-hidden="true">&rarr;</span></a></li><li class="qa"><h3><a href="https://albright-innovations.com/answers/what-does-it-cost-to-work-with-albright-innovations/">What does it cost to work with Albright Innovations?</a></h3><p>It depends on the scope, and we figure it out together before you commit to anything. The first conversation and the operations check don't cost anything, and you'll have a price in writing before any work starts.</p><a class="more" href="https://albright-innovations.com/answers/what-does-it-cost-to-work-with-albright-innovations/">Read the full answer <span class="arrow" aria-hidden="true">&rarr;</span></a></li>
-      </ul>
-      <p class="see-all"><a class="btn" href="https://albright-innovations.com/answers/">See all the answers <span class="arrow" aria-hidden="true">&rarr;</span></a></p>
-    </div>
-  </section>
-
   <section class="about" id="about">
     <div class="wrap">
       <div class="top-row">
@@ -817,20 +610,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="principles" id="principles">
-    <div class="wrap">
-      <div class="head">
-        <p class="label">How we work</p>
-        <h2>The way we do business.</h2>
-      </div>
-      <ul class="p-grid">
-        <li><h3>Authentic</h3><p>Real people, plain words, and work that sounds like your business. What you see from us is who we are.</p></li>
-        <li><h3>Honest</h3><p>We tell you what we'd do with your business and why. We don't guarantee numbers, and we show you the results as they come in.</p></li>
-        <li><h3>Principled</h3><p>We keep our client list small on purpose, and every deal we make is fair and a win for both sides.</p></li>
-      </ul>
     </div>
   </section>
 
@@ -872,7 +651,6 @@
         <a href="https://albright-innovations.com/what-we-do/">What we do</a>
         <a href="https://albright-innovations.com/#time">Where does your week go?</a>
         <a href="https://albright-innovations.com/#calls">Missed-call calculator</a>
-        <a href="https://albright-innovations.com/#checkup">Operations checkup</a>
         <a href="https://albright-innovations.com/answers/">Answers</a>
         <a href="https://albright-innovations.com/how-we-work/">How we work</a>
         <a href="https://albright-innovations.com/about/">About</a>
@@ -917,6 +695,6 @@
 
 <script src="/js/calc.js?v=2c15ba7f" defer></script>
 <script src="/js/tools.js?v=21d62f0f" defer></script>
-<script src="/js/chat.js?v=9bd748db" defer></script>
+<script src="/js/chat.js?v=81aa2134" defer></script>
 </body>
 </html>

@@ -563,10 +563,8 @@ def main():
 
     # --- homepage ---
     meta, body = split_meta(read(SRC / "home.html"), "home.html")
-    # The homepage shows only the answers marked "home: yes"; the rest are one tap away on /answers/.
-    featured = [a for a in answers if a[0].get("home") == "yes"] or answers[:4]
-    body = fill(body, answers=qa_items(featured))
-    extra = [ld_faq([(m["title"], visible_text(m["short"]), f'{BASE}/answers/{m["slug"]}/') for m, _, _ in featured])]
+    body = fill(body)
+    extra = []
     extra += [ld_webapp(t) for t in SITE["tools"]]
     write("index.html", page("/", meta, body, extra, "home"))
     home_updated = max([meta["updated"]] + [u for _, u in pages_for_sitemap])

@@ -20,7 +20,6 @@ Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-i
 
 - [Where does your week go?](https://albright-innovations.com/#time): Add up the hours you spend on quotes, scheduling, invoicing, retyping and social media, and see what they cost per year.
 - [Missed-call calculator](https://albright-innovations.com/#calls): Estimate the jobs and revenue at risk from unanswered calls and slow follow-up.
-- [2-minute operations checkup](https://albright-innovations.com/#checkup): Nine quick questions, a score out of 100, and the three fixes worth doing first.
 
 ## Answers to common questions
 
