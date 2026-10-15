@@ -93,6 +93,36 @@
   play();
 })();
 
+/* Scroll reveals: these blocks rise into place as they come into view. Staggered within a group. */
+(function () {
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced || !('IntersectionObserver' in window)) { return; }
+  var GROUPS = [
+    '.familiar .head', '.familiar .rows .row', '.tool.combo', '.services .intro', '.services .col', '.clients .head', '.logo-wall li',
+    '.start .head', '.door', '.door-full', '.about .top-row', '.contact .head', '.contact .reach',
+    '.page .head', '.page .crumbs', '.steps li', '.page .prose', '.wwd-jump', '.wwd-side-head', '.wwd', '.qa',
+    '.answer-head', '.answer-body', '.cta-box', '.more-answers', '.lp-sec'
+  ];
+  var all = [];
+  GROUPS.forEach(function (sel) {
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    els.forEach(function (el, i) {
+      if (el.classList.contains('reveal') || el.closest('.reveal')) { return; }
+      el.classList.add('reveal');
+      el.style.setProperty('--d', String(Math.min(i, 8)));
+      all.push(el);
+    });
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  all.forEach(function (el) {
+    /* already on screen: show it now, so nothing above the fold waits */
+    var r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) { el.classList.add('is-in'); } else { io.observe(el); }
+  });
+})();
+
 /* Phone menu: close it after a link is tapped, on Escape, or on a tap outside it. */
 (function () {
   var menu = document.querySelector('.menu');
@@ -108,6 +138,22 @@
   var Calc = window.Calc;
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+
+  /* ---------- numbers that count to their new value ---------- */
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tick(el, value, format) {
+    if (!el) { return; }
+    var from = Number(el.getAttribute('data-v'));
+    el.setAttribute('data-v', value);
+    if (reducedMotion || !isFinite(from) || from === value) { el.textContent = format(value); return; }
+    var t0 = performance.now(), dur = 420;
+    if (el._tick) { cancelAnimationFrame(el._tick); }
+    (function step(now) {
+      var k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = format(from + (value - from) * e);
+      if (k < 1) { el._tick = requestAnimationFrame(step); } else { el._tick = 0; el.textContent = format(value); }
+    })(t0);
+  }
 
   /* ---------- shared results store ---------- */
   var KEY = 'albright-results';
@@ -177,9 +223,9 @@
     function render() {
       pending = false;
       var r = Calc.timeLeaks(values());
-      if (out.week) { out.week.textContent = Calc.num(r.week); }
-      if (out.year) { out.year.textContent = Calc.num(r.year); }
-      if (out.dollars) { out.dollars.textContent = Calc.money(r.dollars); }
+      tick(out.week, r.week, function (v) { return Calc.num(Math.round(v * 2) / 2); });
+      tick(out.year, r.year, function (v) { return Calc.num(Math.round(v)); });
+      tick(out.dollars, r.dollars, function (v) { return Calc.money(Math.round(v)); });
       if (out.equiv) { out.equiv.innerHTML = Calc.timeEquivalent(r); }
       var warn = $('#time-warn');
       if (warn) { warn.hidden = !(r.week > 60); }
@@ -218,9 +264,9 @@
     function render() {
       pending = false;
       var r = Calc.missedCalls({ calls: inputs.calls.get(), missed: inputs.missed.get(), value: inputs.value.get(), close: inputs.close.get() });
-      if (out.missed) { out.missed.textContent = Calc.num(Math.round(r.missedMonth)); }
-      if (out.jobs) { out.jobs.textContent = Calc.num(r.jobsMonth); }
-      if (out.year) { out.year.textContent = Calc.money(r.revenueYear); }
+      tick(out.missed, Math.round(r.missedMonth), function (v) { return Calc.num(Math.round(v)); });
+      tick(out.jobs, r.jobsMonth, function (v) { return Calc.num(Math.round(v)); });
+      tick(out.year, r.revenueYear, function (v) { return Calc.money(Math.round(v)); });
       if (out.equiv) { out.equiv.innerHTML = Calc.callsEquivalent(r); }
       A.save('calls', {
         label: 'Missed-call calculator',
