@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Hero options (not part of the site)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&display=swap">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* Three directions for the homepage opener, stacked. Brand colors only: ink, cream, white, the blue and its tints. */
+body::before { display: none; }
+.opt { position: relative; min-height: 100svh; display: grid; align-content: center; overflow: hidden; isolation: isolate; }
+.tag { position: absolute; top: 18px; left: 18px; z-index: 5; font-stretch: var(--narrow); font-weight: 700; font-size: .8rem; letter-spacing: .22em; text-transform: uppercase; padding: 8px 12px; background: var(--accent); color: #FFFFFF; border-radius: 2px; }
+.wrap { width: min(1200px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+.eyebrow { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: .24em; text-transform: uppercase; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+/* ---------- A. Dark and cinematic: ink, huge cream type, slow blue glow ---------- */
+.a { background: #15171C; color: #F3F0E8; padding-block: 120px; }
+.a .glow { position: absolute; inset: -20%; z-index: -1; filter: blur(70px); opacity: .9; }
+.a .glow i { position: absolute; border-radius: 50%; background: #2F4BD8; }
+.a .glow i:nth-child(1) { width: 52vw; height: 52vw; left: 46%; top: -18%; opacity: .55; animation: drift1 14s ease-in-out infinite alternate; }
+.a .glow i:nth-child(2) { width: 36vw; height: 36vw; left: -8%; top: 44%; opacity: .35; animation: drift2 18s ease-in-out infinite alternate; }
+.a .glow i:nth-child(3) { width: 22vw; height: 22vw; left: 62%; top: 62%; opacity: .45; animation: drift1 11s ease-in-out infinite alternate-reverse; }
+@keyframes drift1 { to { transform: translate(-12vw, 10vh) scale(1.15); } }
+@keyframes drift2 { to { transform: translate(14vw, -12vh) scale(.9); } }
+.a .mark { position: absolute; right: -6vw; bottom: -14vh; width: 58vh; height: 58vh; z-index: -1; opacity: .12; color: #F3F0E8; }
+.a .eyebrow { color: color-mix(in srgb, #F3F0E8 70%, transparent); }
+.a h1 { font-size: clamp(2.8rem, 6.6vw, 5.8rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.035em; line-height: .96; max-width: 11ch; margin-top: 18px; }
+.a h1 em { font-style: normal; color: #FFFFFF; background: #2F4BD8; padding: 0 .12em; border-radius: .08em; }
+.a p { font-size: var(--t-lead); color: color-mix(in srgb, #F3F0E8 72%, transparent); max-width: 36em; margin-top: 26px; }
+.a .btn { color: #F3F0E8; border-color: color-mix(in srgb, #F3F0E8 40%, transparent); }
+.a .btn.primary { background: #2F4BD8; border-color: #2F4BD8; color: #FFFFFF; }
+
+/* ---------- B. Big type, outlined word, fine blue grid ---------- */
+.b { background: #FFFFFF; color: #15171C; padding-block: 110px; }
+.b .grid { position: absolute; inset: 0; z-index: -1; opacity: .5;
+  background-image: linear-gradient(to right, color-mix(in srgb, #2F4BD8 14%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, #2F4BD8 14%, transparent) 1px, transparent 1px);
+  background-size: 72px 72px; mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%); }
+.b h1 { font-size: clamp(3.4rem, 10.5vw, 10rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.045em; line-height: .9; }
+.b h1 span { display: block; }
+.b h1 .out { color: transparent; -webkit-text-stroke: 2px #2F4BD8; }
+.b h1 .fill { color: #2F4BD8; }
+.b .row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: end; margin-top: 36px; }
+.b p { font-size: var(--t-lead); color: var(--muted); max-width: 30em; }
+.b .num { display: grid; gap: 4px; border-left: 3px solid #2F4BD8; padding-left: 18px; }
+.b .num b { font-size: clamp(2.2rem, 4vw, 3.4rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.03em; line-height: 1; color: #2F4BD8; }
+.b .num span { font-size: var(--t-small); color: var(--muted); }
+@media (max-width: 760px) { .b .row { grid-template-columns: 1fr; } }
+
+/* ---------- C. Photo-led: Josh in blue duotone, headline over it ---------- */
+.c { background: #15171C; color: #F3F0E8; padding-block: 120px; }
+.c .photo { position: absolute; inset: 0; z-index: -1; background: url(/img/joshua-albright.jpg) center 20% / cover no-repeat; filter: grayscale(1) contrast(1.15); opacity: .55; }
+.c .tint { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #15171C 0%, color-mix(in srgb, #15171C 85%, transparent) 45%, color-mix(in srgb, #2F4BD8 35%, transparent) 100%); mix-blend-mode: multiply; }
+.c .tint2 { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #15171C 0%, transparent 55%); }
+.c h1 { font-size: clamp(2.8rem, 6.2vw, 5.4rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.035em; line-height: .96; max-width: 12ch; margin-top: 18px; }
+.c h1 em { font-style: normal; color: #FFFFFF; background: #2F4BD8; padding: 0 .12em; border-radius: .08em; }
+.c p { font-size: var(--t-lead); color: color-mix(in srgb, #F3F0E8 75%, transparent); max-width: 34em; margin-top: 26px; }
+.c .who { margin-top: 40px; display: flex; align-items: center; gap: 14px; font-size: var(--t-small); color: color-mix(in srgb, #F3F0E8 70%, transparent); }
+.c .who i { display: block; width: 44px; height: 3px; background: #2F4BD8; }
+.c .btn { color: #F3F0E8; border-color: color-mix(in srgb, #F3F0E8 40%, transparent); }
+.c .btn.primary { background: #2F4BD8; border-color: #2F4BD8; color: #FFFFFF; }
+
+.note { padding: 40px var(--gutter); background: var(--surface); color: var(--muted); font-size: var(--t-small); text-align: center; }
+</style>
+</head>
+<body>
+
+<section class="opt a">
+  <span class="tag">Option A · Dark and cinematic</span>
+  <div class="glow" aria-hidden="true"><i></i><i></i><i></i></div>
+  <svg class="mark" viewBox="0 0 240 240" aria-hidden="true"><polygon fill="currentColor" points="20,220 100,20 103,20 103,220"/><polygon fill="currentColor" points="137,220 137,20 140,20 220,220"/><rect fill="#2F4BD8" x="109" y="2" width="22" height="218"/></svg>
+  <div class="wrap">
+    <p class="eyebrow">Authentic Influence</p>
+    <h1>You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+    <p>We take the marketing off your plate: social media, ads and your website. We also build the systems behind the scenes, so your days stop disappearing into busywork.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+</section>
+
+<section class="opt b">
+  <span class="tag">Option B · Big type</span>
+  <div class="grid" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow" style="color: var(--muted)">Marketing and operations for small businesses</p>
+    <h1><span>You built</span><span>the business.</span><span class="out">We handle</span><span class="fill">the headaches.</span></h1>
+    <div class="row">
+      <p>Social media, ads and your website, plus the systems behind the scenes, from your customer list and phones to quoting and invoicing. So you can grow it.</p>
+      <div class="num"><b>16 hrs</b><span>a week the average owner spends on admin. Run your numbers below.</span></div>
+    </div>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+</section>
+
+<section class="opt c">
+  <span class="tag">Option C · Photo-led</span>
+  <div class="photo" aria-hidden="true"></div>
+  <div class="tint" aria-hidden="true"></div>
+  <div class="tint2" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow" style="color: color-mix(in srgb, #F3F0E8 70%, transparent)">Authentic Influence</p>
+    <h1>You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+    <p>We take the marketing off your plate and build the systems behind the scenes, so your days stop disappearing into busywork.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+    <p class="who"><i></i>Joshua Albright, founder. Twelve years building what a growing business needs.</p>
+  </div>
+</section>
+
+<p class="note">Three directions for the top of the homepage. Everything below the opener would stay as it is. Pick one, or mix: for example A's glow with B's type.</p>
+</body>
+</html>
