@@ -130,13 +130,8 @@ h3 { font-size: var(--t-h3); font-weight: 600; line-height: 1.25; letter-spacing
 .hl { color: var(--accent-ink); }
 /* A blue line down the left edge of every page; the header carries the one across. */
 body::before { content: ""; position: fixed; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); z-index: 30; pointer-events: none; transform-origin: top; animation: draw-y 1.1s cubic-bezier(.2,.8,.2,1) both; }
-/* A thin blue rule that draws in under a few words. No blocks, no shadows. */
-.hi, .hero .hl { background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 100% / 0% 0.1em; padding-bottom: 0.04em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-.hi { animation: rule-draw .6s cubic-bezier(.2,.8,.2,1) .4s forwards; }
-.hero .hl { font-weight: 800; animation: rule-draw .6s cubic-bezier(.2,.8,.2,1) .9s forwards; }
-.hero .hl ~ .hl { animation-delay: 1.25s; }
-@keyframes rule-draw { to { background-size: 100% 0.1em; } }
-@media (prefers-reduced-motion: reduce) { .hi, .hero .hl { animation: none; background-size: 100% 0.1em; } }
+/* Key words in the opener: just the blue, a touch bolder. */
+.hero .hl { font-weight: 800; }
 @media (max-width: 760px) { body::before { width: 3px; } }
 .head { display: grid; gap: 24px; align-content: start; }
 .intro { display: grid; gap: 24px; margin-bottom: clamp(40px, 6vw, 72px); }
