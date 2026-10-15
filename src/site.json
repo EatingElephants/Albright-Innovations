@@ -14,12 +14,21 @@
     "booking_url": "",
     "free_website_video": ""
   },
-  "summary": "Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads, Google Business Profiles and websites. We set up a 24/7 assistant that answers website and phone enquiries and sends the lead to the owner, and we improve the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. We work with businesses anywhere in the United States.",
-  "areas": [],
+  "summary": "Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads, Google Business Profiles and websites. We set up a 24/7 assistant that answers website and phone enquiries and sends the lead to the owner, and we improve the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. Based in Big Rapids, Michigan and the Charlotte, North Carolina area, working with businesses anywhere in the U.S.",
+  "areas": [
+    {
+      "name": "Big Rapids, Michigan",
+      "region": "West Michigan"
+    },
+    {
+      "name": "Charlotte, North Carolina area",
+      "region": "Charlotte area"
+    }
+  ],
   "services": [
     {
-      "name": "Operations review",
-      "url": "/what-we-do/#operations-review",
+      "name": "Operations check",
+      "url": "/what-we-do/#operations-check",
       "desc": "A walk-through of how work moves through your business, from the first call to the final invoice, and where time and leads slip away."
     },
     {

@@ -2,7 +2,7 @@
 
 The site at https://albright-innovations.com. Everything you'd ever want to change lives in the `src` folder. A small script turns it into the finished pages.
 
-## Where we left off (October 14, 2026)
+## Where we left off (October 15, 2026)
 
 The redesign is **in progress on the `redesign` branch**. The live site is still the old one, on `main`. Nothing here is public until `redesign` is merged into `main`.
 
@@ -15,6 +15,7 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 - October 11: a **What we do** page (`/what-we-do/`) with every service, what you get and who it fits, split into the two sides of the business. It's in the menu and the footer.
 - October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. Committed later that day, and the main site was brought into line with them: the assistant and Google Business Profile are on the What we do page and the homepage services list. (October 14: the free-website mentions came back off the main site; see the copy rules.)
 - October 14: the free website came off the main site (ads only) and the landing pages were hidden from search. The homepage was trimmed to opener, one combined calculator card, Sound familiar (six lines), What we do, clients, How we start, About and contact. The opener has an animation of the 24/7 assistant: the customer's phone, then the lead arriving on the owner's phone. Service-area wording came off the main site (we work anywhere), and the bio was corrected: Josh grew up around entrepreneurs, not in Big Rapids.
+- October 15: Josh's proofreading pass. One name for the free session (operations check; the old answer address redirects), contradictions fixed, service area back in a softer form (based in Big Rapids and the Charlotte area, working anywhere in the U.S.), long sentences split, calculator sliders capped at 20 hours with a note over 60, periwinkle gone (dark mode now uses the brand blue for fills and Cream for text), and answer pages' browser titles end in "| Albright Innovations". A 3D homepage opener was tried the same day and taken back out; it's in the saved history if ever wanted.
 
 **Copy rules that came out of the work**
 
@@ -100,10 +101,15 @@ updated: 2026-10-04
 crumb: Short name for the breadcrumb
 cta: Button text (optional)
 cta_link: /#time (optional; leave out to open the chat)
+browser_title: Short question | Albright Innovations (optional; the browser tab and share title, 65 characters or fewer)
 -->
 ```
 
 Write the rest of the file in plain HTML: `<h2>` headings as questions, `<ul>` and `<table>` where they help, a source link at the end. Rebuild, and the page, the homepage card, the sitemap and llms.txt all update together.
+
+## If a page's address changes
+
+Add a line to `_redirects` so the old address still works: `old-address new-address 301`. Cloudflare reads that file.
 
 ## Landing pages for ads
 

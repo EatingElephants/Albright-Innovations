@@ -148,7 +148,8 @@
         var hi = Number(number.max); if (isFinite(hi) && number.max !== '' && v > hi) { v = hi; }
         set(v, number);
       });
-      number.addEventListener('blur', function () { if (number.value === '' || !isFinite(Number(number.value))) { set(0); } number.value = state.value; });
+      /* A blank or nonsense box goes to the slider's minimum, not back to the old value. */
+      number.addEventListener('blur', function () { if (number.value === '' || !isFinite(Number(number.value))) { set(Number(range.min) || 0); } number.value = state.value; });
     }
     fill(range);
     return { get: function () { return state.value; }, range: range };
@@ -180,6 +181,8 @@
       if (out.year) { out.year.textContent = Calc.num(r.year); }
       if (out.dollars) { out.dollars.textContent = Calc.money(r.dollars); }
       if (out.equiv) { out.equiv.innerHTML = Calc.timeEquivalent(r); }
+      var warn = $('#time-warn');
+      if (warn) { warn.hidden = !(r.week > 60); }
       Calc.TIME_KEYS.forEach(function (k) {
         var bar = $('[data-bar="' + k + '"]', tool), n = $('[data-n="' + k + '"]', tool);
         if (bar) { bar.style.width = (r.shares[k] * 100).toFixed(1) + '%'; }
@@ -221,7 +224,7 @@
       if (out.equiv) { out.equiv.innerHTML = Calc.callsEquivalent(r); }
       A.save('calls', {
         label: 'Missed-call calculator',
-        summary: Calc.num(r.missedMonth) + ' missed calls a month, about ' + Calc.num(r.jobsMonth) + ' jobs and ' + Calc.money(r.revenueYear) + ' a year at risk',
+        summary: Calc.num(Math.round(r.missedMonth)) + ' missed calls a month, about ' + Calc.num(Math.round(r.jobsMonth)) + ' jobs and ' + Calc.money(r.revenueYear) + ' a year at risk',
         detail: Calc.num(r.calls) + ' calls/wk; ' + Calc.pct(r.missedShare) + ' missed; ' + Calc.money(r.value) + ' avg job; ' + Calc.pct(r.closeShare) + ' become work',
         missedMonth: r.missedMonth, jobsMonth: r.jobsMonth, revenueMonth: r.revenueMonth, revenueYear: r.revenueYear
       });

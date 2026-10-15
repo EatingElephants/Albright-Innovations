@@ -255,7 +255,7 @@ def page(path, meta, body, extra_ld, page_name, template=None, business=True, **
     ldjson = "\n".join(ld(x) for x in ([ld_business()] if business else []) + extra_ld)
     out = fill(
         template or layout,
-        title=esc(meta["title"]),
+        title=esc(meta.get("browser_title", meta["title"])),
         description=esc(meta["description"]),
         canonical=canonical,
         og_image=BASE + meta.get("og", DEFAULT_OG),
@@ -591,7 +591,7 @@ def main():
     lines += ["## Answers to common questions", ""] + [f"- [{t}]({BASE}{p}): {visible_text(s)}" for t, p, s, _ in llms_sections] + [""]
     lines += ["## About", "", f"- [About {SITE['founder']}]({BASE}/about/): Who runs Albright Innovations and the experience behind it.",
               f"- [What we do]({BASE}/what-we-do/): Each service, what you get, and who it fits.",
-              f"- [How we work]({BASE}/how-we-work/): What an operations review involves and how a project runs.", ""]
+              f"- [How we work]({BASE}/how-we-work/): What an operations check involves and how a project runs.", ""]
     write("llms.txt", "\n".join(lines))
 
     full = lines + ["", "---", "", "# Full text of the answers", ""]

@@ -102,7 +102,7 @@ def poster(name, headline_lines, sub):
         d.text((90, y), line, font=big, fill=CREAM, anchor="ls")
         y += int(size * 1.14)
     d.text((90, 610), sub, font=fit([sub], 26, 100, 500, PW - 90 - 70)[0], fill=(168, 164, 154), anchor="ls")
-    spaced(d, 90, 660, "ALBRIGHT-INNOVATIONS.COM", font(18, 70, 600), (138, 155, 255), 4)
+    spaced(d, 90, 660, "ALBRIGHT-INNOVATIONS.COM", font(18, 70, 600), (243, 240, 232), 4)
     out = ROOT / "img" / name
     img.save(out, optimize=True)
     print("  wrote img/" + name, out.stat().st_size // 1024, "KB")
