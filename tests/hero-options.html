@@ -4,110 +4,518 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Hero options (not part of the site)</title>
+<title>20 opener options (not part of the site)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&display=swap">
 <link rel="stylesheet" href="/css/site.css">
 <style>
-/* Three directions for the homepage opener, stacked. Brand colors only: ink, cream, white, the blue and its tints. */
+/* Twenty directions for the top of the homepage. Brand colors only. Scroll, or use the numbers at the top. */
+:root { --ink: #15171C; --cream: #F3F0E8; --blue: #2F4BD8; --soft: #E3E7FA; }
 body::before { display: none; }
-.opt { position: relative; min-height: 100svh; display: grid; align-content: center; overflow: hidden; isolation: isolate; }
-.tag { position: absolute; top: 18px; left: 18px; z-index: 5; font-stretch: var(--narrow); font-weight: 700; font-size: .8rem; letter-spacing: .22em; text-transform: uppercase; padding: 8px 12px; background: var(--accent); color: #FFFFFF; border-radius: 2px; }
-.wrap { width: min(1200px, 100% - 2 * var(--gutter)); margin-inline: auto; }
-.eyebrow { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: .24em; text-transform: uppercase; }
+html { scroll-behavior: smooth; }
+.jump { position: sticky; top: 0; z-index: 50; display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 16px; background: color-mix(in srgb, #FFFFFF 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.jump a { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); font-size: .8rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+.jump a:hover { border-color: var(--blue); color: var(--blue); }
+.opt { position: relative; min-height: 100svh; display: grid; align-content: center; overflow: hidden; isolation: isolate; padding-block: 110px; }
+.tag { position: absolute; top: 18px; left: 18px; z-index: 5; display: flex; gap: 10px; align-items: center; }
+.tag b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--blue); color: #FFFFFF; font-size: .9rem; }
+.tag span { font-stretch: var(--narrow); font-weight: 700; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; padding: 7px 10px; background: var(--ink); color: var(--cream); border-radius: 2px; }
+.cap { position: absolute; left: 18px; bottom: 16px; z-index: 5; font-size: .8rem; color: var(--muted); max-width: 46em; padding: 6px 10px; background: color-mix(in srgb, #FFFFFF 85%, transparent); border-radius: 2px; }
+.dark .cap { background: color-mix(in srgb, var(--ink) 80%, transparent); color: color-mix(in srgb, var(--cream) 80%, transparent); }
+.wrap { width: min(1200px, 100% - 2 * var(--gutter)); margin-inline: auto; position: relative; }
+.eyebrow { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.h { font-stretch: 125%; font-weight: 800; letter-spacing: -.035em; line-height: .98; font-size: clamp(2.6rem, 6vw, 5.2rem); max-width: 12ch; margin-top: 16px; }
+.h em { font-style: normal; color: var(--blue); }
+.lead2 { font-size: var(--t-lead); color: var(--muted); max-width: 34em; margin-top: 24px; }
+.dark { background: var(--ink); color: var(--cream); }
+.dark .eyebrow, .dark .lead2 { color: color-mix(in srgb, var(--cream) 70%, transparent); }
+.dark .btn { color: var(--cream); border-color: color-mix(in srgb, var(--cream) 40%, transparent); }
+.dark .btn.primary, .btn.primary { background: var(--blue); border-color: var(--blue); color: #FFFFFF; }
+.box { color: #FFFFFF; background: var(--blue); padding: 0 .12em; border-radius: .08em; }
+.two { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+@media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
 
-/* ---------- A. Dark and cinematic: ink, huge cream type, slow blue glow ---------- */
-.a { background: #15171C; color: #F3F0E8; padding-block: 120px; }
-.a .glow { position: absolute; inset: -20%; z-index: -1; filter: blur(70px); opacity: .9; }
-.a .glow i { position: absolute; border-radius: 50%; background: #2F4BD8; }
-.a .glow i:nth-child(1) { width: 52vw; height: 52vw; left: 46%; top: -18%; opacity: .55; animation: drift1 14s ease-in-out infinite alternate; }
-.a .glow i:nth-child(2) { width: 36vw; height: 36vw; left: -8%; top: 44%; opacity: .35; animation: drift2 18s ease-in-out infinite alternate; }
-.a .glow i:nth-child(3) { width: 22vw; height: 22vw; left: 62%; top: 62%; opacity: .45; animation: drift1 11s ease-in-out infinite alternate-reverse; }
+/* a phone with the owner's lock screen and the lead notification, reused by several options */
+.ph { width: 270px; max-width: 100%; aspect-ratio: 9 / 18.5; padding: 10px; border-radius: 44px; background: #0E1014; border: 1px solid #2C2F38; box-shadow: 0 40px 70px -30px rgba(21,23,28,.6); margin-inline: auto; }
+.ph .scr { position: relative; height: 100%; border-radius: 35px; overflow: hidden; background: radial-gradient(120% 70% at 30% 20%, #262B3D 0%, #15171C 60%); color: var(--cream); display: flex; flex-direction: column; align-items: center; }
+.ph .st { align-self: stretch; display: flex; justify-content: space-between; align-items: center; padding: 10px 22px 4px; font-size: .78rem; font-weight: 600; }
+.ph .isl { width: 74px; height: 20px; border-radius: 12px; background: #000; }
+.ph .date { margin-top: 32px; font-size: .85rem; color: var(--inv-muted); }
+.ph .clk { font-stretch: 125%; font-weight: 600; font-size: 3.4rem; line-height: 1; letter-spacing: -.02em; }
+.ph .al { position: absolute; left: 8px; right: 8px; top: 168px; display: grid; gap: 2px; padding: 10px 12px; border-radius: 16px; font-size: .78rem; line-height: 1.3; background: #FFFFFF; color: var(--ink); box-shadow: 0 14px 30px -12px rgba(0,0,0,.5); }
+.ph .al b { font-size: .85rem; }
+.ph .al .m { display: flex; align-items: center; gap: 6px; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.ph .al .m i { width: 14px; height: 14px; border-radius: 4px; background: var(--blue); }
+.ph .al .m span:last-child { margin-left: auto; text-transform: none; letter-spacing: 0; }
+
+/* 1 dark glow */
+.o1 .glow { position: absolute; inset: -20%; z-index: -1; filter: blur(70px); }
+.o1 .glow i { position: absolute; border-radius: 50%; background: var(--blue); }
+.o1 .glow i:nth-child(1) { width: 52vw; height: 52vw; left: 46%; top: -18%; opacity: .55; animation: drift1 14s ease-in-out infinite alternate; }
+.o1 .glow i:nth-child(2) { width: 36vw; height: 36vw; left: -8%; top: 44%; opacity: .35; animation: drift2 18s ease-in-out infinite alternate; }
+.o1 .glow i:nth-child(3) { width: 22vw; height: 22vw; left: 62%; top: 62%; opacity: .45; animation: drift1 11s ease-in-out infinite alternate-reverse; }
 @keyframes drift1 { to { transform: translate(-12vw, 10vh) scale(1.15); } }
 @keyframes drift2 { to { transform: translate(14vw, -12vh) scale(.9); } }
-.a .mark { position: absolute; right: -6vw; bottom: -14vh; width: 58vh; height: 58vh; z-index: -1; opacity: .12; color: #F3F0E8; }
-.a .eyebrow { color: color-mix(in srgb, #F3F0E8 70%, transparent); }
-.a h1 { font-size: clamp(2.8rem, 6.6vw, 5.8rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.035em; line-height: .96; max-width: 11ch; margin-top: 18px; }
-.a h1 em { font-style: normal; color: #FFFFFF; background: #2F4BD8; padding: 0 .12em; border-radius: .08em; }
-.a p { font-size: var(--t-lead); color: color-mix(in srgb, #F3F0E8 72%, transparent); max-width: 36em; margin-top: 26px; }
-.a .btn { color: #F3F0E8; border-color: color-mix(in srgb, #F3F0E8 40%, transparent); }
-.a .btn.primary { background: #2F4BD8; border-color: #2F4BD8; color: #FFFFFF; }
+.o1 .mark { position: absolute; right: -6vw; bottom: -14vh; width: 58vh; height: 58vh; z-index: -1; opacity: .12; color: var(--cream); }
 
-/* ---------- B. Big type, outlined word, fine blue grid ---------- */
-.b { background: #FFFFFF; color: #15171C; padding-block: 110px; }
-.b .grid { position: absolute; inset: 0; z-index: -1; opacity: .5;
-  background-image: linear-gradient(to right, color-mix(in srgb, #2F4BD8 14%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, #2F4BD8 14%, transparent) 1px, transparent 1px);
-  background-size: 72px 72px; mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%); }
-.b h1 { font-size: clamp(3.4rem, 10.5vw, 10rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.045em; line-height: .9; }
-.b h1 span { display: block; }
-.b h1 .out { color: transparent; -webkit-text-stroke: 2px #2F4BD8; }
-.b h1 .fill { color: #2F4BD8; }
-.b .row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 48px; align-items: end; margin-top: 36px; }
-.b p { font-size: var(--t-lead); color: var(--muted); max-width: 30em; }
-.b .num { display: grid; gap: 4px; border-left: 3px solid #2F4BD8; padding-left: 18px; }
-.b .num b { font-size: clamp(2.2rem, 4vw, 3.4rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.03em; line-height: 1; color: #2F4BD8; }
-.b .num span { font-size: var(--t-small); color: var(--muted); }
-@media (max-width: 760px) { .b .row { grid-template-columns: 1fr; } }
+/* 2 big outlined type */
+.o2 .grid { position: absolute; inset: 0; z-index: -1; opacity: .5; background-image: linear-gradient(to right, color-mix(in srgb, var(--blue) 14%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, var(--blue) 14%, transparent) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 30% 40%, #000 20%, transparent 70%); }
+.o2 h1 { font-size: clamp(3.2rem, 10vw, 9.4rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.045em; line-height: .9; }
+.o2 h1 span { display: block; }
+.o2 .out { color: transparent; -webkit-text-stroke: 2px var(--blue); }
+.o2 .fill { color: var(--blue); }
 
-/* ---------- C. Photo-led: Josh in blue duotone, headline over it ---------- */
-.c { background: #15171C; color: #F3F0E8; padding-block: 120px; }
-.c .photo { position: absolute; inset: 0; z-index: -1; background: url(/img/joshua-albright.jpg) center 20% / cover no-repeat; filter: grayscale(1) contrast(1.15); opacity: .55; }
-.c .tint { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #15171C 0%, color-mix(in srgb, #15171C 85%, transparent) 45%, color-mix(in srgb, #2F4BD8 35%, transparent) 100%); mix-blend-mode: multiply; }
-.c .tint2 { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #15171C 0%, transparent 55%); }
-.c h1 { font-size: clamp(2.8rem, 6.2vw, 5.4rem); font-stretch: 125%; font-weight: 800; letter-spacing: -.035em; line-height: .96; max-width: 12ch; margin-top: 18px; }
-.c h1 em { font-style: normal; color: #FFFFFF; background: #2F4BD8; padding: 0 .12em; border-radius: .08em; }
-.c p { font-size: var(--t-lead); color: color-mix(in srgb, #F3F0E8 75%, transparent); max-width: 34em; margin-top: 26px; }
-.c .who { margin-top: 40px; display: flex; align-items: center; gap: 14px; font-size: var(--t-small); color: color-mix(in srgb, #F3F0E8 70%, transparent); }
-.c .who i { display: block; width: 44px; height: 3px; background: #2F4BD8; }
-.c .btn { color: #F3F0E8; border-color: color-mix(in srgb, #F3F0E8 40%, transparent); }
-.c .btn.primary { background: #2F4BD8; border-color: #2F4BD8; color: #FFFFFF; }
+/* 3 photo */
+.o3 .photo { position: absolute; inset: 0; z-index: -1; background: url(/img/joshua-albright.jpg) center 20% / cover no-repeat; filter: grayscale(1) contrast(1.15); opacity: .5; }
+.o3 .tint { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--ink) 0%, color-mix(in srgb, var(--ink) 85%, transparent) 45%, color-mix(in srgb, var(--blue) 35%, transparent) 100%); mix-blend-mode: multiply; }
+.o3 .tint2 { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, var(--ink) 0%, transparent 55%); }
 
-.note { padding: 40px var(--gutter); background: var(--surface); color: var(--muted); font-size: var(--t-small); text-align: center; }
+/* 4 blue panel, phone tilts toward the mouse */
+.o4 { background: #FFFFFF; }
+.o4 .panel { position: absolute; top: 0; bottom: 0; right: 0; width: 42%; background: var(--blue); z-index: -1; }
+.o4 .ph { transform: perspective(900px) rotateY(var(--ry, -8deg)) rotateX(var(--rx, 4deg)); transition: transform .25s ease-out; animation: float 6s ease-in-out infinite; }
+@keyframes float { 50% { translate: 0 -14px; } }
+@media (max-width: 860px) { .o4 .panel { width: 100%; top: 55%; } }
+
+/* 5 ticker */
+.o5 { background: var(--surface); }
+.o5 .tick { position: absolute; left: 0; right: 0; bottom: 18%; z-index: -1; white-space: nowrap; overflow: hidden; font-stretch: 125%; font-weight: 800; font-size: clamp(3rem, 9vw, 8rem); letter-spacing: -.04em; color: transparent; -webkit-text-stroke: 1.5px color-mix(in srgb, var(--blue) 40%, transparent); }
+.o5 .tick div { display: inline-block; animation: ticker 40s linear infinite; }
+@keyframes ticker { to { transform: translateX(-50%); } }
+.o5 .tick span { margin-right: 1.2em; }
+
+/* 6 blueprint */
+.o6 { background: var(--blue); color: #FFFFFF; }
+.o6 .bp { position: absolute; inset: 0; z-index: -1; opacity: .35; background-image: linear-gradient(to right, rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.35) 1px, transparent 1px), linear-gradient(to right, rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.12) 1px, transparent 1px); background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px; }
+.o6 .dim { position: absolute; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; opacity: .75; border-top: 1px solid rgba(255,255,255,.6); padding-top: 6px; }
+.o6 .dim::before, .o6 .dim::after { content: ""; position: absolute; top: -5px; width: 1px; height: 11px; background: rgba(255,255,255,.6); }
+.o6 .dim::before { left: 0; } .o6 .dim::after { right: 0; }
+.o6 .eyebrow, .o6 .lead2 { color: rgba(255,255,255,.8); }
+.o6 .h em { color: var(--cream); }
+.o6 .btn { color: #FFFFFF; border-color: rgba(255,255,255,.5); }
+.o6 .btn.primary { background: var(--ink); border-color: var(--ink); }
+
+/* 7 typewriter */
+.o7 .h::after { content: ""; display: inline-block; width: .06em; height: .9em; margin-left: .06em; vertical-align: -.08em; background: var(--blue); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* 8 rotating word */
+.o8 .rot { display: inline-grid; vertical-align: bottom; color: var(--blue); }
+.o8 .rot span { grid-area: 1 / 1; opacity: 0; transform: translateY(.4em); animation: rot 12s infinite; }
+.o8 .rot span:nth-child(2) { animation-delay: 3s; } .o8 .rot span:nth-child(3) { animation-delay: 6s; } .o8 .rot span:nth-child(4) { animation-delay: 9s; }
+@keyframes rot { 0%, 22% { opacity: 1; transform: none; } 25%, 100% { opacity: 0; transform: translateY(-.4em); } 97% { transform: translateY(.4em); } }
+
+/* 9 logo mark halves */
+.o9 { background: #FFFFFF; text-align: center; }
+.o9 .wrap { justify-items: center; display: grid; }
+.o9 .h { max-width: 16ch; text-align: center; margin-inline: auto; }
+.o9 .lead2 { margin-inline: auto; }
+.o9 .big { position: absolute; left: 50%; top: 50%; width: 110vh; height: 110vh; translate: -50% -50%; z-index: -1; opacity: .07; color: var(--ink); }
+.o9 .big .l { animation: in-l 1.6s cubic-bezier(.2,.8,.2,1) both; } .o9 .big .r { animation: in-r 1.6s cubic-bezier(.2,.8,.2,1) both; }
+.o9 .big .bar { fill: var(--blue); transform-origin: 50% 100%; transform-box: fill-box; animation: rise 1.6s .2s cubic-bezier(.2,.8,.2,1) both; }
+
+/* 10 phone with notifications popping around it */
+.o10 { background: var(--blue); color: #FFFFFF; text-align: center; }
+.o10 .eyebrow, .o10 .lead2 { color: rgba(255,255,255,.8); }
+.o10 .h { margin-inline: auto; text-align: center; max-width: 16ch; }
+.o10 .h em { color: var(--cream); }
+.o10 .stage { position: relative; width: min(680px, 100%); margin: 40px auto 0; }
+.o10 .ph { animation: float 6s ease-in-out infinite; }
+.o10 .pop { position: absolute; padding: 10px 14px; border-radius: 14px; background: #FFFFFF; color: var(--ink); font-size: .82rem; font-weight: 600; box-shadow: 0 18px 40px -14px rgba(0,0,0,.5); opacity: 0; animation: pop 9s infinite; white-space: nowrap; text-align: left; }
+.o10 .pop small { display: block; font-weight: 400; color: var(--muted); font-size: .72rem; }
+.o10 .pop:nth-child(2) { left: 0; top: 18%; animation-delay: 0s; } .o10 .pop:nth-child(3) { right: 0; top: 34%; animation-delay: 3s; } .o10 .pop:nth-child(4) { left: 6%; top: 62%; animation-delay: 6s; }
+@keyframes pop { 0%, 4% { opacity: 0; transform: translateY(12px) scale(.96); } 8%, 30% { opacity: 1; transform: none; } 36%, 100% { opacity: 0; transform: translateY(-8px); } }
+@media (max-width: 860px) { .o10 .pop { position: static; display: inline-block; margin: 6px; } }
+
+/* 11 aurora wave */
+.o11 { background: #FFFFFF; }
+.o11 .wave { position: absolute; left: -10%; right: -10%; bottom: -12vh; height: 46vh; z-index: -1; filter: blur(28px); opacity: .8; background: linear-gradient(90deg, transparent, var(--soft), var(--blue), var(--soft), transparent); background-size: 200% 100%; border-radius: 50% 50% 0 0; animation: aurora 9s ease-in-out infinite alternate; }
+@keyframes aurora { to { background-position: 100% 0; transform: translateY(-6vh) scaleX(1.1); } }
+
+/* 12 fanned cards */
+.o12 { background: var(--surface); }
+.o12 .fan { position: relative; height: 420px; }
+.o12 .card { position: absolute; left: 50%; top: 50%; width: 260px; height: 340px; translate: -50% -50%; border-radius: 16px; background: #FFFFFF; border: 1px solid var(--line); box-shadow: 0 30px 60px -30px rgba(21,23,28,.45); padding: 18px; display: grid; align-content: start; gap: 10px; transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+.o12 .card b { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.o12 .card i { display: block; height: 8px; border-radius: 4px; background: var(--soft); }
+.o12 .card i.w { width: 70%; } .o12 .card i.x { width: 45%; }
+.o12 .card:nth-child(1) { transform: rotate(-12deg) translateX(-130px); } .o12 .card:nth-child(2) { transform: rotate(0deg) translateY(-14px); z-index: 2; } .o12 .card:nth-child(3) { transform: rotate(12deg) translateX(130px); }
+.o12 .fan:hover .card:nth-child(1) { transform: rotate(-18deg) translateX(-190px); } .o12 .fan:hover .card:nth-child(3) { transform: rotate(18deg) translateX(190px); }
+
+/* 13 giant number */
+.o13 { background: #FFFFFF; }
+.o13 .num { font-stretch: 125%; font-weight: 800; font-size: clamp(6rem, 22vw, 20rem); line-height: .85; letter-spacing: -.06em; color: var(--blue); }
+.o13 .num small { font-size: .22em; letter-spacing: -.02em; color: var(--ink); margin-left: .15em; }
+
+/* 14 editorial */
+.o14 { background: var(--cream); }
+.o14 .ed { display: grid; grid-template-columns: auto 1fr; gap: clamp(24px, 4vw, 60px); align-items: end; }
+.o14 .word { font-stretch: 125%; font-weight: 800; font-size: clamp(5rem, 18vw, 16rem); line-height: .8; letter-spacing: -.06em; color: var(--ink); }
+.o14 .word i { font-style: normal; color: var(--blue); }
+.o14 .side { border-left: 3px solid var(--blue); padding-left: 22px; }
+@media (max-width: 860px) { .o14 .ed { grid-template-columns: 1fr; } }
+
+/* 15 windows */
+.o15 { background: var(--soft); }
+.o15 .desk { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; align-items: start; }
+.o15 .win { background: #FFFFFF; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 26px 50px -32px rgba(21,23,28,.5); animation: rise-in .8s both; }
+.o15 .bar { display: flex; align-items: center; padding: 9px 14px; border-bottom: 1px solid var(--line); font-size: .74rem; color: var(--muted); }
+.o15 .bar::before { content: ""; width: 8px; height: 8px; margin-right: 38px; border-radius: 50%; background: var(--line); box-shadow: 13px 0 0 var(--line), 26px 0 0 var(--line); }
+.o15 .body { padding: 24px; }
+.o15 .w1 { grid-column: 1 / 8; } .o15 .w2 { grid-column: 8 / 13; grid-row: 1 / span 2; animation-delay: .15s; } .o15 .w3 { grid-column: 1 / 5; animation-delay: .3s; } .o15 .w4 { grid-column: 5 / 8; animation-delay: .45s; }
+.o15 .pill { display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: #FFFFFF; font-weight: 600; font-size: .9rem; margin: 4px 6px 0 0; }
+@media (max-width: 860px) { .o15 .w1, .o15 .w2, .o15 .w3, .o15 .w4 { grid-column: 1 / -1; grid-row: auto; } }
+
+/* 16 before / after with a divider you drag */
+.o16 { background: #FFFFFF; }
+.o16 .cmp { position: relative; height: 440px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--surface); touch-action: none; }
+.o16 .side-b, .o16 .side-a { position: absolute; inset: 0; padding: 26px; }
+.o16 .side-b { background: var(--surface); }
+.o16 .side-a { background: #FFFFFF; clip-path: inset(0 0 0 var(--cut, 50%)); }
+.o16 .note { position: absolute; width: 130px; padding: 12px; font-size: .8rem; font-weight: 600; color: var(--ink); background: var(--soft); border-radius: 2px; box-shadow: 0 8px 18px -10px rgba(21,23,28,.4); }
+.o16 .row { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: center; margin-bottom: 14px; }
+.o16 .row i { width: 22px; height: 22px; border-radius: 50%; background: var(--blue); display: grid; place-items: center; }
+.o16 .row i::after { content: ""; width: 6px; height: 10px; border: solid #FFFFFF; border-width: 0 2px 2px 0; transform: rotate(45deg) translate(-1px, -1px); }
+.o16 .handle { position: absolute; top: 0; bottom: 0; left: var(--cut, 50%); width: 3px; background: var(--blue); cursor: ew-resize; }
+.o16 .handle::after { content: "\2194"; position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 44px; height: 44px; border-radius: 50%; background: var(--blue); color: #FFFFFF; display: grid; place-items: center; font-size: 1.1rem; }
+.o16 .lbl { position: absolute; top: 12px; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+
+/* 17 spotlight */
+.o17 .spot { position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(to right, color-mix(in srgb, var(--blue) 45%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, var(--blue) 45%, transparent) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(260px circle at var(--mx, 60%) var(--my, 50%), #000 0%, transparent 100%); -webkit-mask-image: radial-gradient(260px circle at var(--mx, 60%) var(--my, 50%), #000 0%, transparent 100%); }
+
+/* 18 diagonal slab */
+.o18 { background: #FFFFFF; }
+.o18 .slab { position: absolute; right: -10%; top: -20%; width: 58%; height: 150%; background: var(--blue); transform: skewX(-12deg); z-index: -1; }
+.o18 .ph { transform: rotate(-6deg); animation: float 7s ease-in-out infinite; }
+
+/* 19 lead travels along a line */
+.o19 { background: var(--surface); }
+.o19 svg { width: 100%; height: auto; display: block; }
+.o19 .path { fill: none; stroke: var(--blue); stroke-width: 3; stroke-dasharray: 8 10; animation: dash 1.4s linear infinite; }
+@keyframes dash { to { stroke-dashoffset: -18; } }
+.o19 .dot { fill: var(--blue); offset-path: path("M 40 140 C 220 140, 220 40, 400 40 S 600 140, 760 140"); animation: travel 4s ease-in-out infinite; }
+@keyframes travel { 0% { offset-distance: 0%; } 100% { offset-distance: 100%; } }
+.o19 .node { fill: #FFFFFF; stroke: var(--line); }
+.o19 text { font: 600 13px Archivo, sans-serif; fill: var(--ink); }
+
+/* 20 minimal with a pulse */
+.o20 { background: #FFFFFF; }
+.o20 .open { display: inline-flex; align-items: center; gap: 10px; font-size: var(--t-small); color: var(--muted); }
+.o20 .open i { width: 10px; height: 10px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 0 color-mix(in srgb, var(--blue) 50%, transparent); animation: pulse 2s infinite; }
+@keyframes pulse { to { box-shadow: 0 0 0 14px transparent; } }
+.o20 .h { max-width: 18ch; font-weight: 600; }
+.o20 .h em { font-weight: 800; }
+.end { padding: 60px var(--gutter); text-align: center; color: var(--muted); font-size: var(--t-small); background: var(--surface); }
 </style>
 </head>
 <body>
 
-<section class="opt a">
-  <span class="tag">Option A · Dark and cinematic</span>
+<nav class="jump" aria-label="Options">
+  <a href="#o1">1</a><a href="#o2">2</a><a href="#o3">3</a><a href="#o4">4</a><a href="#o5">5</a><a href="#o6">6</a><a href="#o7">7</a><a href="#o8">8</a><a href="#o9">9</a><a href="#o10">10</a><a href="#o11">11</a><a href="#o12">12</a><a href="#o13">13</a><a href="#o14">14</a><a href="#o15">15</a><a href="#o16">16</a><a href="#o17">17</a><a href="#o18">18</a><a href="#o19">19</a><a href="#o20">20</a>
+</nav>
+
+<section class="opt dark o1" id="o1">
+  <div class="tag"><b>1</b><span>Dark and cinematic</span></div>
   <div class="glow" aria-hidden="true"><i></i><i></i><i></i></div>
   <svg class="mark" viewBox="0 0 240 240" aria-hidden="true"><polygon fill="currentColor" points="20,220 100,20 103,20 103,220"/><polygon fill="currentColor" points="137,220 137,20 140,20 220,220"/><rect fill="#2F4BD8" x="109" y="2" width="22" height="218"/></svg>
   <div class="wrap">
     <p class="eyebrow">Authentic Influence</p>
-    <h1>You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
-    <p>We take the marketing off your plate: social media, ads and your website. We also build the systems behind the scenes, so your days stop disappearing into busywork.</p>
+    <h1 class="h">You built the business. We handle the <span class="box">headaches</span> so you can grow it.</h1>
+    <p class="lead2">We take the marketing off your plate: social media, ads and your website. We also build the systems behind the scenes, so your days stop disappearing into busywork.</p>
     <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
   </div>
+  <p class="cap">Ink background, three blue glows drifting slowly, your mark large and faint in the corner.</p>
 </section>
 
-<section class="opt b">
-  <span class="tag">Option B · Big type</span>
+<section class="opt o2" id="o2">
+  <div class="tag"><b>2</b><span>Big type</span></div>
   <div class="grid" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow" style="color: var(--muted)">Marketing and operations for small businesses</p>
+    <p class="eyebrow">Marketing and operations for small businesses</p>
     <h1><span>You built</span><span>the business.</span><span class="out">We handle</span><span class="fill">the headaches.</span></h1>
-    <div class="row">
-      <p>Social media, ads and your website, plus the systems behind the scenes, from your customer list and phones to quoting and invoicing. So you can grow it.</p>
-      <div class="num"><b>16 hrs</b><span>a week the average owner spends on admin. Run your numbers below.</span></div>
-    </div>
     <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
   </div>
+  <p class="cap">The headline as the whole picture: four huge lines, one outlined, one solid blue, a faint blue grid behind.</p>
 </section>
 
-<section class="opt c">
-  <span class="tag">Option C · Photo-led</span>
-  <div class="photo" aria-hidden="true"></div>
-  <div class="tint" aria-hidden="true"></div>
-  <div class="tint2" aria-hidden="true"></div>
+<section class="opt dark o3" id="o3">
+  <div class="tag"><b>3</b><span>Photo-led</span></div>
+  <div class="photo" aria-hidden="true"></div><div class="tint" aria-hidden="true"></div><div class="tint2" aria-hidden="true"></div>
   <div class="wrap">
-    <p class="eyebrow" style="color: color-mix(in srgb, #F3F0E8 70%, transparent)">Authentic Influence</p>
-    <h1>You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
-    <p>We take the marketing off your plate and build the systems behind the scenes, so your days stop disappearing into busywork.</p>
+    <p class="eyebrow">Authentic Influence</p>
+    <h1 class="h">You built the business. We handle the <span class="box">headaches</span> so you can grow it.</h1>
+    <p class="lead2">We take the marketing off your plate and build the systems behind the scenes, so your days stop disappearing into busywork.</p>
     <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
-    <p class="who"><i></i>Joshua Albright, founder. Twelve years building what a growing business needs.</p>
   </div>
+  <p class="cap">Your portrait full width in black and white with a blue tint, headline laid over it. It says a real person runs this.</p>
 </section>
 
-<p class="note">Three directions for the top of the homepage. Everything below the opener would stay as it is. Pick one, or mix: for example A's glow with B's type.</p>
+<section class="opt o4" id="o4" data-tilt>
+  <div class="tag"><b>4</b><span>Blue panel, phone that follows you</span></div>
+  <div class="panel" aria-hidden="true"></div>
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Authentic Influence</p>
+      <h1 class="h">You built the business. We handle the <em>headaches</em> so you can <em>grow it</em>.</h1>
+      <p class="lead2">Social media, ads and your website, plus the systems behind the scenes.</p>
+      <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+    </div>
+    <div class="ph" aria-hidden="true"><div class="scr"><div class="st"><span>9:13</span><span class="isl"></span><span>&#9679;&#9679;&#9679;</span></div><p class="date">Tuesday evening</p><p class="clk">9:13</p><div class="al"><span class="m"><i></i>Mail<span>now</span></span><b>New lead from your website</b><span>Dana Whitfield &middot; (555) 555-0142</span><span>Wants a deck before summer.</span></div></div></div>
+  </div>
+  <p class="cap">Half white, half blue. The phone floats, and it tilts toward your mouse as you move around the page.</p>
+</section>
+
+<section class="opt o5" id="o5">
+  <div class="tag"><b>5</b><span>Ticker</span></div>
+  <div class="tick" aria-hidden="true"><div><span>Missed calls.</span><span>Late invoices.</span><span>Quotes that wait.</span><span>Empty Facebook page.</span><span>Retyped info.</span><span>Missed calls.</span><span>Late invoices.</span><span>Quotes that wait.</span><span>Empty Facebook page.</span><span>Retyped info.</span></div></div>
+  <div class="wrap">
+    <p class="eyebrow">Sound familiar?</p>
+    <h1 class="h">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+    <p class="lead2">Every one of those words is a leak. We find them and close them.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+  <p class="cap">The pain points scroll past in outlined type behind the headline, slowly, forever.</p>
+</section>
+
+<section class="opt o6" id="o6">
+  <div class="tag"><b>6</b><span>Blueprint</span></div>
+  <div class="bp" aria-hidden="true"></div>
+  <div class="dim" style="left: 8%; top: 14%; width: 30%">First call &middot; 0:00</div>
+  <div class="dim" style="right: 8%; bottom: 16%; width: 26%">Final invoice &middot; same week</div>
+  <div class="wrap">
+    <p class="eyebrow">Always Improving</p>
+    <h1 class="h">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+    <p class="lead2">We draw up how work moves through your business, then fix the steps that cost you the most.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+  <p class="cap">All blue, drawn like an engineering sheet: fine grid, dimension marks. Says "systems" without saying it.</p>
+</section>
+
+<section class="opt dark o7" id="o7">
+  <div class="tag"><b>7</b><span>Typewriter</span></div>
+  <div class="wrap">
+    <p class="eyebrow">Authentic Influence</p>
+    <h1 class="h" data-type="You built the business. We handle the headaches so you can grow it."></h1>
+    <p class="lead2">Social media, ads, your website, and the systems behind the scenes.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+  <p class="cap">The headline types itself out when the page opens, with a blinking blue cursor. Reload to see it.</p>
+</section>
+
+<section class="opt o8" id="o8">
+  <div class="tag"><b>8</b><span>Rotating word</span></div>
+  <div class="wrap">
+    <p class="eyebrow">Authentic Influence</p>
+    <h1 class="h">You built the business. We handle the <span class="rot"><span>headaches.</span><span>missed calls.</span><span>late invoices.</span><span>quiet Facebook page.</span></span></h1>
+    <p class="lead2">So you can grow it. Social media, ads, your website, and the systems behind the scenes.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+  <p class="cap">The last word changes every three seconds: headaches, missed calls, late invoices, quiet Facebook page.</p>
+</section>
+
+<section class="opt o9" id="o9">
+  <div class="tag"><b>9</b><span>The mark</span></div>
+  <svg class="big" viewBox="0 0 240 240" aria-hidden="true"><polygon class="l" fill="currentColor" points="20,220 100,20 103,20 103,220"/><polygon class="r" fill="currentColor" points="137,220 137,20 140,20 220,220"/><rect class="bar" x="109" y="2" width="22" height="218"/></svg>
+  <div class="wrap">
+    <p class="eyebrow">Albright Innovations</p>
+    <h1 class="h">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+    <p class="lead2">Social media, ads and your website, plus the systems behind the scenes.</p>
+    <div class="actions" style="justify-content:center"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+  <p class="cap">Centered, with your logo mark enormous and faint behind it. The two halves slide in and the blue bar rises when the page loads.</p>
+</section>
+
+<section class="opt o10" id="o10">
+  <div class="tag"><b>10</b><span>Phone first</span></div>
+  <div class="wrap">
+    <p class="eyebrow">24/7 assistant</p>
+    <h1 class="h">Leads come in. <em>You hear about them.</em></h1>
+    <div class="stage" aria-hidden="true">
+      <div class="ph"><div class="scr"><div class="st"><span>9:13</span><span class="isl"></span><span>&#9679;&#9679;&#9679;</span></div><p class="date">Tuesday evening</p><p class="clk">9:13</p><div class="al"><span class="m"><i></i>Mail<span>now</span></span><b>New lead from your website</b><span>Dana Whitfield &middot; (555) 555-0142</span><span>Wants a deck before summer.</span></div></div></div>
+      <div class="pop">New lead from your website<small>9:13 p.m.</small></div>
+      <div class="pop">Quote opened by the customer<small>9:40 p.m.</small></div>
+      <div class="pop">New 5-star review<small>7:02 a.m.</small></div>
+    </div>
+  </div>
+  <p class="cap">All blue. The phone is the hero, floating, with notifications popping up around it one at a time.</p>
+</section>
+
+<section class="opt o11" id="o11">
+  <div class="tag"><b>11</b><span>Aurora</span></div>
+  <div class="wave" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow">Authentic Influence</p>
+    <h1 class="h">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+    <p class="lead2">Social media, ads and your website, plus the systems behind the scenes.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+  <p class="cap">White page, a soft blue band of light along the bottom that slowly shifts, like the northern lights.</p>
+</section>
+
+<section class="opt o12" id="o12">
+  <div class="tag"><b>12</b><span>Fanned cards</span></div>
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Authentic Influence</p>
+      <h1 class="h">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+      <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+    </div>
+    <div class="fan" aria-hidden="true">
+      <div class="card"><b>Website</b><i class="w"></i><i></i><i class="x"></i><i class="w"></i></div>
+      <div class="card"><b>Phone</b><i class="w"></i><i class="x"></i><i></i><i class="w"></i><i class="x"></i></div>
+      <div class="card"><b>Calendar</b><i></i><i class="w"></i><i class="x"></i><i class="w"></i></div>
+    </div>
+  </div>
+  <p class="cap">Three cards (website, phone, calendar) fanned like a hand. They spread apart when you hover.</p>
+</section>
+
+<section class="opt o13" id="o13">
+  <div class="tag"><b>13</b><span>The number</span></div>
+  <div class="wrap">
+    <p class="num"><span data-count="16">0</span><small>hrs a week</small></p>
+    <h1 class="h" style="font-size: clamp(1.6rem, 3vw, 2.4rem); max-width: 30ch; margin-top: 24px">is what the average owner spends on admin. We handle it so you can <em>grow the business</em>.</h1>
+    <div class="actions"><a class="btn primary" href="#">Run your numbers &rarr;</a><a class="btn" href="#">Talk to us</a></div>
+  </div>
+  <p class="cap">One giant number that counts up from zero when it comes into view. The headline becomes the caption.</p>
+</section>
+
+<section class="opt o14" id="o14">
+  <div class="tag"><b>14</b><span>Editorial</span></div>
+  <div class="wrap ed">
+    <p class="word">Busy<i>.</i></p>
+    <div class="side">
+      <p class="eyebrow">Sound familiar?</p>
+      <h1 class="h" style="font-size: clamp(1.8rem, 3.4vw, 2.8rem); max-width: 22ch">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+      <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a></div>
+    </div>
+  </div>
+  <p class="cap">Cream page, one enormous word, the headline tucked beside it like a magazine spread.</p>
+</section>
+
+<section class="opt o15" id="o15">
+  <div class="tag"><b>15</b><span>Windows</span></div>
+  <div class="wrap desk">
+    <div class="win w1"><p class="bar">Albright Innovations</p><div class="body"><p class="eyebrow">Authentic Influence</p><h1 class="h" style="font-size: clamp(2rem, 4vw, 3.4rem)">You built the business. We handle the <em>headaches</em> so you can grow it.</h1><div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a></div></div></div>
+    <div class="win w2"><p class="bar">24/7 assistant</p><div class="body"><div class="ph" style="width: 220px"><div class="scr"><div class="st"><span>9:13</span><span class="isl"></span><span>&#9679;&#9679;&#9679;</span></div><p class="date">Tuesday evening</p><p class="clk">9:13</p><div class="al"><span class="m"><i></i>Mail<span>now</span></span><b>New lead from your website</b><span>Dana Whitfield</span></div></div></div></div></div>
+    <div class="win w3"><p class="bar">Explore</p><div class="body"><span class="pill">What we do</span><span class="pill">Answers</span><span class="pill">About</span></div></div>
+    <div class="win w4"><p class="bar">Founder</p><div class="body"><b>Joshua Albright</b><p style="color: var(--muted); font-size: .9rem">Twelve years building what a growing business needs.</p></div></div>
+  </div>
+  <p class="cap">The desktop-of-windows idea from the other night, kept small: four windows that drop in one after another.</p>
+</section>
+
+<section class="opt o16" id="o16">
+  <div class="tag"><b>16</b><span>Before and after</span></div>
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Drag the divider</p>
+      <h1 class="h">Your week, <em>before and after</em>.</h1>
+      <p class="lead2">Sticky notes and memory on the left. The same week with the pieces connected on the right.</p>
+      <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a></div>
+    </div>
+    <div class="cmp" data-cmp aria-hidden="true">
+      <div class="side-b"><span class="lbl" style="left:14px">Before</span>
+        <div class="note" style="left:30px;top:50px;rotate:-4deg">Call back Tues!</div><div class="note" style="left:170px;top:90px;rotate:3deg">Quote for the Hendersons??</div><div class="note" style="left:60px;top:200px;rotate:2deg">Where's the spreadsheet?</div><div class="note" style="left:230px;top:250px;rotate:-6deg">Post on Facebook</div><div class="note" style="left:120px;top:330px;rotate:5deg">Invoice #1042 OVERDUE</div>
+      </div>
+      <div class="side-a"><span class="lbl" style="right:14px">After</span>
+        <div style="margin-top:40px"><div class="row"><i></i>Every call answered or texted back</div><div class="row"><i></i>Quotes out the same day</div><div class="row"><i></i>Invoices sent when the job is done</div><div class="row"><i></i>Facebook posted every week</div><div class="row"><i></i>One customer list</div></div>
+      </div>
+      <div class="handle"></div>
+    </div>
+  </div>
+  <p class="cap">A slider you drag: the messy desk on one side, the tidy checklist on the other. The chaos idea, in two dimensions.</p>
+</section>
+
+<section class="opt dark o17" id="o17" data-spot>
+  <div class="tag"><b>17</b><span>Spotlight</span></div>
+  <div class="spot" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow">Authentic Influence</p>
+    <h1 class="h">You built the business. We handle the <span class="box">headaches</span> so you can grow it.</h1>
+    <p class="lead2">Social media, ads and your website, plus the systems behind the scenes.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+  </div>
+  <p class="cap">Dark page. A blue grid is hidden in the background and your mouse is the flashlight that reveals it.</p>
+</section>
+
+<section class="opt o18" id="o18">
+  <div class="tag"><b>18</b><span>Diagonal</span></div>
+  <div class="slab" aria-hidden="true"></div>
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Authentic Influence</p>
+      <h1 class="h">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+      <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a><a class="btn" href="#">See what we do</a></div>
+    </div>
+    <div class="ph" aria-hidden="true"><div class="scr"><div class="st"><span>9:13</span><span class="isl"></span><span>&#9679;&#9679;&#9679;</span></div><p class="date">Tuesday evening</p><p class="clk">9:13</p><div class="al"><span class="m"><i></i>Mail<span>now</span></span><b>New lead from your website</b><span>Dana Whitfield &middot; (555) 555-0142</span></div></div></div>
+  </div>
+  <p class="cap">A big blue slab cut on the diagonal, the phone leaning into it and floating.</p>
+</section>
+
+<section class="opt o19" id="o19">
+  <div class="tag"><b>19</b><span>The lead's journey</span></div>
+  <div class="wrap">
+    <p class="eyebrow">24/7 assistant</p>
+    <h1 class="h">A customer messages at 9 p.m. <em>You have the lead by 9:01.</em></h1>
+    <svg viewBox="0 0 800 200" aria-hidden="true" style="margin-top: 30px; max-width: 800px">
+      <path class="path" d="M 40 140 C 220 140, 220 40, 400 40 S 600 140, 760 140"/>
+      <circle class="node" cx="40" cy="140" r="26"/><text x="40" y="186" text-anchor="middle">Your website</text>
+      <circle class="node" cx="400" cy="40" r="26"/><text x="400" y="14" text-anchor="middle">The assistant</text>
+      <circle class="node" cx="760" cy="140" r="26"/><text x="760" y="186" text-anchor="middle">Your phone</text>
+      <circle class="dot" r="9"/>
+    </svg>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a></div>
+  </div>
+  <p class="cap">A dot travels along a dotted blue line from the website, through the assistant, to your phone. On a loop.</p>
+</section>
+
+<section class="opt o20" id="o20">
+  <div class="tag"><b>20</b><span>Quiet confidence</span></div>
+  <div class="wrap">
+    <p class="open"><i></i>Taking on a few new clients this season</p>
+    <h1 class="h">You built the business. We handle the <em>headaches</em> so you can grow it.</h1>
+    <p class="lead2">Social media, ads and your website, plus the systems behind the scenes. We keep the client list small on purpose.</p>
+    <div class="actions"><a class="btn primary" href="#">Talk to us &rarr;</a></div>
+  </div>
+  <p class="cap">Lots of white space, a pulsing blue dot that says you're open for business. The least loud option here, on purpose.</p>
+</section>
+
+<p class="end">Twenty directions for the top of the homepage. Everything below the opener stays as it is. Pick one or two, or mix pieces.</p>
+
+<script>
+/* 4: phone tilts toward the mouse */
+document.querySelectorAll('[data-tilt]').forEach(function (s) {
+  var ph = s.querySelector('.ph');
+  s.addEventListener('pointermove', function (e) {
+    var r = s.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    ph.style.setProperty('--ry', (x * 22) + 'deg'); ph.style.setProperty('--rx', (-y * 16) + 'deg');
+  });
+  s.addEventListener('pointerleave', function () { ph.style.removeProperty('--ry'); ph.style.removeProperty('--rx'); });
+});
+/* 7: typewriter, starts when it scrolls into view */
+document.querySelectorAll('[data-type]').forEach(function (h) {
+  var text = h.getAttribute('data-type'), i = 0;
+  function next() { h.textContent = text.slice(0, i++); if (i <= text.length) { setTimeout(next, text.charAt(i - 2) === ' ' ? 90 : 48); } }
+  new IntersectionObserver(function (en, io) { if (en[0].isIntersecting) { next(); io.disconnect(); } }).observe(h);
+});
+/* 13: counter */
+document.querySelectorAll('[data-count]').forEach(function (n) {
+  var to = Number(n.getAttribute('data-count')), t0 = null;
+  function step(t) { if (!t0) { t0 = t; } var k = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - k, 3); n.textContent = Math.round(to * e); if (k < 1) { requestAnimationFrame(step); } }
+  new IntersectionObserver(function (en, io) { if (en[0].isIntersecting) { requestAnimationFrame(step); io.disconnect(); } }).observe(n);
+});
+/* 16: before/after divider */
+document.querySelectorAll('[data-cmp]').forEach(function (c) {
+  function at(e) { var r = c.getBoundingClientRect(); c.style.setProperty('--cut', Math.max(4, Math.min(96, (e.clientX - r.left) / r.width * 100)) + '%'); }
+  var down = false;
+  c.addEventListener('pointerdown', function (e) { down = true; at(e); });
+  window.addEventListener('pointermove', function (e) { if (down) { at(e); } });
+  window.addEventListener('pointerup', function () { down = false; });
+});
+/* 17: spotlight follows the mouse */
+document.querySelectorAll('[data-spot]').forEach(function (s) {
+  s.addEventListener('pointermove', function (e) { var r = s.getBoundingClientRect(); s.style.setProperty('--mx', (e.clientX - r.left) + 'px'); s.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+});
+</script>
 </body>
 </html>
