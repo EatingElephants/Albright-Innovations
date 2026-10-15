@@ -227,7 +227,7 @@ small { font-size: var(--t-small); color: var(--muted); }
 
 /* Hero: the statement on the left, the time calculator on the right */
 .hero { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 7vw, 96px); position: relative; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .hero-copy { display: grid; gap: 28px; }
 .hero h1 { font-size: clamp(2.3rem, 5.2vw, 4.4rem); }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -856,56 +856,3 @@ footer small a { color: var(--muted); }
 @keyframes demo-caret { 50% { opacity: 0; } }
 @media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } .demo-phone { width: 240px; } }
 @media (prefers-reduced-motion: reduce) { .demo-msg, .demo-alert, .demo-screen { animation: none; transition: none; } }
-
-/* Opener: the clutter of a busy week in 3D, then everything in its place.
-   States on the section: op-3d (the 3D scene is running), is-chaos (the mess), is-tidy (the desktop).
-   html.op-js means the mess is going to play, so the windows wait for it. */
-.op { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(20px, 3vw, 40px) clamp(48px, 6vw, 80px); background: var(--accent-soft); transition: background-color .9s ease; }
-html.op-js .op:not(.is-tidy) { background: var(--bg); min-height: calc(100svh - 68px); }
-.op-stage { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: 0; pointer-events: none; opacity: 0; transition: opacity .6s; }
-.op.op-3d .op-stage { opacity: 1; }
-.op-hint { position: absolute; left: 0; right: 0; top: calc(100svh - 68px - 64px); z-index: 2; margin: 0; text-align: center; font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: .22em; text-transform: uppercase; color: var(--muted); opacity: 0; pointer-events: none; transition: opacity .4s; }
-.op.is-chaos .op-hint { opacity: 1; }
-.op-desk { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); align-items: start; }
-.win, .op-pills { transition: opacity .55s ease calc(var(--i, 0) * 90ms), transform .6s cubic-bezier(.2, .9, .3, 1) calc(var(--i, 0) * 90ms); }
-html.op-js .op:not(.is-tidy) .win, html.op-js .op:not(.is-tidy) .op-pills { opacity: 0; transform: translateY(18px) scale(.98); pointer-events: none; }
-.win { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 26px 50px -32px color-mix(in srgb, var(--ink) 50%, transparent); }
-.win-bar { display: flex; align-items: center; margin: 0; padding: 9px 14px; border-bottom: 1px solid var(--line); font-size: .74rem; color: var(--muted); }
-.win-bar::before { content: ""; width: 8px; height: 8px; margin-right: 38px; border-radius: 50%; background: var(--line); box-shadow: 13px 0 0 var(--line), 26px 0 0 var(--line); flex: none; }
-.win-body { display: grid; gap: 20px; padding: clamp(18px, 2.4vw, 30px); }
-.win-main { grid-column: 1 / 8; }
-.win-main h1 { font-size: clamp(2.1rem, 4.3vw, 3.7rem); }
-.op .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.op .note { font-size: var(--t-small); color: var(--muted); display: flex; align-items: center; gap: 10px; }
-.op .note::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex: none; }
-.win-asst { grid-column: 8 / 13; grid-row: 1 / span 2; }
-.win-asst .win-body { justify-items: center; padding: 18px 14px 22px; }
-.op-knoll { grid-column: 1 / 8; position: relative; height: 240px; border: 1px dashed color-mix(in srgb, var(--ink) 20%, transparent); border-radius: 16px; }
-.op:not(.op-3d) .op-knoll { display: none; }
-.op-knoll span { position: absolute; left: 16px; top: 11px; font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
-.win-list { grid-column: 1 / 6; }
-.win-josh { grid-column: 6 / 9; }
-.checks { display: grid; gap: 10px; }
-.checks li { position: relative; padding-left: 30px; color: var(--muted); font-size: var(--t-small); }
-.checks li::before { content: ""; position: absolute; left: 0; top: 1px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent); }
-.checks li::after { content: ""; position: absolute; left: 6px; top: 5px; width: 5px; height: 8px; border: solid var(--on-accent); border-width: 0 2px 2px 0; transform: rotate(45deg); }
-.josh { display: flex; align-items: center; gap: 14px; }
-.josh img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; flex: none; }
-.josh p { display: grid; gap: 2px; margin: 0; font-size: var(--t-small); color: var(--muted); }
-.josh b { color: var(--ink); font-size: 1rem; }
-.op-pills { grid-column: 9 / 13; display: flex; flex-wrap: wrap; gap: 10px; align-content: start; }
-.pill { display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; font-weight: 600; font-size: var(--t-small); text-decoration: none; cursor: pointer; box-shadow: 0 10px 24px -18px color-mix(in srgb, var(--ink) 55%, transparent); transition: transform .2s, border-color .2s; }
-.pill:hover { transform: translateY(-1px); border-color: var(--accent); }
-.pill.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-.pill.ghost { background: transparent; box-shadow: none; }
-.op:not(.op-3d) [data-op-replay] { display: none; }
-@media (max-width: 900px) {
-  .op-desk { grid-template-columns: minmax(0, 1fr); }
-  .win-main, .win-asst, .op-knoll, .win-list, .win-josh, .op-pills { grid-column: 1 / -1; grid-row: auto; }
-  .win-main { order: 0; } .op-knoll { order: 1; height: 210px; } .op-pills { order: 2; } .win-asst { order: 3; } .win-list { order: 4; } .win-josh { order: 5; }
-}
-@media (max-width: 760px) {
-  .win-list, .win-josh, .op .hero-mark, .op .note { display: none; }
-  .op-knoll { height: 190px; }
-}
-@media (prefers-reduced-motion: reduce) { .op, .win, .op-pills, .op-stage { transition: none; } }

@@ -82,7 +82,6 @@ The build also checks the brand rules it can check: no "AI" in visible copy, no 
 | Colors, fonts, spacing | `css/site.css` |
 | The calculator math | `js/calc.js` (tests in `tests/calc.html`) |
 | How the tools and the chat behave | `js/tools.js`, `js/chat.js` |
-| The 3D opener on the homepage (the mess that tidies itself) | `js/opener3d.js`; the windows around it are in `src/home.html`. The chrome word comes from `js/opener-font.json`, made from the Archivo font; if the word changes, that file has to be remade (ask Claude). |
 | How the landing-page form behaves | `js/lead.js` |
 | Logos and the portrait | `img/` |
 | The share images people see when a link is pasted | run `py -3 make_og.py` after editing the words in it (one image per page, plus the video poster) |
