@@ -3,60 +3,115 @@ title: Albright Innovations | Marketing and operations for small businesses
 description: See how much time and money the busywork is costing your business, then let us take it off your plate. Social media, ads, websites and the systems behind the scenes.
 updated: 2026-10-04
 -->
-  <section class="hero" id="top">
-    <div class="wrap">
-      <div class="hero-copy">
-        <figure class="hero-mark" aria-hidden="true">
-          <svg class="mark" viewBox="0 0 240 240">
-            <polygon class="half l" points="20,220 100,20 103,20 103,220"/>
-            <polygon class="half r" points="137,220 137,20 140,20 220,220"/>
-            <rect class="bar" x="109" y="2" width="22" height="218"/>
-          </svg>
-          <span>Authentic Influence</span>
-        </figure>
-        <h1>You built the business. We handle the <span class="hl">headaches</span> so you can <span class="hl">grow it</span>.</h1>
-        <p class="lead">We take the marketing off your plate: social media, ads and your website. We also build the systems behind the scenes, from your customer list and phones to quoting and invoicing, so your days stop disappearing into busywork.</p>
-        <div class="actions">
-          <button class="btn primary" type="button" data-chat-open>Talk to us <span class="arrow" aria-hidden="true">&rarr;</span></button>
-          <a class="btn" href="#services">See what we do</a>
+  <!-- Opener: the clutter of a busy week in 3D, then everything in its place (js/opener3d.js).
+       This small script decides before the first paint whether the mess will play: not with
+       reduced motion, and not without 3D. If 3D hasn't arrived in 4 seconds, the page shows itself. -->
+  <script>
+  (function () {
+    var d = document.documentElement;
+    try {
+      var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var c = document.createElement("canvas");
+      if (!still && (c.getContext("webgl2") || c.getContext("webgl"))) {
+        d.classList.add("op-js");
+        setTimeout(function () { if (!document.querySelector(".op.op-3d")) { d.classList.remove("op-js"); } }, 4000);
+      }
+    } catch (e) { /* no 3D: the page shows as usual */ }
+  })();
+  </script>
+  <section class="op" id="top" data-op>
+    <canvas class="op-stage" aria-hidden="true"></canvas>
+    <p class="op-hint" aria-hidden="true">Scroll or tap to tidy up</p>
+    <div class="wrap op-desk">
+      <div class="win win-main" style="--i:0">
+        <p class="win-bar">Albright Innovations</p>
+        <div class="win-body">
+            <figure class="hero-mark" aria-hidden="true">
+              <svg class="mark" viewBox="0 0 240 240">
+                <polygon class="half l" points="20,220 100,20 103,20 103,220"/>
+                <polygon class="half r" points="137,220 137,20 140,20 220,220"/>
+                <rect class="bar" x="109" y="2" width="22" height="218"/>
+              </svg>
+              <span>Authentic Influence</span>
+            </figure>
+            <h1>You built the business. We handle the <span class="hl">headaches</span> so you can <span class="hl">grow it</span>.</h1>
+            <p class="lead">We take the marketing off your plate: social media, ads and your website. We also build the systems behind the scenes, from your customer list and phones to quoting and invoicing, so your days stop disappearing into busywork.</p>
+            <div class="actions">
+              <button class="btn primary" type="button" data-chat-open>Talk to us <span class="arrow" aria-hidden="true">&rarr;</span></button>
+              <a class="btn" href="#services">See what we do</a>
+            </div>
+            <p class="note">We work with a handful of small and medium businesses at a time.</p>
         </div>
-        <p class="note">We work with a handful of small and medium businesses at a time.</p>
       </div>
-      <figure class="opener-demo" role="img" aria-label="Example: a customer messages a contractor's website at 9:12 p.m. The 24/7 assistant answers and takes their name and number. A moment later the lead arrives by email on the owner's phone.">
-        <p class="demo-label" aria-hidden="true" data-demo-label>The customer&rsquo;s phone</p>
-        <div class="demo-phone" aria-hidden="true">
-          <div class="demo-screen" data-demo>
-            <div class="demo-chat">
-            <div class="demo-status"><span>9:12</span><span class="demo-island"></span><span class="demo-bars"><i></i><i></i><i></i></span></div>
-            <div class="demo-head">
-              <span class="demo-av">R</span>
-              <span class="demo-who"><b>Riverbend Builders</b><small>Assistant &middot; replies right away</small></span>
+      <div class="win win-asst" style="--i:2">
+        <p class="win-bar">24/7 assistant</p>
+        <div class="win-body">
+          <figure class="opener-demo" role="img" aria-label="Example: a customer messages a contractor's website at 9:12 p.m. The 24/7 assistant answers and takes their name and number. A moment later the lead arrives by email on the owner's phone.">
+            <p class="demo-label" aria-hidden="true" data-demo-label>The customer&rsquo;s phone</p>
+            <div class="demo-phone" aria-hidden="true">
+              <div class="demo-screen" data-demo>
+                <div class="demo-chat">
+                <div class="demo-status"><span>9:12</span><span class="demo-island"></span><span class="demo-bars"><i></i><i></i><i></i></span></div>
+                <div class="demo-head">
+                  <span class="demo-av">R</span>
+                  <span class="demo-who"><b>Riverbend Builders</b><small>Assistant &middot; replies right away</small></span>
+                </div>
+                <div class="demo-body">
+                  <p class="demo-msg bot is-on">Hi! I'm the assistant for Riverbend Builders. What can I help you with?</p>
+                  <p class="demo-msg me" data-step="type">Do you build decks? Hoping to have one before summer.</p>
+                  <p class="demo-msg bot" data-step="reply">We do, and the owner gives free estimates. What's your name and the best number to reach you?</p>
+                  <p class="demo-msg me" data-step="type">Dana Whitfield, 555-0142</p>
+                  <p class="demo-msg bot" data-step="reply">Thanks, Dana. I've sent this to the owner, who will call you first thing tomorrow.</p>
+                  <p class="demo-dots"><i></i><i></i><i></i></p>
+                </div>
+                <div class="demo-input"><span class="demo-field">Type a message&hellip;</span><span class="demo-send"></span></div>
+                </div>
+                <div class="demo-owner">
+                  <div class="demo-status"><span>9:13</span><span class="demo-island"></span><span class="demo-bars"><i></i><i></i><i></i></span></div>
+                  <p class="demo-date">Tuesday evening</p>
+                  <p class="demo-clock">9:13</p>
+                <div class="demo-alert">
+                  <span class="demo-alert-top"><span class="demo-mail"></span>Mail<span>now</span></span>
+                  <b>New lead from your website</b>
+                  <span>Dana Whitfield &middot; (555) 555-0142</span>
+                  <span>Wants a deck before summer. Asked for an estimate.</span>
+                </div>
+                </div>
+              </div>
             </div>
-            <div class="demo-body">
-              <p class="demo-msg bot is-on">Hi! I'm the assistant for Riverbend Builders. What can I help you with?</p>
-              <p class="demo-msg me" data-step="type">Do you build decks? Hoping to have one before summer.</p>
-              <p class="demo-msg bot" data-step="reply">We do, and the owner gives free estimates. What's your name and the best number to reach you?</p>
-              <p class="demo-msg me" data-step="type">Dana Whitfield, 555-0142</p>
-              <p class="demo-msg bot" data-step="reply">Thanks, Dana. I've sent this to the owner, who will call you first thing tomorrow.</p>
-              <p class="demo-dots"><i></i><i></i><i></i></p>
-            </div>
-            <div class="demo-input"><span class="demo-field">Type a message&hellip;</span><span class="demo-send"></span></div>
-            </div>
-            <div class="demo-owner">
-              <div class="demo-status"><span>9:13</span><span class="demo-island"></span><span class="demo-bars"><i></i><i></i><i></i></span></div>
-              <p class="demo-date">Tuesday evening</p>
-              <p class="demo-clock">9:13</p>
-            <div class="demo-alert">
-              <span class="demo-alert-top"><span class="demo-mail"></span>Mail<span>now</span></span>
-              <b>New lead from your website</b>
-              <span>Dana Whitfield &middot; (555) 555-0142</span>
-              <span>Wants a deck before summer. Asked for an estimate.</span>
-            </div>
-            </div>
-          </div>
+            <figcaption>An example of the 24/7 assistant at 9 p.m. The business, names and numbers are made up.</figcaption>
+          </figure>
         </div>
-        <figcaption>An example of the 24/7 assistant at 9 p.m. The business, names and numbers are made up.</figcaption>
-      </figure>
+      </div>
+      <div class="op-knoll" aria-hidden="true"><span>Everything in its place</span></div>
+      <div class="win win-list" style="--i:3">
+        <p class="win-bar">How we work</p>
+        <div class="win-body">
+          <ul class="checks">
+            <li>We tell you what we'd do with your business and why, before you decide anything.</li>
+            <li>No guaranteed numbers. You see the results as they come in.</li>
+            <li>Plain words, no jargon.</li>
+            <li>A small client list, on purpose.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="win win-josh" style="--i:4">
+        <p class="win-bar">Founder</p>
+        <div class="win-body">
+          <div class="josh">
+            <img src="/img/joshua-albright.jpg" alt="Joshua Albright" width="721" height="900" loading="lazy">
+            <p><b>Joshua Albright</b><span>Twelve years building what a growing business needs.</span></p>
+          </div>
+          <a class="more" href="/about/">More about me <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <nav class="op-pills" aria-label="Explore" style="--i:5">
+        <a class="pill" href="/what-we-do/">What we do</a>
+        <a class="pill" href="/answers/">Answers</a>
+        <a class="pill" href="/about/">About</a>
+        <button class="pill primary" type="button" data-chat-open>Talk to us</button>
+        <button class="pill ghost" type="button" data-op-replay>Show me the mess</button>
+      </nav>
     </div>
   </section>
 
@@ -363,3 +418,7 @@ updated: 2026-10-04
       </div>
     </div>
   </section>
+
+  <!-- three.js for the opener, pinned to one version -->
+  <script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="/js/opener3d.js"></script>

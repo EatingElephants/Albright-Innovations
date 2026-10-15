@@ -241,7 +241,7 @@ def asset_version(rel):
     return hashlib.sha1((ROOT / rel).read_bytes()).hexdigest()[:8]
 
 
-ASSETS = {rel: asset_version(rel) for rel in ("css/site.css", "js/calc.js", "js/tools.js", "js/chat.js", "js/lead.js")}
+ASSETS = {rel: asset_version(rel) for rel in ("css/site.css", "js/calc.js", "js/tools.js", "js/chat.js", "js/lead.js", "js/opener3d.js")}
 
 
 def version_assets(h):
