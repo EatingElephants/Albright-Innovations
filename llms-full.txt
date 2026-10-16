@@ -687,6 +687,316 @@ The operations check if the office side is what's wearing you down. A website co
 
 Tell us what's going on →
 
+## Privacy Policy | Albright Innovations
+
+Source: https://albright-innovations.com/privacy/
+
+Home (/) / Privacy Policy
+
+Legal
+Privacy Policy
+
+Last updated: October 16, 2026
+
+Your privacy matters to us. This policy explains what information we collect, why we collect it, who we share it with and the choices you have.
+
+## 1. Who we are
+
+This Privacy Policy explains how Joshua Albright, doing business as Albright Innovations ("Albright Innovations," "we," "us," "our"), collects, uses and shares information. It applies to our website at https://albright-innovations.com (https://albright-innovations.com), our landing pages, our forms, our done-for-you services and our 24/7 assistant plans. We are based in Big Rapids, Michigan and the Charlotte, North Carolina area. You can contact us at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com).
+
+## 2. Two kinds of people this covers
+
+People who visit our website, fill out our forms, contact us or buy from us. For this information, we decide how it is used.
+
+People who chat with an assistant that one of our customers has set up on their own website or social pages. Our customer decides what the assistant collects and why. We and our service providers handle that information on the customer’s behalf. If you used an assistant on another business’s website, please read that business’s privacy notice, and contact that business first for any request about your information.
+
+## 3. Information we collect
+
+Information you give us:
+
+- Contact and business details: your name, business name, email address, phone number, business type, area, and your website or Google or Facebook page link.
+
+- Messages you send us and anything else you choose to tell us, including by form, email or chat.
+
+- Account and billing details. Payments are handled by our payment processor (Stripe). We do not store your full card number.
+
+- Content you give us to build your website or set up your assistant, such as text, photos, logos and documents.
+
+Information collected automatically:
+
+- Device and usage information such as your browser, device type, IP address, pages viewed, time on page and referring site.
+
+- Ad and campaign information, such as which ad or link brought you to us (for example, UTM tags and ad-click identifiers).
+
+- Cookies, pixels and similar technologies (see Section 6).
+
+Information from chats with an assistant (for our customers’ visitors):
+
+- The messages typed into the chat, and the name, phone number, email address or other details the visitor chooses to share.
+
+- Basic technical information such as the date, time and page where the chat took place.
+
+- For assistants connected to Facebook or Instagram, the messages and basic profile details Meta passes along to the page owner.
+
+Please do not share sensitive information such as payment card numbers, health information, government ID numbers or passwords in a chat or form.
+
+## 4. How we use information
+
+- Provide, set up, run and support our website, services and assistant plans.
+
+- Respond to your questions and requests, and follow up on forms you submit.
+
+- Process payments, send receipts and manage your account and trial.
+
+- Send service messages such as confirmations, billing notices, outage notices and check-ins about your account.
+
+- Send you marketing about our services, where the law allows. You can opt out at any time (see Section 11).
+
+- Measure and improve our website, ads and services, and understand which ads bring in leads.
+
+- Keep our services secure, prevent fraud and misuse, and follow the law.
+
+- For assistants: deliver chat replies and send leads and alerts to the business that set up the assistant.
+
+## 5. Legal bases and consent
+
+Where the law asks for a legal basis, we rely on our contract with you, our legitimate interest in running and improving our business, your consent where required (for example, for certain cookies or marketing), and legal obligations.
+
+## 6. Cookies, pixels and analytics
+
+We use cookies and similar tools to make our site work, measure traffic and measure our advertising. These include the Meta Pixel, which tells Meta when someone who clicked our Facebook or Instagram ad takes an action on our site, such as submitting a form. Meta may use that information to show you ads and to measure results, under Meta’s own policies. We may also use analytics tools such as Google Analytics.
+
+You can control cookies in your browser settings, and you can manage ad preferences in your Facebook and Instagram settings and through the tools provided by the Digital Advertising Alliance (https://optout.aboutads.info (https://optout.aboutads.info)). Blocking some cookies may affect how our site works. We respond to opt-out preference signals such as Global Privacy Control where the law requires it.
+
+## 7. Who we share information with
+
+We do not sell your personal information. We share it only with:
+
+- Service providers that help us run our business: the assistant platform (our assistant platform provider), payment processing (Stripe), Google (for email, documents, forms and analytics), Meta (Facebook, Instagram and the Pixel), and email, form, scheduling and website hosting tools.
+
+- Language model providers that generate the assistant’s replies. Chat messages are sent to them through the assistant platform so a reply can be produced.
+
+- For assistant chats: the business that set up the assistant.
+
+- Professional advisers such as lawyers, accountants and insurers, when needed.
+
+- Authorities or other parties when the law requires it, or to protect rights, safety and security.
+
+- A buyer or successor if our business is sold or reorganized.
+
+These providers may use the information only to provide services to us and under their own privacy terms.
+
+## 8. How long we keep information
+
+We keep information only as long as we need it for the reasons above, including to meet legal, tax and accounting requirements. Typically that means for as long as you are a customer, plus a reasonable period afterward. Lead and inquiry records that do not turn into customers are kept for a reasonable period and then deleted or anonymized. Chat records for an assistant are kept by the business that runs it for as long as it chooses, and by the assistant platform under its own retention practices.
+
+## 9. Security
+
+We use reasonable safeguards, such as access controls and trusted providers, to protect information. No system is completely secure, so we cannot guarantee absolute security. If a breach affects your information, we will notify you as the law requires.
+
+## 10. Your choices and rights
+
+You can ask us to:
+
+- Tell you what personal information we hold about you and give you a copy.
+
+- Correct information that is wrong.
+
+- Delete your information, subject to legal and business record-keeping needs.
+
+- Stop using your information for marketing.
+
+To make a request, email joshua@albright-innovations.com (mailto:joshua@albright-innovations.com). We may need to confirm who you are first, and we will respond within 45 days (or sooner if the law requires). Depending on where you live, you may have additional rights under your state’s privacy law, including the right to appeal our decision. We will not treat you differently for using your rights. If your request is about an assistant chat on another business’s site, we may refer you to that business.
+
+## 11. Marketing messages
+
+If you give us your email address or phone number, we may contact you about your inquiry and our services. Each marketing email has an unsubscribe link. You can also reply STOP to a text message or email us to opt out. We will still send you messages about your account and billing.
+
+## 12. Children
+
+Our website and services are meant for businesses and are not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has given us information, please email us and we will delete it.
+
+## 13. Where information is stored
+
+We and our providers are based mainly in the United States, and your information may be processed and stored here. If you use our services from outside the United States, you understand that your information will be transferred to the United States.
+
+## 14. Links to other sites
+
+Our website may link to other websites, such as Facebook, Google and Stripe. We do not control them and are not responsible for their privacy practices.
+
+## 15. Changes to this policy
+
+We may update this policy from time to time. We will post the new version here with a new "last updated" date. If a change is significant, we will tell you by email or on our website.
+
+## 16. Contact us
+
+Questions or requests about privacy? Email joshua@albright-innovations.com (mailto:joshua@albright-innovations.com).
+
+## Terms of Service | Albright Innovations
+
+Source: https://albright-innovations.com/terms/
+
+Home (/) / Terms of Service
+
+Legal
+Terms of Service
+
+Last updated: October 16, 2026
+
+Please read these Terms carefully. They explain the rules for using our website and our services, including what you pay, what you get and what we each are responsible for.
+
+## 1. Who we are
+
+These Terms of Service ("Terms") are between you and Joshua Albright, doing business as Albright Innovations ("Albright Innovations," "we," "us," "our"), based in Big Rapids, Michigan and the Charlotte, North Carolina area. You can reach us at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com).
+
+These Terms cover our website at https://albright-innovations.com (https://albright-innovations.com), our landing pages, our done-for-you services, and our self-serve 24/7 assistant plans ("Assistant Plans"). By visiting our website, signing up for a plan, or paying us, you agree to these Terms. If you do not agree, please do not use our website or services.
+
+## 2. Our services
+
+Website and done-for-you services. We build and manage websites, social media, Google Business Profile and operations help for small businesses. The scope, price and timing of that work are set out in a separate written order or agreement with you. If that agreement conflicts with these Terms, the agreement controls for that work.
+
+Assistant Plans. We offer month-to-month plans that let you set up a 24/7 assistant on your own website. The assistant answers your visitors’ questions day and night. Depending on your plan, it can also capture leads and send you alerts, or chat on your Facebook and Instagram pages. The plan names and what each includes are shown when you sign up. The assistant software is run on our behalf by a third-party platform (see Section 9).
+
+Self-serve means you set the assistant up yourself using our step-by-step guide. We offer an optional paid guided setup session, which is a one-time, 60-minute session for one assistant, with no follow-up calls.
+
+## 3. Who can use our services
+
+Our services are for business use. You must be able to form a binding contract and must give us accurate information when you sign up. If you sign up for a business, you confirm that you have the authority to accept these Terms for it.
+
+## 4. Plans, billing and cancellation
+
+- Month to month. Assistant Plans renew automatically each month until you cancel. There is no long-term contract.
+
+- Price. The price is shown at checkout before you pay. We may change prices with at least 30 days’ notice by email. The new price applies at your next renewal after the notice period.
+
+- Free trial. If a plan includes a 7-day free trial, a payment card is required to start it. Unless you cancel before the trial ends, your card is charged the plan price automatically when the trial ends, and then each month.
+
+- Cancelling. You can cancel at any time through your account, or by emailing joshua@albright-innovations.com (mailto:joshua@albright-innovations.com). Cancelling stops the next charge. Your plan stays active through the end of the month you have already paid for.
+
+- No refunds. All payments are final, and we do not give refunds or credits for partial months, unused time or unused messages.
+
+- Included messages and extra usage. Each plan includes a monthly amount of assistant messages. Usage beyond what your plan includes is paid from a prepaid balance (wallet) in your account on the assistant platform. That balance can be topped up automatically from your payment card. Extra usage is billed at the rate shown in your account.
+
+- Payments and taxes. Payments are processed by third-party payment providers. You are responsible for any applicable taxes. If a payment fails, we may suspend your plan until it is resolved.
+
+If you believe you were charged in error, email us within 30 days of the charge and we will look into it promptly.
+
+## 5. Support
+
+Support depends on your plan.
+
+- Chat plan: no email support. You get our step-by-step guide and help page.
+
+- Chat + Leads plan and Chat + Leads + Social plan: email support at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com), with a response within two business days. Support covers billing problems and outages on our end only.
+
+We do not offer phone support, custom setup, training, or follow-up calls with any Assistant Plan unless you buy the guided setup session. Help beyond these limits, such as building or fixing your assistant for you, is a separate paid service.
+
+## 6. Your responsibilities for your assistant
+
+You are in charge of your assistant and what it says. You agree to:
+
+- Provide accurate, lawful information for the assistant to use, and keep it up to date (hours, services, prices and so on).
+
+- Tell your website visitors that they are chatting with an automated assistant, and make it easy for them to reach a person when the assistant cannot help.
+
+- Post your own privacy notice that covers the information the assistant collects from your visitors, and get any consent the law requires before you contact them.
+
+- Follow the rules of the channels you connect, including Meta’s rules for Facebook and Instagram messaging.
+
+- Not use the assistant to collect sensitive data such as payment card numbers, health records, government ID numbers or passwords.
+
+- Review your assistant’s conversations and leads, and follow up on them. We do not monitor your conversations for you.
+
+You are responsible for your business’s use of the assistant, including everything it says to your visitors.
+
+## 7. Acceptable use
+
+You agree not to use our website or services to:
+
+- Break any law or regulation, or infringe anyone’s rights.
+
+- Send spam, harass or mislead people, or impersonate another person or business.
+
+- Offer adult content, multilevel marketing or get-rich schemes, or make claims about your business that you cannot back up.
+
+- Give medical, legal or financial advice through the assistant unless you are properly qualified and licensed to do so.
+
+- Attack, overload, reverse engineer or try to gain unauthorized access to our systems or those of our providers.
+
+- Resell or share your account access, or use a plan for more businesses than it covers.
+
+We may refuse service, remove content, or suspend or end your account if we believe you are not following these Terms.
+
+## 8. How the assistant works, and its limits
+
+The assistant generates its replies automatically, based on the information you give it and on a third-party language model. It can make mistakes, miss context or give an answer that is out of date or wrong. We do not guarantee that its replies will be accurate, complete or suitable for any purpose, and we do not guarantee any number of leads, customers, sales or other results.
+
+You are responsible for testing your assistant before you rely on it and for checking it from time to time.
+
+## 9. Third-party services
+
+Our services depend on third parties, such as the assistant platform (our assistant platform provider), payment processing (Stripe), Meta (Facebook and Instagram), Google, and the language model providers behind the assistant. Their services are governed by their own terms and privacy policies, and your use of them may be subject to those terms. We are not responsible for outages, changes, fees or actions of third parties. If a third party changes or stops a feature, we may have to change or stop it too.
+
+## 10. Your content and our work
+
+You keep ownership of the content you give us, such as text, images, logos, documents and the information used to train your assistant. You give us permission to use that content as needed to provide the services to you, including to store it, process it and display it through the assistant.
+
+You promise that you have the right to give us that content and that it does not violate anyone’s rights or the law.
+
+We keep ownership of our website, guides, templates, software, designs and other materials, and of our methods and know-how. Your plan gives you a limited, non-exclusive, non-transferable right to use them for your own business while your plan is active.
+
+For website work, ownership of the final website files and how they pass to you are set out in your written agreement. Stock images, fonts and other third-party materials stay under their own licenses.
+
+## 11. No-charge or promotional work
+
+If we ever do work for you at no charge, such as a sample, preview or promotional build, it is provided as is, without any promise of results. We may decline or stop such work at our discretion. Any files we deliver for free are yours to keep, but third-party materials in them stay under their own licenses.
+
+## 12. Disclaimers
+
+Our website and services are provided "as is" and "as available." To the fullest extent the law allows, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose and non-infringement. We do not promise that our services will be uninterrupted, error-free or secure, or that they will produce any particular business result.
+
+## 13. Limit on our liability
+
+To the fullest extent the law allows, Albright Innovations will not be liable for any indirect, incidental, special, consequential or punitive damages, or for lost profits, lost revenue, lost data, lost business or lost opportunities, even if we were told they were possible.
+
+Our total liability to you for any claim related to our website or services will not be more than the amount you paid us in the 12 months before the event that gave rise to the claim.
+
+Some places do not allow certain limits, so parts of this section may not apply to you.
+
+## 14. Your responsibility to us
+
+You agree to defend and reimburse us for claims, losses and costs (including reasonable attorney fees) that come from your content, your assistant’s use in your business, your breach of these Terms, or your violation of any law or third party’s rights.
+
+## 15. Suspension and ending
+
+You can stop using our services at any time by cancelling (see Section 4). We can suspend or end your access if you break these Terms, if you do not pay, if a provider we rely on stops supporting your use, or if we stop offering the service. If we end a plan for reasons other than your breach, we will give you reasonable notice.
+
+When your plan ends, your assistant stops working. We may delete your account data after a reasonable period, so export anything you need before you cancel. Sections that by their nature should continue (such as ownership, disclaimers, liability and governing law) survive the end of these Terms.
+
+## 16. Governing law and disputes
+
+These Terms are governed by the laws of the State of North Carolina, without regard to its conflict-of-law rules. If a dispute arises, please email us first at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com) and give us 30 days to work it out with you in good faith. If we cannot resolve it, any legal action must be brought in the state or federal courts located in or serving Union County, North Carolina, and you agree to those courts’ jurisdiction.
+
+## 17. Changes to these Terms
+
+We may update these Terms from time to time. We will post the new version here with a new "last updated" date. For material changes affecting paid plans, we will notify you by email. If you keep using our services after a change takes effect, you accept the updated Terms.
+
+## 18. General terms
+
+- Entire agreement. These Terms, together with any written order or agreement and our Privacy Policy, are the whole agreement between us on this subject.
+
+- Severability. If any part of these Terms is found unenforceable, the rest stays in effect.
+
+- No waiver. If we do not enforce a right away, we have not given it up.
+
+- Assignment. You may not transfer your account or these Terms to anyone else without our written consent. We may transfer ours as part of a sale or reorganization of our business.
+
+- Electronic notices. We may send notices to the email address on your account.
+
+## 19. Contact us
+
+Questions about these Terms? Email joshua@albright-innovations.com (mailto:joshua@albright-innovations.com).
+
 ## What we do | Albright Innovations
 
 Source: https://albright-innovations.com/what-we-do/
