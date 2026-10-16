@@ -644,7 +644,12 @@ input[type="range"]:focus-visible::-moz-range-thumb { outline: 2px solid var(--a
 .steps p { color: var(--muted); }
 
 /* Footer */
-footer { padding-block: 56px 36px; border-top: 1px solid var(--line); }
+footer { padding-block: 18px; border-top: 1px solid var(--line); }
+/* One slim row: the mark, the page links, the copyright. Contact details live in the contact section and the chat panel. */
+.foot-row { display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; }
+.foot-row .foot-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.foot-row .foot-nav a { min-height: 36px; }
+@media (max-width: 760px) { .foot-row { justify-content: flex-start; } }
 .foot-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); }
 .foot-brand { display: grid; gap: 14px; align-content: start; justify-items: start; }
 footer .tag { font-stretch: var(--narrow); font-weight: 600; font-size: var(--t-label); letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); }
