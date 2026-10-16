@@ -234,7 +234,22 @@ small { font-size: var(--t-small); color: var(--muted); }
 }
 
 /* Hero: the statement on the left, the time calculator on the right */
-.hero { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 7vw, 96px); position: relative; overflow: hidden; }
+.hero { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 7vw, 96px); position: relative; overflow: hidden; isolation: isolate; }
+/* The mark behind the opener: faint, drifting side to side and breathing */
+.hero-big-mark { position: absolute; left: 50%; top: 50%; width: min(120vh, 110%); height: auto; aspect-ratio: 1; translate: -50% -50%; z-index: -1; color: var(--ink); opacity: .06; pointer-events: none; animation: mark-drift 18s ease-in-out infinite alternate; }
+.hero-big-mark .bar { fill: var(--accent); }
+@keyframes mark-drift { from { transform: translateX(-7%); opacity: .045; } 50% { opacity: .085; } to { transform: translateX(7%); opacity: .045; } }
+/* A band of blue light along the bottom, slowly shifting */
+.hero-aurora { position: absolute; left: -10%; right: -10%; bottom: -14vh; height: 40vh; z-index: -1; filter: blur(30px); opacity: .75; pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--accent-soft), var(--accent), var(--accent-soft), transparent); background-size: 200% 100%; border-radius: 50% 50% 0 0; animation: aurora 10s ease-in-out infinite alternate; }
+@keyframes aurora { to { background-position: 100% 0; transform: translateY(-5vh) scaleX(1.1); } }
+/* The word that changes: its own line, so the rest of the headline holds still */
+.hero .rot { display: grid; color: var(--accent-ink); font-weight: 800; }
+.hero .rot > span { grid-area: 1 / 1; white-space: nowrap; opacity: 0; transform: translateY(.35em); animation: rot-word 12s infinite; }
+.hero .rot > span:nth-child(2) { animation-delay: 3s; } .hero .rot > span:nth-child(3) { animation-delay: 6s; } .hero .rot > span:nth-child(4) { animation-delay: 9s; }
+@keyframes rot-word { 0%, 22% { opacity: 1; transform: none; } 25%, 100% { opacity: 0; transform: translateY(-.35em); } 97% { transform: translateY(.35em); } }
+@media (prefers-reduced-motion: reduce) { .hero-big-mark, .hero-aurora { animation: none; } .hero .rot > span { animation: none; } .hero .rot > span:first-child { opacity: 1; transform: none; } }
+@media (max-width: 760px) { .hero-big-mark { width: 150%; } .hero-aurora { height: 30vh; } }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(32px, 5vw, 72px); align-items: center; }
 .hero-copy { display: grid; gap: 28px; }
 .hero h1 { font-size: clamp(2.3rem, 5.2vw, 4.4rem); }
