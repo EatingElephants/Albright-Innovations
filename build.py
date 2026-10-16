@@ -252,6 +252,7 @@ def version_assets(h):
 
 def page(path, meta, body, extra_ld, page_name, template=None, business=True, **more):
     canonical = BASE + path
+    more.setdefault("robots", meta.get("robots", "index, follow"))
     ldjson = "\n".join(ld(x) for x in ([ld_business()] if business else []) + extra_ld)
     out = fill(
         template or layout,
@@ -525,7 +526,8 @@ def main():
                 "sameAs": [SITE["facebook"]],
             })
         write(path.strip("/") + "/index.html", page(path, meta, body, extra, path.strip("/")))
-        pages_for_sitemap.append((path, meta["updated"]))
+        if "noindex" not in meta.get("robots", ""):
+            pages_for_sitemap.append((path, meta["updated"]))
 
     # --- landing pages: ad traffic only, so none of them are in the sitemap or open to search engines ---
     landing_written = []
@@ -599,6 +601,8 @@ def main():
         full += [f"## {t}", "", f"Source: {BASE}{p}", "", visible_text(s), "", to_text(b), ""]
     for f in sorted((SRC / "pages").glob("*.html")):
         m, b = split_meta(read(f), f.name)
+        if "noindex" in m.get("robots", ""):
+            continue
         full += [f"## {m['title']}", "", f"Source: {BASE}{m['path']}", "", to_text(b), ""]
     write("llms-full.txt", "\n".join(full))
 

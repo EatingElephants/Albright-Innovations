@@ -903,3 +903,21 @@ html.js .reveal.is-in .label::before { transform: none; }
   html.js .reveal { opacity: 1; transform: none; transition: none; }
   html.js .reveal .label::before { transform: none; transition: none; }
 }
+
+/* Hidden setup guide at /help/assistant/ (not linked, not indexed) */
+.guide-page .wrap { gap: clamp(28px, 4vw, 44px); }
+.guide-toc { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.guide-toc a { display: inline-flex; align-items: center; min-height: 40px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: var(--t-small); border-bottom: 1px solid var(--line); }
+.guide-toc a:hover { border-bottom-color: var(--accent); }
+.guide section { padding-bottom: 28px; margin-bottom: 8px; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
+.guide section:last-child { border-bottom: 0; }
+.guide h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); margin: 0 0 14px; }
+.guide h3 { font-size: 1.05rem; font-weight: 700; margin: 26px 0 8px; }
+.guide .table-wrap { overflow-x: auto; margin: 14px 0; }
+.guide table th, .guide table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.guide table th { font-stretch: 70%; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; color: var(--muted); }
+.guide pre { background: var(--surface); padding: 18px; border-radius: 2px; overflow-x: auto; font-size: .85rem; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+.guide code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+.guide-note { border-left: 3px solid var(--accent); padding: 12px 16px; background: var(--surface); }
+.guide-help { border-top: 1px solid var(--line); padding-top: 28px; display: grid; gap: 12px; justify-items: start; }
+.guide-help h2 { font-size: 1.4rem; margin: 0; }

@@ -77,6 +77,7 @@ The build also checks the brand rules it can check: no "AI" in visible copy, no 
 | The About page | `src/pages/about.html` |
 | The How we work page | `src/pages/how-we-work.html` |
 | The What we do page | `src/pages/what-we-do.html` |
+| The 24/7 assistant setup guide (hidden, not linked, not indexed) | `src/pages/assistant-guide.html`, at `/help/assistant/`. Marked `robots: noindex` in its meta block, so the build keeps it out of the sitemap and `llms-full.txt`. |
 | A landing page or its thank-you page | `src/landing/` (one file per page) |
 | The lead form on the landing pages | `src/form.html` (fields), the top of each page's file (heading, button, offer name) |
 | The landing-page settings: form endpoint, Pixel ID, video, booking link | `src/site.json`, under `landing` |
