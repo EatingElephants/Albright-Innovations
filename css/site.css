@@ -957,3 +957,4 @@ html.js .reveal.is-in .label::before { transform: none; }
 .booking-open a { color: var(--accent-ink); font-weight: 600; }
 @media (max-width: 600px) { .booking-frame { height: 640px; } }
 .demo-phone { position: relative; z-index: 2; } .demo-screen { z-index: 1; }
+.opener-demo { position: relative; z-index: 2; }
