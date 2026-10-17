@@ -730,7 +730,7 @@ $99.99/month
 
 7 days free trial
 
-Everything in Basic Plus, and it brings you customers. Your assistant collects your customers' contact info and sends it straight to you, with an instant lead alert by email. Customers can book a visit or call right in the chat.
+Everything in the DIY package, and it brings you customers. Your assistant collects your customers' contact info and sends it straight to you, with an instant lead alert by email. Customers can book a visit or call right in the chat.
 
 - 1 Chat Agent
 
@@ -791,6 +791,14 @@ Everything in Pro, and it meets your customers where they already message you. Y
 - Email support, answered within two business days
 
 Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=premium&stripe_price_id=price_1URKL8EWwld5dXANX9m1opr1&billing_cycle=month)
+
+Beyond the chat
+
+## Chatbots are just the beginning.
+
+Are you interested in more of what we can do for your business? Book a 30-minute consultation and we'll look at how else we can help: the work behind the scenes, your marketing, and the systems that keep your days running.
+
+Book a 30-minute consultation → (https://calendly.com/jsalbrig-studio/30min)
 
 ## Good to know
 
@@ -972,7 +980,7 @@ Website and done-for-you services. We build and manage websites, social media, G
 
 Assistant Plans. We offer month-to-month plans that let you set up a 24/7 assistant on your own website. The assistant answers your visitors’ questions day and night. Depending on your plan, it can also capture leads and send you alerts, or chat on your Facebook and Instagram pages. The plan names and what each includes are shown when you sign up. The assistant software is run on our behalf by a third-party platform (see Section 9).
 
-Self-serve means you set the assistant up yourself using our step-by-step guide. We offer an optional paid guided setup session, which is a one-time, 60-minute session for one assistant, with no follow-up calls.
+Self-serve means you set the assistant up yourself using our step-by-step guide.
 
 ## 3. Who can use our services
 
@@ -1004,7 +1012,7 @@ Support depends on your plan.
 
 - Pro and Pro + Social plans: email support at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com), with a response within two business days. Support covers billing problems and outages on our end only.
 
-We do not offer phone support, custom setup, training, or follow-up calls with any Assistant Plan unless you buy the guided setup session. Help beyond these limits, such as building or fixing your assistant for you, is a separate paid service.
+We do not offer phone support, custom setup, training, or follow-up calls with any Assistant Plan. Help beyond these limits, such as building or fixing your assistant for you, is a separate paid service.
 
 ## 6. Your responsibilities for your assistant
 

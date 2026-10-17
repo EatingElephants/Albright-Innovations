@@ -939,3 +939,10 @@ html.js .reveal.is-in .label::before { transform: none; }
 .plan-featured { border-color: var(--accent); }
 .plan-badge { position: absolute; top: -12px; left: 22px; padding: 5px 10px; background: var(--accent); color: var(--on-accent); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; }
 @media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }
+
+/* Price page: consultation section */
+.price-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px 40px; margin: 56px 0 8px; padding: clamp(24px, 3vw, 36px); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 2px; background: var(--surface); }
+.price-next > div { max-width: 40em; display: grid; gap: 10px; }
+.price-next h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0; }
+.price-next p { margin: 0; color: var(--muted); }
+.nav a:not(.btn) { white-space: nowrap; }
