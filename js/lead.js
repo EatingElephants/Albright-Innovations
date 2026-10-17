@@ -15,8 +15,10 @@
 
   /* 1. Local preview: links to albright-innovations.com stay on this computer. */
   (function () {
+    /* On the real site, nothing happens. On a preview copy (this computer, or a Cloudflare preview address),
+       links to albright-innovations.com are kept on the copy being looked at. */
     var h = location.hostname;
-    if (h !== 'localhost' && h !== '127.0.0.1') { return; }
+    if (h === 'albright-innovations.com' || h === 'www.albright-innovations.com') { return; }
     var live = 'https://albright-innovations.com';
     Array.prototype.forEach.call(document.querySelectorAll('a[href^="' + live + '"]'), function (a) {
       a.setAttribute('href', a.getAttribute('href').slice(live.length) || '/');
