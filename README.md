@@ -2,7 +2,7 @@
 
 The site at https://albright-innovations.com. Everything you'd ever want to change lives in the `src` folder. A small script turns it into the finished pages.
 
-## Where we left off (October 15, 2026)
+## Where we left off (October 17, 2026)
 
 The redesign is **in progress on the `redesign` branch**. The live site is still the old one, on `main`. Nothing here is public until `redesign` is merged into `main`.
 
@@ -25,21 +25,36 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 - No prices anywhere. Pricing isn't set.
 - No giveaways on the main site. The free website is an ad offer and lives only on the landing pages. The main site stays professional: what we do, nothing free.
 
-**Still to do before it goes live**
+**Still to do before it goes live** (updated October 17, 2026)
 
-1. **Keep polishing.** Review on a phone and a computer, especially the landing pages, which are new.
-2. **Rebuild the landing pages short.** Josh reviewed them on October 13: far too long, about eleven phone screens, and weak. Target about four phone screens each: the hook line from the ad with the form right under it (five fields), the catch in three lines, photo and client logos as proof, three questions, the form again. Cut the rest; it all lives on the main site. Operations keeps the calculator, contractors keeps the example conversation. Then finish them: in `src/site.json` under `landing`: connect the form (`lead_endpoint`, see below), paste the Pixel ID, add the video link and the booking link. Confirm the "within two business days" promise on the thank-you pages. Approve the contractor page copy, which is a draft (every section is marked `TODO DRAFT COPY`).
-3. **Connect the chat panel to an inbox.** The site is hosted on Cloudflare **Workers** (not Pages), so `functions/api/lead.js` doesn't run there yet. Until it's converted, the panel opens a prefilled email instead, so no message is lost. Once the landing-page form is connected, the same service can take the chat panel too.
-4. **Check the Cloudflare build.** GitHub marks the builds for both `main` and `redesign` as failed, though `main` still publishes. Open the build log in Cloudflare and confirm what that red mark means before merging.
-5. **Content TODOs** (search `src/` for `TODO`): pricing, testimonials and client results, the CallRail stat, three pain-point stats still to source, and the landing-page items above.
-6. **Make `www.albright-innovations.com` work.** Right now that address doesn't exist at all. In Cloudflare, add `www` to the site and redirect it to `https://albright-innovations.com`.
-7. **Merge `redesign` into `main`** once the above is done. Cloudflare publishes within a minute.
-8. **After it's live:**
-   - Confirm https://albright-innovations.com/robots.txt and https://albright-innovations.com/sitemap.xml show the new files, not Cloudflare's stand-in. If Cloudflare's "managed robots.txt" setting is on, it adds its own text to ours; check the result reads sensibly.
-   - Set up Google Search Console for the domain, submit `sitemap.xml`, and use "Request indexing" on the homepage, the What we do page and a few Answers pages. Do the same in Bing Webmaster Tools.
-   - Run Google's Rich Results Test and a Lighthouse check on the real pages, including the three landing pages.
-   - Earn links from other sites (Google Business Profile, Facebook page, chamber of commerce, local directories, client sites). The domain has none yet, which is why its "Domain Rating" is 0.
-   - Give each Facebook ad its own landing-page link with tracking values (see "Landing pages for ads").
+*Needs Josh*
+1. **Go-ahead to merge** `redesign` into `main`. Nothing goes public until this happens.
+2. **Legal review** of the Privacy Policy (`/privacy/`) and Terms (`/terms/`) by a lawyer. Confirm the legal address, the 7-day trial and automatic monthly charges, the plan names, the "Reply STOP" texting promise, and whether the policy should name the assistant provider.
+3. **Confirm the rental business is third-generation** (in the approved facts below).
+4. **Confirm the "within two business days" promise** on the two thank-you pages.
+5. **Approve the contractor page copy** (`/contractors/`), which is still a draft.
+6. **Decide the wording** of "Start with the free operations check" on the cost answer page.
+7. **Accounts and details for the ads:** a Web3Forms account for the form (about five minutes), the Meta Pixel ID, the video (record the animation as an MP4, upload it to YouTube as unlisted, send me the link), and the booking link (Calendly works).
+8. **Pricing:** no packages or prices are set yet (`src/answers/12-cost.html` has a TODO).
+9. **Testimonials and results:** only with the client's permission, and only what can be verified.
+10. **Stats still to source:** the CallRail numbers, repeat-customer value, untracked ad spend, and posting frequency. Each needs a primary source that loads.
+
+*Needs Cloudflare access*
+11. **Fix `www.albright-innovations.com`.** It doesn't open at all right now. Add `www` to the site in Cloudflare and redirect it to the main address.
+12. **Check the Cloudflare build log.** GitHub shows a red mark on both branches. Read the log before merging.
+13. **Chat panel inbox.** The site runs on Cloudflare Workers, so `functions/api/lead.js` doesn't run there. Until it's converted, the panel opens a prefilled email, so no lead is lost.
+
+*Can be done in this session*
+14. **Rebuild the three ad landing pages short**, about four phone screens each (the planning notes are in the section "Landing pages for ads").
+15. **Connect the ad form** once the Web3Forms key is in hand. The `landing` settings are in `src/site.json`.
+16. **Confirm the landing pages stay out of search** (already set: `noindex`, out of the sitemap).
+
+*After it's live*
+17. Check that `robots.txt` and `sitemap.xml` on the live site show the new files, and that Cloudflare's managed robots text reads sensibly.
+18. Set up Google Search Console and Bing Webmaster Tools, submit `sitemap.xml`, and request indexing on the homepage, What we do, and a few Answers pages.
+19. Run Google's Rich Results Test and a Lighthouse check on the real pages, including the ad pages.
+20. Earn links: Google Business Profile, the Facebook page, the chamber of commerce, local directories and client sites.
+21. Give each Facebook ad its own tracked link (see "Landing pages for ads").
 
 ## Approved facts about Josh
 
@@ -49,7 +64,7 @@ Use these and nothing more, and don't name the former employer.
 - Marketing degree, University of North Carolina at Charlotte, 2006.
 - Worked in the restaurant business through the financial crisis.
 - Twelve years at one company, from a startup to over $10 million a year, moving from sales to marketing to contracts to Director of Operations. Built its contracts department from the ground up and ran it; built the full customer workflow from first call to final follow-up; worked alongside accounting.
-- Started Albright Innovations in 2025. Based in Big Rapids, Michigan and Waxhaw, North Carolina. Does the work himself and keeps the client list small.
+- Started Albright Innovations in 2025. Based in Big Rapids, Michigan and the Charlotte, North Carolina area (the same wording the site uses). Does the work himself and keeps the client list small.
 
 ## The one rule
 
