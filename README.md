@@ -30,37 +30,35 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 *Needs Josh*
 1. **Go-ahead to merge** `redesign` into `main`. Nothing goes public until this happens.
 2. **Legal review** of the Privacy Policy (`/privacy/`) and Terms (`/terms/`) by a lawyer. Confirm the legal address, the 7-day trial and automatic monthly charges, the plan names, the "Reply STOP" texting promise, and whether the policy should name the assistant provider.
-3. **Confirm the rental business is third-generation** (in the approved facts below).
-4. **Confirm the "within two business days" promise** on the two thank-you pages.
-5. **Approve the contractor page copy** (`/contractors/`), which is still a draft.
-6. **Decide the wording** of "Start with the free operations check" on the cost answer page.
-7. **Accounts and details for the ads:** a Web3Forms account for the form (about five minutes), the Meta Pixel ID, the video (record the animation as an MP4, upload it to YouTube as unlisted, send me the link), and the booking link (Calendly works).
-8. **Pricing:** no packages or prices are set yet (`src/answers/12-cost.html` has a TODO).
-9. **Testimonials and results:** only with the client's permission, and only what can be verified.
-10. **Stats still to source:** the CallRail numbers, repeat-customer value, untracked ad spend, and posting frequency. Each needs a primary source that loads.
+3. **Confirm the "within two business days" promise** on the two thank-you pages (ad pages, on hold).
+4. **Approve the contractor page copy** (`/contractors/`), still a draft (ad page, on hold).
+5. **Prices** for a price page. Josh will supply them. `src/answers/12-cost.html` has a TODO until then.
+6. **Testimonials and results:** only with the client's permission, and only what can be verified.
+7. **Stats still to source:** the CallRail numbers, repeat-customer value, untracked ad spend, and posting frequency. Each needs a primary source that loads.
+8. **Links from other sites:** Josh will send them.
 
 *Needs Cloudflare access*
-11. **Fix `www.albright-innovations.com`.** It doesn't open at all right now. Add `www` to the site in Cloudflare and redirect it to the main address.
-12. **Check the Cloudflare build log.** GitHub shows a red mark on both branches. Read the log before merging.
-13. **Chat panel inbox.** The site runs on Cloudflare Workers, so `functions/api/lead.js` doesn't run there. Until it's converted, the panel opens a prefilled email, so no lead is lost.
+9. **Fix `www.albright-innovations.com`** (in progress October 17). It doesn't open at all right now. Point `www` at the site and redirect it to the main address.
+10. **Check the Cloudflare build log.** GitHub shows a red mark on both branches. Read the log before merging.
+11. **Chat panel inbox.** The site runs on Cloudflare Workers, so `functions/api/lead.js` doesn't run there. Until it's converted, the panel opens a prefilled email, so no lead is lost.
 
-*Can be done in this session*
-14. **Rebuild the three ad landing pages short**, about four phone screens each (the planning notes are in the section "Landing pages for ads").
-15. **Connect the ad form** once the Web3Forms key is in hand. The `landing` settings are in `src/site.json`.
-16. **Confirm the landing pages stay out of search** (already set: `noindex`, out of the sitemap).
+*Paused: advertising* (see the memory note `ads-on-hold`)
+12. Ad landing pages rebuilt short, ad form connected, Meta Pixel, ad video and booking link, and tracked links per ad. Kept out of search meanwhile (`noindex`, out of the sitemap).
+
+*Next on the website*
+13. **Price page** once Josh has the prices.
 
 *After it's live*
-17. Check that `robots.txt` and `sitemap.xml` on the live site show the new files, and that Cloudflare's managed robots text reads sensibly.
-18. Set up Google Search Console and Bing Webmaster Tools, submit `sitemap.xml`, and request indexing on the homepage, What we do, and a few Answers pages.
-19. Run Google's Rich Results Test and a Lighthouse check on the real pages, including the ad pages.
-20. Earn links: Google Business Profile, the Facebook page, the chamber of commerce, local directories and client sites.
-21. Give each Facebook ad its own tracked link (see "Landing pages for ads").
+14. Check that `robots.txt` and `sitemap.xml` on the live site show the new files, and that Cloudflare's managed robots text reads sensibly.
+15. Set up Google Search Console and Bing Webmaster Tools, submit `sitemap.xml`, and request indexing on the homepage, What we do, and a few Answers pages.
+16. Run Google's Rich Results Test and a Lighthouse check on the real pages.
+17. Earn links: Google Business Profile, the Facebook page, the chamber of commerce, local directories and client sites.
 
 ## Approved facts about Josh
 
 Use these and nothing more, and don't name the former employer.
 
-- Grew up around entrepreneurs. The family's rental business in Big Rapids, Michigan is in its third generation, and his mother ran a business of her own. He moved away from Big Rapids at eight and visited often, so never say he grew up in Big Rapids or in the family business.
+- Grew up around entrepreneurs. The family's rental business in Big Rapids, Michigan is in its third generation (confirmed by Josh, October 17), and his mother ran a business of her own. He moved away from Big Rapids at eight and visited often, so never say he grew up in Big Rapids or in the family business.
 - Marketing degree, University of North Carolina at Charlotte, 2006.
 - Worked in the restaurant business through the financial crisis.
 - Twelve years at one company, from a startup to over $10 million a year, moving from sales to marketing to contracts to Director of Operations. Built its contracts department from the ground up and ran it; built the full customer workflow from first call to final follow-up; worked alongside accounting.
