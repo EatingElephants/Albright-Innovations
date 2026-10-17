@@ -38,7 +38,7 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 8. **Links from other sites:** Josh will send them.
 
 *Needs Cloudflare access*
-9. **Fix `www.albright-innovations.com`** (in progress October 17). It doesn't open at all right now. Point `www` at the site and redirect it to the main address.
+9. ~~Fix `www.albright-innovations.com`~~ **Done October 17.** `www` redirects to the main address, keeping the page path. Tested.
 10. **Check the Cloudflare build log.** GitHub shows a red mark on both branches. Read the log before merging.
 11. **Chat panel inbox.** The site runs on Cloudflare Workers, so `functions/api/lead.js` doesn't run there. Until it's converted, the panel opens a prefilled email, so no lead is lost.
 
