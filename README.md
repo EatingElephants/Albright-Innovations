@@ -46,7 +46,11 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 12. Ad landing pages rebuilt short, ad form connected, Meta Pixel, ad video and booking link, and tracked links per ad. Kept out of search meanwhile (`noindex`, out of the sitemap).
 
 *Next on the website*
-13. **Price page** once Josh has the prices.
+13. **Price page.** Three plans, each with a Stripe checkout button on `app.albright-innovations.com`:
+    - basic: `https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=basic&stripe_price_id=price_1URJ5xEWwld5dXANhqTYcYpC&billing_cycle=month`
+    - pro: `https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=pro&stripe_price_id=price_1URKAeEWwld5dXANNzFwnZoO&billing_cycle=month`
+    - premium: `https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=premium&stripe_price_id=price_1URKL8EWwld5dXANX9m1opr1&billing_cycle=month`
+    - Still needed: prices and what each plan includes. Plan names must match the Terms (which currently use Chat, Chat + Leads, Chat + Leads + Social). Confirm whether these checkout links are live and whether a free trial is included.
 
 *After it's live*
 14. Check that `robots.txt` and `sitemap.xml` on the live site show the new files, and that Cloudflare's managed robots text reads sensibly.
