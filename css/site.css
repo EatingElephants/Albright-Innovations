@@ -946,3 +946,4 @@ html.js .reveal.is-in .label::before { transform: none; }
 .price-next h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0; }
 .price-next p { margin: 0; color: var(--muted); }
 .nav a:not(.btn) { white-space: nowrap; }
+.logo-link { display: block; } .logo-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
