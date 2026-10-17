@@ -921,3 +921,21 @@ html.js .reveal.is-in .label::before { transform: none; }
 .guide-note { border-left: 3px solid var(--accent); padding: 12px 16px; background: var(--surface); }
 .guide-help { border-top: 1px solid var(--line); padding-top: 28px; display: grid; gap: 12px; justify-items: start; }
 .guide-help h2 { font-size: 1.4rem; margin: 0; }
+
+/* Price page */
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.plan { position: relative; display: flex; flex-direction: column; gap: 14px; padding: clamp(22px, 2.6vw, 30px); background: var(--bg); border: 1px solid var(--line); border-radius: 2px; }
+.plan h2 { font-size: 1.35rem; margin: 0; }
+.plan-price { display: flex; align-items: baseline; gap: 4px; margin: 0; }
+.plan-price .amt { font-stretch: 125%; font-weight: 800; font-size: 2.2rem; letter-spacing: -.02em; }
+.plan-price .per { color: var(--muted); font-size: var(--t-small); }
+.plan-trial { margin: -6px 0 0; color: var(--accent-ink); font-weight: 600; font-size: var(--t-small); }
+.plan-desc { margin: 0; color: var(--muted); font-size: var(--t-small); }
+.plan-specs, .plan-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: var(--t-small); }
+.plan-specs { padding-block: 12px; border-block: 1px solid var(--line); font-weight: 600; }
+.plan-list li { position: relative; padding-left: 24px; color: var(--muted); }
+.plan-list li::before { content: ""; position: absolute; left: 4px; top: .55em; width: 6px; height: 10px; border: solid var(--accent); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.plan-btn { margin-top: auto; justify-self: stretch; text-align: center; }
+.plan-featured { border-color: var(--accent); }
+.plan-badge { position: absolute; top: -12px; left: 22px; padding: 5px 10px; background: var(--accent); color: var(--on-accent); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; }
+@media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }

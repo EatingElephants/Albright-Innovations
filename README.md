@@ -46,7 +46,7 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 12. Ad landing pages rebuilt short, ad form connected, Meta Pixel, ad video and booking link, and tracked links per ad. Kept out of search meanwhile (`noindex`, out of the sitemap).
 
 *Next on the website*
-13. **Price page.** Three plans, each with a Stripe checkout button on `app.albright-innovations.com`:
+13. ~~**Price page.**~~ **Built October 17** at `/pricing/`, using the wording from the app. Linked from the footer. Plan names match the Terms. Open questions: the Pro card says "Everything in Basic Plus," a plan name that doesn't appear in the app (the app has DIY - Starter Pack, Pro and Pro + Social). The Terms still mention a one-time 60-minute guided setup session, which isn't in the app. Confirm both, then decide whether the price page belongs in the main menu. Plans: , each with a Stripe checkout button on `app.albright-innovations.com`:
     - basic: `https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=basic&stripe_price_id=price_1URJ5xEWwld5dXANhqTYcYpC&billing_cycle=month`
     - pro: `https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=pro&stripe_price_id=price_1URKAeEWwld5dXANNzFwnZoO&billing_cycle=month`
     - premium: `https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=premium&stripe_price_id=price_1URKL8EWwld5dXANX9m1opr1&billing_cycle=month`

@@ -687,6 +687,121 @@ The operations check if the office side is what's wearing you down. A website co
 
 Tell us what's going on →
 
+## Pricing | Albright Innovations
+
+Source: https://albright-innovations.com/pricing/
+
+Home (/) / Pricing
+
+Pricing
+Three plans for your 24/7 assistant.
+
+Every plan includes a 7-day free trial. A credit card is required to start the trial. Cancel any time before it ends and you won't be charged.
+
+## DIY - Starter Pack
+
+$39.99/month
+
+7 days free trial
+
+Build your own 24/7 assistant for your website. It answers customer questions day and night. You set it up yourself with our step-by-step guide. No other support offered.
+
+- 1 Chat Agent
+
+- 250,000 Characters
+
+- 1,000 Messages Every month
+
+- Answers your customers day and night
+
+- Build it yourself from your website
+
+- Works on your website and a chat link for signs and cards
+
+- Step-by-step setup guide
+
+- Up to 1000 messages a month
+
+Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=basic&stripe_price_id=price_1URJ5xEWwld5dXANhqTYcYpC&billing_cycle=month)
+
+## Pro
+
+$99.99/month
+
+7 days free trial
+
+Everything in Basic Plus, and it brings you customers. Your assistant collects your customers' contact info and sends it straight to you, with an instant lead alert by email. Customers can book a visit or call right in the chat.
+
+- 1 Chat Agent
+
+- 500,000 Characters
+
+- 2,000 Messages Every month
+
+- Everything in Basic Plus
+
+- Collects your customers' contact info and sends it straight to you
+
+- Instant lead alerts by email
+
+- Customers can book a visit or call right in the chat
+
+- Up to 2,000 messages a month
+
+- Our most capable assistant models
+
+- Email support, answered within two business days
+
+Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=pro&stripe_price_id=price_1URKAeEWwld5dXANNzFwnZoO&billing_cycle=month)
+
+Most Popular
+
+## Pro + Social
+
+$149.99/month
+
+7 days free trial
+
+Everything in Pro, and it meets your customers where they already message you. Your assistant answers questions day and night on your website, Facebook and Instagram. It collects your customers' contact info and sends it straight to you, with an instant lead alert by email. Customers can book a visit or a call right in the chat.
+
+- 1 Chat Agent
+
+- 1,000,000 Characters
+
+- 5,000 Messages Every month
+
+- Everything in Pro
+
+- Chats with customers on Facebook and Instagram messages, not just your website
+
+- Collects customers' contact info from any of those chats and sends it straight to you
+
+- Instant lead alerts by email
+
+- Customers can book a visit or a call right in the chat
+
+- Customers can tap the mic and talk instead of typing
+
+- Hands the conversation to you when it can't help
+
+- Up to 5,000 messages a month
+
+- Our most capable assistant models
+
+- Email support, answered within two business days
+
+Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=premium&stripe_price_id=price_1URKL8EWwld5dXANX9m1opr1&billing_cycle=month)
+
+## Good to know
+
+- All plans are month to month. You can change or cancel at any time.
+
+- Messages included in your plan are counted each month. Extra usage is covered by a prepaid balance in your account.
+
+- The DIY - Starter Pack includes no email support. You set it up yourself with our step-by-step guide.
+
+Not sure which one fits? Tell us what's going on
+
 ## Privacy Policy | Albright Innovations
 
 Source: https://albright-innovations.com/privacy/
@@ -885,9 +1000,9 @@ If you believe you were charged in error, email us within 30 days of the charge 
 
 Support depends on your plan.
 
-- Chat plan: no email support. You get our step-by-step guide and help page.
+- DIY - Starter Pack: no email support. You get our step-by-step guide and help page.
 
-- Chat + Leads plan and Chat + Leads + Social plan: email support at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com), with a response within two business days. Support covers billing problems and outages on our end only.
+- Pro and Pro + Social plans: email support at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com), with a response within two business days. Support covers billing problems and outages on our end only.
 
 We do not offer phone support, custom setup, training, or follow-up calls with any Assistant Plan unless you buy the guided setup session. Help beyond these limits, such as building or fixing your assistant for you, is a separate paid service.
 
