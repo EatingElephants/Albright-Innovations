@@ -947,3 +947,12 @@ html.js .reveal.is-in .label::before { transform: none; }
 .price-next p { margin: 0; color: var(--muted); }
 .nav a:not(.btn) { white-space: nowrap; }
 .logo-link { display: block; } .logo-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* Live booking calendar in the contact section */
+.contact .wrap { grid-template-columns: minmax(0, 1fr); }
+.booking { display: grid; gap: 12px; margin-top: 8px; }
+.booking-note { margin: 0; color: var(--muted); }
+.booking-frame { width: 100%; height: 720px; border: 1px solid var(--line); border-radius: 2px; background: var(--bg); }
+.booking-open { margin: 0; font-size: var(--t-small); }
+.booking-open a { color: var(--accent-ink); font-weight: 600; }
+@media (max-width: 600px) { .booking-frame { height: 640px; } }
