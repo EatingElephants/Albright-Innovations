@@ -1,6 +1,6 @@
 # Albright Innovations
 
-> Albright Innovations helps small and medium businesses get more customers and run more smoothly. We manage social media, Facebook and Instagram ads, Google Business Profiles and websites. We set up a 24/7 assistant that answers website enquiries and sends the lead to the owner, and we improve the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. Based in Big Rapids, Michigan and the Charlotte, North Carolina area, working with businesses anywhere in the U.S.
+> Albright Innovations helps small and medium businesses with their marketing and the systems behind it. We manage social media, Facebook and Instagram ads, Google Business Profiles and websites. We set up a 24/7 assistant that answers website enquiries and sends the lead to the owner, and we improve the systems behind the scenes: customer lists, phones, scheduling, quoting, invoicing, follow-up and lead tracking. Based in Big Rapids, Michigan and the Charlotte, North Carolina area, working with businesses anywhere in the U.S.
 
 Tagline: Authentic Influence. Founder: Joshua Albright. Email: joshua@albright-innovations.com. Website: https://albright-innovations.com/
 
@@ -341,7 +341,7 @@ Tagged links | Each post or ad links to your site with a short tag on the end of
 
 Do the first one today. Add the other two when you're spending money on ads.
 
-## The step most businesses skip
+## The step that's easy to skip
 
 Knowing where the call came from isn't enough. You need to know where the job came from. That means the source has to travel with the customer from the first call through the quote to the invoice. When it does, you can total up invoices by source at the end of the month and see, in dollars, what each ad or post was worth.
 
@@ -395,7 +395,7 @@ Our rule of thumb: one of these is worth fixing. Two or more is worth a conversa
 
 ## What doesn't need a full redo
 
-Sometimes the structure is fine and the content is stale. If the site works on a phone, loads fast and is easy to edit, you may not need a rebuild. A round of new photos, current services and an honest "about" page can get you most of the way for much less. We'll tell you if that's your situation. A rebuild you don't need isn't a good deal for either of us.
+Sometimes the structure is fine and the content is stale. If the site works on a phone, loads fast and is easy to edit, you may not need a rebuild. A round of new photos, current services and an honest "about" page may be enough, for much less. We'll tell you if that's your situation. A rebuild you don't need isn't a good deal for either of us.
 
 ## What a rebuild involves
 
@@ -574,7 +574,7 @@ Joshua AlbrightFounder
 About
 I've built this before. Now I build it for businesses like yours.
 
-I'm Joshua Albright, and I run Albright Innovations. I help a handful of good businesses get more customers and run more smoothly, and I'm involved in every project.
+I'm Joshua Albright, and I run Albright Innovations. I help a handful of good businesses with their marketing and the systems behind it, and I'm involved in every project.
 
 ## Where I come from
 

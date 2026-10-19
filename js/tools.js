@@ -13,6 +13,19 @@
   });
 })();
 
+/* The word that changes in the headline. Only "headaches" is in the HTML, so search engines read one
+   headline; the other words are added here and shown one at a time by the CSS animation. */
+(function () {
+  var rot = document.querySelector('.hero .rot[data-words]');
+  if (!rot) { return; }
+  rot.getAttribute('data-words').split('|').forEach(function (word) {
+    var s = document.createElement('span');
+    s.setAttribute('aria-hidden', 'true');
+    s.textContent = word;
+    rot.appendChild(s);
+  });
+})();
+
 /* Opener animation: a customer messages a contractor's website at night, the assistant answers,
    and the lead lands on the owner's phone. Loops while on screen. With reduced motion, or no script,
    the finished conversation shows instead. */
