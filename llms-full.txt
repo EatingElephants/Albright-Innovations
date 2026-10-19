@@ -690,9 +690,9 @@ Source: https://albright-innovations.com/pricing/
 Home (/) / Pricing
 
 Pricing
-Three plans for your 24/7 assistant.
+Four plans for your 24/7 assistant.
 
-Every plan includes a 7-day free trial. A credit card is required to start the trial. Cancel any time before it ends and you won't be charged.
+The DIY - Starter Pack, Pro and Pro + Social plans include a 7-day free trial. A credit card is required to start the trial. Cancel any time before it ends and you won't be charged.
 
 ## DIY - Starter Pack
 
@@ -715,8 +715,6 @@ Build your own 24/7 assistant for your website. It answers customer questions da
 - Works on your website and a chat link for signs and cards
 
 - Step-by-step setup guide
-
-- Up to 1000 messages a month
 
 Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=basic&stripe_price_id=price_1URJ5xEWwld5dXANhqTYcYpC&billing_cycle=month)
 
@@ -741,8 +739,6 @@ Everything in the DIY - Starter Pack, plus it collects your customers' contact i
 - Instant lead alerts by email
 
 - Customers can book a visit or call right in the chat
-
-- Up to 2,000 messages a month
 
 - Our most capable assistant models
 
@@ -780,13 +776,37 @@ Everything in Pro, and it meets your customers where they already message you. Y
 
 - Hands the conversation to you when it can't help
 
-- Up to 5,000 messages a month
-
 - Our most capable assistant models
 
 - Email support, answered within two business days
 
 Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=premium&stripe_price_id=price_1URKL8EWwld5dXANX9m1opr1&billing_cycle=month)
+
+## Agency
+
+$499/month
+
+Everything in Pro + Social, set up and looked after by us. We build your assistant from your website and what you tell us about your business, then keep it accurate as things change. Each month you get a report on the leads it collected and the questions it couldn't answer, plus a 30-minute call with us to go over what your customers are asking about.
+
+- 1 Chat Agent
+
+- 1,000,000 Characters
+
+- 10,000 Messages Every month
+
+- Everything in Pro + Social
+
+- We set up your assistant for you
+
+- We review its conversations and fix anything it couldn't answer
+
+- We update it when your hours, services or prices change
+
+- Monthly report: leads collected, conversations handled and questions it couldn't answer
+
+- A 30-minute call with us every month
+
+Get started → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=enterprise&stripe_price_id=price_1USK5bEWwld5dXANC55cHHUr&billing_cycle=month)
 
 Beyond the chat
 
@@ -1008,7 +1028,9 @@ Support depends on your plan.
 
 - Pro and Pro + Social plans: email support at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com), with a response within two business days. Support covers billing problems and outages on our end only.
 
-We do not offer phone support, custom setup, training, or follow-up calls with any Assistant Plan. Help beyond these limits, such as building or fixing your assistant for you, is a separate paid service.
+- Agency plan: we set up the assistant for you, review its conversations, update it when your hours, services or prices change, send you a monthly report, and hold a 30-minute call with you each month. Email support is as for the Pro plans.
+
+On the DIY - Starter Pack, Pro and Pro + Social plans, we do not offer phone support, custom setup, training, or follow-up calls. Help beyond these limits, such as building or fixing your assistant for you, is part of the Agency plan or a separate paid service.
 
 ## 6. Your responsibilities for your assistant
 
