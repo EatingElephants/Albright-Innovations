@@ -2,7 +2,7 @@
 
 The site at https://albright-innovations.com. Everything you'd ever want to change lives in the `src` folder. A small script turns it into the finished pages.
 
-## Where we left off (October 17, 2026)
+## Where we left off (October 19, 2026)
 
 The redesign is **in progress on the `redesign` branch**. The live site is still the old one, on `main`. Nothing here is public until `redesign` is merged into `main`.
 
@@ -16,12 +16,13 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 - October 13: three **landing pages for Facebook ads**, each with one job and no menu: `/free-website/`, `/operations/` and `/contractors/`, each with a thank-you page. A shared lead form with hidden tracking fields so you can tell ad A from ad B, a Meta Pixel slot, a video slot, a booking-link slot, share images, and a "Landing pages for ads" section further down this file. Committed later that day, and the main site was brought into line with them: the assistant and Google Business Profile are on the What we do page and the homepage services list. (October 14: the free-website mentions came back off the main site; see the copy rules.)
 - October 14: the free website came off the main site (ads only) and the landing pages were hidden from search. The homepage was trimmed to opener, one combined calculator card, Sound familiar (six lines), What we do, clients, How we start, About and contact. The opener has an animation of the 24/7 assistant: the customer's phone, then the lead arriving on the owner's phone. Service-area wording came off the main site (we work anywhere), and the bio was corrected: Josh grew up around entrepreneurs, not in Big Rapids.
 - October 15: Josh's proofreading pass. One name for the free session (operations check; the old answer address redirects), contradictions fixed, service area back in a softer form (based in Big Rapids and the Charlotte area, working anywhere in the U.S.), long sentences split, calculator sliders capped at 20 hours with a note over 60, periwinkle gone (dark mode now uses the brand blue for fills and Cream for text), and answer pages' browser titles end in "| Albright Innovations". A 3D homepage opener was tried the same day and taken back out; it's in the saved history if ever wanted.
+- October 19: a copy pass from the reviewer's list. The site now makes no claim it can't point to a source for: the assistant is "for your website" (no phone pickup), the admin-hours figure is the Time etc / Forbes survey sentence everywhere, outcome promises became descriptions of what we do, advice reads as our rule of thumb, and every statistic links its source in the same tab. The landing-page spam trap no longer says "Fax".
 - **Next up: pick a homepage opener.** Twenty directions are sketched on one page at `tests/hero-options.html` (open the preview, then go to http://localhost:8000/tests/hero-options.html). Josh picks one or a mix, then it gets built into the real homepage with the entrance motion and the phone demo. The current opener stays until then.
 
 **Copy rules that came out of the work**
 
 - Stay broad about operations. Describe finding and fixing each business's bottlenecks after talking with the owner, never specific features (phone quoting, automatic texts, online booking, pay links). There are no technology partners yet, and every business needs something different.
-- The 24/7 assistant is a real offer (website chat, and the phone line when a call isn't answered), so it can be described. Every other operations promise stays broad.
+- The 24/7 assistant is a real offer on the website (and on Facebook and Instagram messages on the Pro + Social plan), so it can be described. Phone pickup isn't live, so the site doesn't mention it. Every other operations promise stays broad.
 - No prices anywhere. Pricing isn't set.
 - No giveaways on the main site. The free website is an ad offer and lives only on the landing pages. The main site stays professional: what we do, nothing free.
 
@@ -34,7 +35,7 @@ To look at it: double-click **`preview.bat`** in this folder. Your browser opens
 4. **Approve the contractor page copy** (`/contractors/`), still a draft (ad page, on hold).
 5. **Prices** for a price page. Josh will supply them. `src/answers/12-cost.html` has a TODO until then.
 6. **Testimonials and results:** only with the client's permission, and only what can be verified.
-7. **Stats still to source:** the CallRail numbers, repeat-customer value, untracked ad spend, and posting frequency. Each needs a primary source that loads.
+7. **Stats:** the October 19 copy pass sourced every number on the site (see the commit "Copy pass: every claim sourced"). Source links open in the same tab and are credited with the source name and year. If a new number is added, it needs a primary source that loads. The CallRail numbers are still deliberately absent.
 8. **Links from other sites:** Josh will send them.
 
 *Needs Cloudflare access*
