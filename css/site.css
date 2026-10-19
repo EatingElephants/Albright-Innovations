@@ -941,10 +941,11 @@ html.js .reveal.is-in .label::before { transform: none; }
 /* The whole card is clickable: the button's link is stretched over the card. Hover lifts the card a touch. */
 .plan-btn { margin-top: auto; justify-self: stretch; text-align: center; }
 .plan-btn::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
-.plan { transition: border-color .2s, transform .2s; }
-.plan:hover { border-color: var(--accent); transform: translateY(-3px); }
+/* Nothing moves on hover: a card or button that shifts under the pointer makes the cursor flicker at the edges. */
+.plan { cursor: pointer; transition: border-color .2s; }
+.plan:hover { border-color: var(--accent); }
+.plan-btn:hover { transform: none; }
 .plan:hover .plan-btn:not(.primary) { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-@media (prefers-reduced-motion: reduce) { .plan { transition: none; } .plan:hover { transform: none; } }
 .plan-featured { border-color: var(--accent); }
 .plan-badge { position: absolute; top: -12px; left: 50%; translate: -50%; white-space: nowrap; padding: 5px 10px; background: var(--accent); color: var(--on-accent); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; }
 @media (max-width: 1100px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
