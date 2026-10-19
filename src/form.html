@@ -11,7 +11,7 @@
     </div>
     <form class="lead-form" method="post" action="{{action}}"{{enctype}} data-endpoint="{{endpoint}}" data-key="{{key}}" data-thanks="{{thanks}}" data-email="{{email}}" data-offer="{{offer}}">
       <!-- Spam trap: people never see this field. If it has a value, the lead is not real. -->
-      <div class="hp" aria-hidden="true"><label for="f-fax">Fax</label><input id="f-fax" name="company_fax" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="hp" aria-hidden="true"><input name="company_fax" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"></div>
       <input type="hidden" name="offer" value="{{offer}}">
       <input type="hidden" name="utm_source" value="">
       <input type="hidden" name="utm_medium" value="">
