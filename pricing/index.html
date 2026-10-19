@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..800;1,62..125,300..800&display=swap">
-<link rel="stylesheet" href="/css/site.css?v=9b062945">
+<link rel="stylesheet" href="/css/site.css?v=5cf4ee8f">
 <script type="application/ld+json">{
  "@context": "https://schema.org",
  "@graph": [
@@ -251,21 +251,23 @@
   <div class="wrap">
     <div>
       <nav class="crumbs" aria-label="Breadcrumb"><a href="https://albright-innovations.com/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Pricing</span></nav>
-      <div class="head">
-        <p class="label">Pricing</p>
-        <h1>Four plans for your 24/7 assistant.</h1>
-        <p class="lead">The DIY - Starter Pack, Pro and Pro + Social plans include a 7-day free trial. A credit card is required to start the trial. Cancel any time before it ends and you won't be charged.</p>
-      </div>
+      <!-- Sits above the plans on purpose: the assistant is one piece of what we do. A styled paragraph, not a heading, so the page's first heading stays the h1 below. -->
+      <section class="price-next" aria-labelledby="next-h">
+        <div>
+          <p class="label">Everything else we do</p>
+          <p class="price-next-h" id="next-h">Chatbots are just the beginning of saving you time.</p>
+          <p>Interested in more of what we can do for your business? Book a 30-minute consultation and we'll look at how else we can help: the work behind the scenes, your marketing, and the systems that keep your days running.</p>
+        </div>
+        <a class="btn primary" href="https://cal.com/joshua-a-s8u2iv/30min" target="_blank" rel="noopener">Book a 30-minute consultation <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </section>
     </div>
 
-    <section class="price-next" aria-labelledby="next-h">
-      <div>
-        <p class="label">Everything else we do</p>
-        <h2 id="next-h">Chatbots are just the beginning of saving you time.</h2>
-        <p>Are you interested in more of what we can do for your business? Book a 30-minute consultation and we'll look at how else we can help: the work behind the scenes, your marketing, and the systems that keep your days running.</p>
-      </div>
-      <a class="btn primary" href="https://cal.com/joshua-a-s8u2iv/30min" target="_blank" rel="noopener">Book a 30-minute consultation <span class="arrow" aria-hidden="true">&rarr;</span></a>
-    </section>
+    <div class="head">
+      <p class="label">Pricing</p>
+      <h1>Four plans for your 24/7 assistant.</h1>
+      <p class="lead">The DIY - Starter Pack, Pro and Pro + Social plans include a 7-day free trial. A credit card is required to start the trial. Cancel any time before it ends and you won't be charged.</p>
+    </div>
+
 
     <div class="plans">
 

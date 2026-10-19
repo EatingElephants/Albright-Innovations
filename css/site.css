@@ -944,11 +944,19 @@ html.js .reveal.is-in .label::before { transform: none; }
 @media (max-width: 1100px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .plans { grid-template-columns: 1fr; } }
 
-/* Price page: consultation section */
-.price-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px 40px; margin: 0; padding: clamp(24px, 3vw, 36px); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 2px; background: var(--surface); }
-.price-next > div { max-width: 40em; display: grid; gap: 10px; }
-.price-next h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin: 0; }
-.price-next p { margin: 0; color: var(--muted); }
+/* Price page: consultation strip above the plans. Kept thin so the plans show on the first screen. */
+.pricing-page .wrap { gap: 28px; }
+.pricing-page .crumbs { margin-bottom: 20px; }
+.pricing-page .head { gap: 12px; }
+.pricing-page .head h1 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); }
+.pricing-page .head .lead { font-size: var(--t-body); max-width: 48em; }
+.price-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 32px; margin: 0; padding: 18px 22px; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 2px; background: var(--surface); }
+.price-next > div { flex: 1 1 34em; max-width: 52em; display: grid; gap: 4px; }
+.price-next .label { margin-bottom: 2px; }
+.price-next-h { font-size: clamp(1.15rem, 1.9vw, 1.45rem); font-weight: 700; letter-spacing: -.01em; line-height: 1.25; margin: 0; }
+.price-next p { margin: 0; color: var(--muted); font-size: var(--t-small); }
+.price-next .price-next-h { color: var(--ink); }
+.price-next .btn { flex: none; }
 .nav a:not(.btn) { white-space: nowrap; }
 .logo-link { display: block; } .logo-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
