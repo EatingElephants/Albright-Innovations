@@ -237,7 +237,8 @@ small { font-size: var(--t-small); color: var(--muted); }
 /* Hero: the statement on the left, the time calculator on the right */
 .hero { padding-block: clamp(48px, 7vw, 96px) clamp(56px, 7vw, 96px); position: relative; overflow: hidden; isolation: isolate; }
 /* The mark, fixed in the middle of the screen behind every page: the page scrolls, the mark stays. */
-.site-mark { position: fixed; left: 50%; top: 50%; width: min(110vh, 100vw); height: auto; aspect-ratio: 1; translate: -50% -50%; z-index: 1; color: var(--ink); opacity: .06; pointer-events: none; mix-blend-mode: multiply; }
+/* z-index -1 puts it behind the page content, so anything with its own fill (cards, the dark band, the phone demo) covers it like a real background. */
+.site-mark { position: fixed; left: 50%; top: 50%; width: min(110vh, 100vw); height: auto; aspect-ratio: 1; translate: -50% -50%; z-index: -1; color: var(--ink); opacity: .06; pointer-events: none; mix-blend-mode: multiply; }
 .site-mark .bar { fill: var(--accent); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .site-mark { mix-blend-mode: screen; opacity: .08; } }
 :root[data-theme="dark"] .site-mark { mix-blend-mode: screen; opacity: .08; }
@@ -957,6 +958,3 @@ html.js .reveal.is-in .label::before { transform: none; }
 .booking-open { margin: 0; font-size: var(--t-small); }
 .booking-open a { color: var(--accent-ink); font-weight: 600; }
 @media (max-width: 600px) { .booking-frame { height: 640px; } }
-.demo-phone { position: relative; z-index: 2; } .demo-screen { z-index: 1; }
-.opener-demo { position: relative; z-index: 2; }
-.hero { z-index: 2; }
