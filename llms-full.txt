@@ -762,7 +762,7 @@ Everything in Pro, and it meets your customers where they already message you. Y
 
 - Email support, answered within two business days
 
-Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=premium&stripe_price_id=price_1URKL8EWwld5dXANX9m1opr1&billing_cycle=month)
+Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=premium&stripe_price_id=price_1USbS0EWwld5dXANxzsxepoi&billing_cycle=month)
 
 ## Agency
 
