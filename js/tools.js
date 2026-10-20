@@ -220,7 +220,9 @@
   (function timeTool() {
     var tool = $('#time');
     if (!tool) { return; }
-    var inputs = {}, pending = false;
+    /* touched: the visitor moved a slider. Until then nothing is saved, so the chat panel
+       doesn't attach the default numbers to a message from someone who never used the calculator. */
+    var inputs = {}, pending = false, touched = false;
     $$('.slider', tool).forEach(function (block) {
       var range = $('input[type="range"]', block);
       var key = range && range.getAttribute('data-time');
@@ -249,6 +251,7 @@
         if (bar) { bar.style.width = (r.shares[k] * 100).toFixed(1) + '%'; }
         if (n) { n.textContent = Calc.num(r.hours[k]) + ' h'; }
       });
+      if (!touched) { return; }
       A.save('time', {
         label: 'Where does your week go?',
         summary: Calc.num(r.week) + ' hours a week on admin, about ' + Calc.money(r.dollars) + ' a year at ' + Calc.money(r.rate) + '/hour',
@@ -257,6 +260,7 @@
       });
     }
     function schedule() {
+      touched = true;
       if (pending) { return; }
       pending = true;
       window.requestAnimationFrame(render);
@@ -268,7 +272,7 @@
   (function callsTool() {
     var tool = $('[data-tool="calls"]');
     if (!tool) { return; }
-    var inputs = {}, pending = false;
+    var inputs = {}, pending = false, touched = false;
     $$('.slider', tool).forEach(function (block) {
       var range = $('input[type="range"]', block);
       var key = range && range.getAttribute('data-calls');
@@ -283,6 +287,7 @@
       tick(out.jobs, r.jobsMonth, function (v) { return Calc.num(Math.round(v)); });
       tick(out.year, r.revenueYear, function (v) { return Calc.money(Math.round(v)); });
       if (out.equiv) { out.equiv.innerHTML = Calc.callsEquivalent(r); }
+      if (!touched) { return; }
       A.save('calls', {
         label: 'Missed-call calculator',
         summary: Calc.num(Math.round(r.missedMonth)) + ' missed calls a month, about ' + Calc.num(Math.round(r.jobsMonth)) + ' jobs and ' + Calc.money(r.revenueYear) + ' a year at risk',
@@ -291,6 +296,7 @@
       });
     }
     function schedule() {
+      touched = true;
       if (pending) { return; }
       pending = true;
       window.requestAnimationFrame(render);
