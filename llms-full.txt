@@ -696,33 +696,9 @@ Interested in more of what we can do for your business? Book a 30-minute consult
 Book a 30-minute consultation → (https://cal.com/joshua-a-s8u2iv/30min)
 
 Pricing
-Four plans for your 24/7 assistant.
+Three plans for your 24/7 assistant.
 
-The DIY - Starter Pack, Pro and Pro + Social plans include a 7-day free trial. A credit card is required to start the trial. Cancel any time before it ends and you won't be charged.
-
-## DIY - Starter Pack
-
-$39.99/month
-
-7 days free trial
-
-Build your own 24/7 assistant for your website. It answers customer questions day and night. You set it up yourself with our step-by-step guide. No other support offered.
-
-- 1 Chat Agent
-
-- 250,000 Characters
-
-- 1,000 Messages Every month
-
-- Answers your customers day and night
-
-- Build it yourself from your website
-
-- Works on your website and a chat link for signs and cards
-
-- Step-by-step setup guide
-
-Start free trial → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=basic&stripe_price_id=price_1URJ5xEWwld5dXANhqTYcYpC&billing_cycle=month)
+The Pro and Pro + Social plans include a 7-day free trial. A credit card is required to start the trial. Cancel any time before it ends and you won't be charged.
 
 ## Pro
 
@@ -730,7 +706,7 @@ $99.99/month
 
 7 days free trial
 
-Everything in the DIY - Starter Pack, plus it collects your customers' contact info and sends it straight to you. You get an instant lead alert by email. Customers can book a visit or call right in the chat.
+Your assistant answers customer questions on your website day and night. It collects your customers' contact info and sends it straight to you, with an instant lead alert by email. Customers can book a visit or a call right in the chat.
 
 - 1 Chat Agent
 
@@ -738,7 +714,7 @@ Everything in the DIY - Starter Pack, plus it collects your customers' contact i
 
 - 2,000 Messages Every month
 
-- Everything in the DIY-Starter Pack
+- Answers your customers day and night on your website
 
 - Collects your customers' contact info and sends it straight to you
 
@@ -756,7 +732,7 @@ Most Popular
 
 ## Pro + Social
 
-$149.99/month
+$224.99/month
 
 7 days free trial
 
@@ -790,9 +766,11 @@ Start free trial → (https://app.albright-innovations.com/en/billing/stripe/sub
 
 ## Agency
 
-$499/month
+$989/month
 
-Everything in Pro + Social, set up and looked after by us. We build your assistant from your website and what you tell us about your business, then keep it accurate as things change. Each month you get a report on the leads it collected and the questions it couldn't answer, plus a 30-minute call with us to go over what your customers are asking about.
++ $1,500.00 set-up fee
+
+Everything in Pro + Social, set up and looked after by us. We build your assistant from your website and what you tell us about your business, then keep it accurate as things change (restrictions apply). Each month you get a report on the leads it collected and the questions it couldn't answer, plus a 30-minute call with us to go over what your customers are asking about.
 
 - 1 Chat Agent
 
@@ -820,7 +798,7 @@ Get started → (https://app.albright-innovations.com/en/billing/stripe/subscrip
 
 - Messages included in your plan are counted each month. Extra usage is covered by a prepaid balance in your account.
 
-- The DIY - Starter Pack includes no email support. You set it up yourself with our step-by-step guide.
+- The Agency plan has a one-time $1,500 set-up fee and no free trial. We build and look after the assistant for you.
 
 Not sure which one fits? Tell us what's going on
 
@@ -1022,13 +1000,11 @@ If you believe you were charged in error, email us within 30 days of the charge 
 
 Support depends on your plan.
 
-- DIY - Starter Pack: no email support. You get our step-by-step guide and help page.
-
 - Pro and Pro + Social plans: email support at joshua@albright-innovations.com (mailto:joshua@albright-innovations.com), with a response within two business days. Support covers billing problems and outages on our end only.
 
 - Agency plan: we set up the assistant for you, review its conversations, update it when your hours, services or prices change, send you a monthly report, and hold a 30-minute call with you each month. Email support is as for the Pro plans.
 
-On the DIY - Starter Pack, Pro and Pro + Social plans, we do not offer phone support, custom setup, training, or follow-up calls. Help beyond these limits, such as building or fixing your assistant for you, is part of the Agency plan or a separate paid service.
+On the Pro and Pro + Social plans, we do not offer phone support, custom setup, training, or follow-up calls. Help beyond these limits, such as building or fixing your assistant for you, is part of the Agency plan or a separate paid service.
 
 ## 6. Your responsibilities for your assistant
 

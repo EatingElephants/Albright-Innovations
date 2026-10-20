@@ -925,7 +925,7 @@ html.js .reveal.is-in .label::before { transform: none; }
 .guide-help h2 { font-size: 1.4rem; margin: 0; }
 
 /* Price page */
-.plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
 .plan { position: relative; display: flex; flex-direction: column; gap: 14px; padding: clamp(22px, 2.6vw, 30px); background: var(--bg); border: 1px solid var(--line); border-radius: 2px; }
 /* Name, price and trial line are centred, like the cards in the app; the name stays on one line. */
 .plan h2 { font-size: clamp(1.1rem, 1.5vw, 1.35rem); margin: 0; text-align: center; white-space: nowrap; }
@@ -933,6 +933,7 @@ html.js .reveal.is-in .label::before { transform: none; }
 .plan-price .amt { font-stretch: 125%; font-weight: 800; font-size: 2.2rem; letter-spacing: -.02em; }
 .plan-price .per { color: var(--muted); font-size: var(--t-small); }
 .plan-trial { margin: -6px 0 0; color: var(--accent-ink); font-weight: 600; font-size: var(--t-small); text-align: center; }
+.plan-fee { margin: -6px 0 0; color: var(--muted); font-weight: 600; font-size: var(--t-small); text-align: center; }
 .plan-desc { margin: 0; color: var(--muted); font-size: var(--t-small); }
 .plan-specs, .plan-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: var(--t-small); }
 .plan-specs { padding-block: 12px; border-block: 1px solid var(--line); font-weight: 600; }
@@ -948,8 +949,7 @@ html.js .reveal.is-in .label::before { transform: none; }
 .plan:hover .plan-btn:not(.primary) { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .plan-featured { border-color: var(--accent); }
 .plan-badge { position: absolute; top: -12px; left: 50%; translate: -50%; white-space: nowrap; padding: 5px 10px; background: var(--accent); color: var(--on-accent); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; border-radius: 2px; }
-@media (max-width: 1100px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .plans { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .plans { grid-template-columns: 1fr; } }
 
 /* Price page: consultation strip above the plans. Kept thin so the plans show on the first screen. */
 .pricing-page .wrap { gap: 28px; }
