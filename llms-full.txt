@@ -766,6 +766,8 @@ Start free trial → (https://app.albright-innovations.com/en/billing/stripe/sub
 
 ## Agency
 
+Starting at
+
 $989/month
 
 + $1,500.00 set-up fee
@@ -790,7 +792,7 @@ Everything in Pro + Social, set up and looked after by us. We build your assista
 
 - A 30-minute call with us every month
 
-Get started → (https://app.albright-innovations.com/en/billing/stripe/subscription/checkout/session/?purchase_type=package&plan_key=enterprise&stripe_price_id=price_1USK5bEWwld5dXANC55cHHUr&billing_cycle=month)
+Book a call → (https://cal.com/joshua-a-s8u2iv/30min)
 
 ## Good to know
 

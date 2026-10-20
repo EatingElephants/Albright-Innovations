@@ -930,6 +930,7 @@ html.js .reveal.is-in .label::before { transform: none; }
 /* Name, price and trial line are centred, like the cards in the app; the name stays on one line. */
 .plan h2 { font-size: clamp(1.1rem, 1.5vw, 1.35rem); margin: 0; text-align: center; white-space: nowrap; }
 .plan-price { display: flex; align-items: baseline; justify-content: center; gap: 4px; margin: 0; }
+.plan-from { margin: 0 0 -10px; color: var(--muted); font-weight: 600; font-size: var(--t-small); text-align: center; }
 .plan-price .amt { font-stretch: 125%; font-weight: 800; font-size: 2.2rem; letter-spacing: -.02em; }
 .plan-price .per { color: var(--muted); font-size: var(--t-small); }
 .plan-trial { margin: -6px 0 0; color: var(--accent-ink); font-weight: 600; font-size: var(--t-small); text-align: center; }
